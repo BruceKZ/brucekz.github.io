@@ -1,0 +1,22 @@
+{
+    "name": "vuepress",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "Zhixiang Dai <hnhnuh@126.com>",
+    "license": "MIT",
+    "devDependencies": {
+        "@vuepress/bundler-vite": "^2.0.0-rc.24",
+        "@vuepress/helper": "^2.0.0-rc.112",
+        "@vuepress/theme-default": "^2.0.0-rc.112",
+        "katex": "^0.16.22",
+        "vuepress": "^2.0.0-rc.24"
+    },
+    "scripts": {
+        "docs:dev": "vuepress dev docs",
+        "docs:build": "vuepress build docs"
+    },
+    "dependencies": {
+        "@vuepress/plugin-markdown-math": "^2.0.0-rc.112",
+        "sass-embedded": "^1.92.1"
+    }
+}
