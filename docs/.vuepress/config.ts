@@ -2,6 +2,7 @@ import {viteBundler} from '@vuepress/bundler-vite'
 import {defaultTheme} from '@vuepress/theme-default'
 import {defineUserConfig} from 'vuepress'
 import {markdownMathPlugin} from '@vuepress/plugin-markdown-math'
+import {mdEnhancePlugin} from 'vuepress-plugin-md-enhance'
 
 let ml_sidebar = [
     {
@@ -55,6 +56,7 @@ export default defineUserConfig({
         markdownMathPlugin({
             type: 'katex',
         }),
+        mdEnhancePlugin({}),
     ],
     lang: 'en-US',
     title: 'Bruce12138\'s BLOG',

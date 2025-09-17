@@ -20,14 +20,34 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - name: Install rclone
+        run: |
+          curl -fsSL https://rclone.org/install.sh | sudo bash
+      - name: Configure rclone
+        run: |
+          mkdir -p ~/.config/rclone
+          cat > ~/.config/rclone/rclone.conf << 'EOF'
+          ${RCLONE_CONF}
+          EOF
+        env:
+          RCLONE_CONF: ${{ secrets.RCLONE_CONF }}
+
+      - name: Pull Graph Theory Notes PDF
+        run: |
+          mkdir -p "docs/.vuepress/public/notes"
+          rclone copy "gd:GoodNotes/Graph Theory/Graph Theory Notes.pdf" "docs/.vuepress/public/notes" --progress
+          ls -lah "docs/.vuepress/public/notes"
+
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: yarn
       - run: yarn install --frozen-lockfile
       - run: yarn docs:build
+
       - name: Add CNAME
-        run: echo 'blog.example.com' > docs/.vuepress/dist/CNAME
+        run: echo 'blog.daiz.cc' > docs/.vuepress/dist/CNAME
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
