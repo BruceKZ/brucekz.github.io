@@ -1,7 +1,7 @@
 name: docs
 on:
   push:
-    branches: [main]
+    branches: [ main ]
   workflow_dispatch:
 
 permissions:
@@ -26,6 +26,8 @@ jobs:
           cache: yarn
       - run: yarn install --frozen-lockfile
       - run: yarn docs:build
+      - name: Add CNAME
+        run: echo 'blog.example.com' > docs/.vuepress/dist/CNAME
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
