@@ -26,11 +26,10 @@ jobs:
       - name: Configure rclone
         run: |
           mkdir -p ~/.config/rclone
-          cat > ~/.config/rclone/rclone.conf << 'EOF'
-          ${RCLONE_CONF}
-          EOF
+          echo "${RCLONE_CONF}" > ~/.config/rclone/rclone.conf
         env:
           RCLONE_CONF: ${{ secrets.RCLONE_CONF }}
+
 
       - name: Pull Graph Theory Notes PDF
         run: |
