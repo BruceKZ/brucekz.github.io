@@ -36,7 +36,7 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p docs/.vuepress/public/notes
-          rclone copy "gdrive:GoodNotes/Graph Theory/Graph Theory Notes.pdf" docs/.vuepress/public/notes --progress
+          rclone copy "gd:GoodNotes/Graph Theory/Graph Theory Notes.pdf" docs/.vuepress/public/notes --progress
           ls -lah docs/.vuepress/public/notes
 
       - uses: actions/setup-node@v4
