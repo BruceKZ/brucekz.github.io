@@ -42,9 +42,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: yarn
 
-      # ★ 关键：启用 Corepack 并激活 yarn@4.9.4（与 package.json 的 packageManager 对齐）
       - name: Use Yarn 4 via Corepack
         run: |
           corepack enable
