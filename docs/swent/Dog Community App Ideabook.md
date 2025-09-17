@@ -1,8 +1,6 @@
 ---
 title: Dog Community App Ideabook
 date: 2025-09-12 11:09:00
-categories: Product
-permalink: swent-idea/
 tags:
   - EPFL
   - CS-311
