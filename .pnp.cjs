@@ -33,6 +33,7 @@ const RAW_RUNTIME_STATE =
           ["@vuepress/plugin-markdown-math", "virtual:1fc6044c0afaef02dcf086d19a0e8b6adbe69a8721eca1cc03640403783e9a84c0db43461b91d7e040df7fc727c632e3681f80080e87719bb5ac3c8a52d05f43#npm:2.0.0-rc.112"],\
           ["@vuepress/theme-default", "virtual:1fc6044c0afaef02dcf086d19a0e8b6adbe69a8721eca1cc03640403783e9a84c0db43461b91d7e040df7fc727c632e3681f80080e87719bb5ac3c8a52d05f43#npm:2.0.0-rc.112"],\
           ["katex", "npm:0.16.22"],\
+          ["markdown-it", "npm:13.0.2"],\
           ["sass-embedded", "npm:1.92.1"],\
           ["typescript", "patch:typescript@npm%3A5.9.2#optional!builtin<compat/typescript>::version=5.9.2&hash=5786d5"],\
           ["vue", "virtual:1fc6044c0afaef02dcf086d19a0e8b6adbe69a8721eca1cc03640403783e9a84c0db43461b91d7e040df7fc727c632e3681f80080e87719bb5ac3c8a52d05f43#npm:3.5.21"],\
@@ -2800,6 +2801,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["entities", [\
+      ["npm:3.0.1", {\
+        "packageLocation": "../../../.yarn/berry/cache/entities-npm-3.0.1-21eeb201ba-10c0.zip/node_modules/entities/",\
+        "packageDependencies": [\
+          ["entities", "npm:3.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:4.5.0", {\
         "packageLocation": "../../../.yarn/berry/cache/entities-npm-4.5.0-7cdb83b832-10c0.zip/node_modules/entities/",\
         "packageDependencies": [\
@@ -3461,6 +3469,14 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["linkify-it", [\
+      ["npm:4.0.1", {\
+        "packageLocation": "../../../.yarn/berry/cache/linkify-it-npm-4.0.1-9c7d5a3cd6-10c0.zip/node_modules/linkify-it/",\
+        "packageDependencies": [\
+          ["linkify-it", "npm:4.0.1"],\
+          ["uc.micro", "npm:1.0.6"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:5.0.0", {\
         "packageLocation": "../../../.yarn/berry/cache/linkify-it-npm-5.0.0-adb5f9c96f-10c0.zip/node_modules/linkify-it/",\
         "packageDependencies": [\
@@ -3521,6 +3537,18 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["markdown-it", [\
+      ["npm:13.0.2", {\
+        "packageLocation": "../../../.yarn/berry/cache/markdown-it-npm-13.0.2-4aeddbcb85-10c0.zip/node_modules/markdown-it/",\
+        "packageDependencies": [\
+          ["argparse", "npm:2.0.1"],\
+          ["entities", "npm:3.0.1"],\
+          ["linkify-it", "npm:4.0.1"],\
+          ["markdown-it", "npm:13.0.2"],\
+          ["mdurl", "npm:1.0.1"],\
+          ["uc.micro", "npm:1.0.6"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:14.1.0", {\
         "packageLocation": "../../../.yarn/berry/cache/markdown-it-npm-14.1.0-e337d75bfe-10c0.zip/node_modules/markdown-it/",\
         "packageDependencies": [\
@@ -3585,6 +3613,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["mdurl", [\
+      ["npm:1.0.1", {\
+        "packageLocation": "../../../.yarn/berry/cache/mdurl-npm-1.0.1-054d974269-10c0.zip/node_modules/mdurl/",\
+        "packageDependencies": [\
+          ["mdurl", "npm:1.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:2.0.0", {\
         "packageLocation": "../../../.yarn/berry/cache/mdurl-npm-2.0.0-3259713daf-10c0.zip/node_modules/mdurl/",\
         "packageDependencies": [\
@@ -4790,6 +4825,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["uc.micro", [\
+      ["npm:1.0.6", {\
+        "packageLocation": "../../../.yarn/berry/cache/uc.micro-npm-1.0.6-36f3dc2fc4-10c0.zip/node_modules/uc.micro/",\
+        "packageDependencies": [\
+          ["uc.micro", "npm:1.0.6"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:2.1.0", {\
         "packageLocation": "../../../.yarn/berry/cache/uc.micro-npm-2.1.0-c45282c865-10c0.zip/node_modules/uc.micro/",\
         "packageDependencies": [\
@@ -5167,6 +5209,7 @@ const RAW_RUNTIME_STATE =
           ["@vuepress/plugin-markdown-math", "virtual:1fc6044c0afaef02dcf086d19a0e8b6adbe69a8721eca1cc03640403783e9a84c0db43461b91d7e040df7fc727c632e3681f80080e87719bb5ac3c8a52d05f43#npm:2.0.0-rc.112"],\
           ["@vuepress/theme-default", "virtual:1fc6044c0afaef02dcf086d19a0e8b6adbe69a8721eca1cc03640403783e9a84c0db43461b91d7e040df7fc727c632e3681f80080e87719bb5ac3c8a52d05f43#npm:2.0.0-rc.112"],\
           ["katex", "npm:0.16.22"],\
+          ["markdown-it", "npm:13.0.2"],\
           ["sass-embedded", "npm:1.92.1"],\
           ["typescript", "patch:typescript@npm%3A5.9.2#optional!builtin<compat/typescript>::version=5.9.2&hash=5786d5"],\
           ["vue", "virtual:1fc6044c0afaef02dcf086d19a0e8b6adbe69a8721eca1cc03640403783e9a84c0db43461b91d7e040df7fc727c632e3681f80080e87719bb5ac3c8a52d05f43#npm:3.5.21"],\
