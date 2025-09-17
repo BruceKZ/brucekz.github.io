@@ -9,6 +9,7 @@ let ml_sidebar = [
         children: [
             '/ml/README.md',
             '/ml/regression.md',
+            '/ml/linear_regression.md',
         ],
     },
 ]
