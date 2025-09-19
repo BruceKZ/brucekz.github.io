@@ -1,5 +1,5 @@
 ---
-title: Dog Community App Ideabook
+title: Idea
 date: 2025-09-12 11:09:00
 tags:
   - EPFL
@@ -32,10 +32,10 @@ Beyond that, DogLink provides a dedicated community where dog owners can share p
 * **Split App Model:**
 
     * Local storage: dog health records, offline reminders, cached posts
-    * Cloud storage (Firebase): accounts, posts, walking services, clinic data
+    * Cloud storage (Firebase): accounts, posts, walking services, clinic data, dog info sync.
 
 * **User Support:**
-
+    * Every user is dog lover.
     * Two user types: dog owners and dog lovers
     * Dog profiles, personal accounts, walking/playtime history, social connections
 
