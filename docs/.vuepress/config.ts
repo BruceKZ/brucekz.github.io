@@ -21,7 +21,7 @@ let swent_sidebar = [
         text: 'Software Enterprise',
         children: [
             '/swent/README.md',
-            '/swent/Dog Community App Ideabook.md',
+            '/swent/idea.md',
         ],
     },
 ]
