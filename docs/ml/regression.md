@@ -17,6 +17,7 @@ Regression is to relate input variables to the output variable, to either predic
 ## Dataset for regression 回归的数据集
 
 数据集被分为若干个输入-输出对：
+
 $$
 (\mathbf{x}_n, y_n)
 $$

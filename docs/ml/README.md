@@ -17,7 +17,9 @@ Regression is to relate input variables to the output variable, to either predic
 
 数据集被分为若干个输入-输出对：
 
-$$(\mathbf{x}_n, y_n)$$
+$$
+(\mathbf{x}_n, y_n)
+$$
 
 其中：  
 - $\mathbf{x}_n$ 是维度为 $D$ 的向量，表示第 $n$ 个样本的输入特征。  
