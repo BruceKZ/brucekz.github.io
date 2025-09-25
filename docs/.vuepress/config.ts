@@ -23,6 +23,7 @@ let swent_sidebar = [
         children: [
             '/swent/README.md',
             '/swent/idea.md',
+            '/swent/commit_message.md',
         ],
     },
 ]
