@@ -1,10 +1,10 @@
 # Lecture 6
 
 ## 回顾
-- LP 的对偶性
-- Weak Duality
-- String Duality
-- Complementarity slackness
+- [LP 的对偶性](https://blog.daiz.cc/algo2/Lecture5.html#_2-%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92%E7%9A%84%E5%AF%B9%E5%81%B6%E6%80%A7-duality)
+- [Weak Duality](https://blog.daiz.cc/algo2/Lecture5.html#%E5%AF%B9%E5%81%B6%E6%80%A7%E5%AE%9A%E7%90%86)
+- [String Duality](https://blog.daiz.cc/algo2/Lecture5.html#%E5%AF%B9%E5%81%B6%E6%80%A7%E5%AE%9A%E7%90%86)
+- [Complementarity slackness](https://blog.daiz.cc/algo2/Lecture5.html#%E4%BA%92%E8%A1%A5%E6%9D%BE%E5%BC%9B)
 
 ## 最小费用完美匹配的对偶性与互补松弛性
 Duality and Complementarity Slackness of Min-Cost Perfect Matching
@@ -24,6 +24,9 @@ $$
 $$
 
 在之前的笔记中，已经证明了这样的线性规划的极点是整数解。所以我们可以通过求解上述线性规划来求解最小费用问题。
+
+**对偶**
+
 
 
 
