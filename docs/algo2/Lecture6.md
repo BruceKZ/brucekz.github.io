@@ -55,7 +55,7 @@ $$
 \text{Subject to:}\quad
 & \sum_{b\in B:(a,b)\in E} x_{ab} \geq 1 &&\forall a\in A\\
 & - \sum_{b\in B:(a,b)\in E} x_{ab} \geq -1 &&\forall a\in A\\
-& \sum_{b\in B:(a,b)\in E} x_{ab} \geq 1 &&\forall b\in B\\
+& \sum_{a\in A:(a,b)\in E} x_{ab} \geq 1 &&\forall b\in B\\
 & - \sum_{a\in A:(a,b)\in E} x_{ab} \geq -1 &&\forall b\in B\\
 & x_e \geq 0&& \forall e\in E
 \end{align*}
