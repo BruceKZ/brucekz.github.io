@@ -1,4 +1,7 @@
-# Never regret the choices you make.
+# Home 
+
+> Never regret the choices you make.
+
 
 Category:
 - [Machine Learning](/ml/)

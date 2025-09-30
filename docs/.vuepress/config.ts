@@ -73,8 +73,8 @@ export default defineUserConfig({
         mdEnhancePlugin({}),
     ],
     lang: 'en-US',
-    title: 'Bruce12138\'s BLOG',
-    description: 'The blogs for CS',
+    title: 'Bruce12138',
+    description: '',
     head: [
         ['link', {rel: 'icon', href:'/favicon.ico'}]
     ]

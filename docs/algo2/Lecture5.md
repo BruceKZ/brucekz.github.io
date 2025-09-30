@@ -116,8 +116,8 @@ $$
 那么 ，我们可以由式子的右侧开始
 $$
 \begin{align*}
-因为 &\sum_{i=1}^{n} A_{ji} x_i \geq b_j \qquad\text{(来自于原始LP的限制)}\\
-所以 &\sum_{j=1}^{m} b_j y_j \leq \sum_{j=1}^{m} \sum_{i=1}^{n} A_{ji} x_i y_j \quad\text{(带入)}
+\text{因为} &\sum_{i=1}^{n} A_{ji} x_i \geq b_j \qquad\text{(来自于原始LP的限制)}\\
+\text{所以} &\sum_{j=1}^{m} b_j y_j \leq \sum_{j=1}^{m} \sum_{i=1}^{n} A_{ji} x_i y_j \quad\text{(带入)}
 \end{align*}
 $$
 然后再交换 求和的顺序得到
