@@ -21,6 +21,14 @@ jobs:
         with:
           fetch-depth: 0
 
+      # 缓存本地 PDF，供下次比对
+      - name: Cache Graph Theory Notes
+        uses: actions/cache@v4
+        with:
+          path: |
+            docs/.vuepress/public/notes/Graph Theory Notes.pdf
+          key: graph-theory-notes-v1
+
       - name: Install rclone
         run: |
           curl -fsSL https://rclone.org/install.sh | sudo bash
@@ -32,12 +40,14 @@ jobs:
         env:
           RCLONE_CONF: ${{ secrets.RCLONE_CONF }}
 
-      - name: Pull Graph Theory Notes PDF
+      - name: Pull Graph Theory Notes PDF (auto-detect remote changes)
         run: |
           set -euo pipefail
-          mkdir -p docs/.vuepress/public/notes
-          rclone copy "gd:GoodNotes/Graph Theory/Graph Theory Notes.pdf" docs/.vuepress/public/notes --progress
-          ls -lah docs/.vuepress/public/notes
+          mkdir -p "docs/.vuepress/public/notes"
+          # --update: 仅当源较新时覆盖
+          # --checksum: 通过校验和比较（Drive 支持 MD5），更稳妥
+          rclone copy "gd:GoodNotes/Graph Theory/Graph Theory Notes.pdf" "docs/.vuepress/public/notes" --update --checksum --progress
+          ls -lah "docs/.vuepress/public/notes"
 
       - uses: actions/setup-node@v4
         with:
@@ -49,9 +59,7 @@ jobs:
           corepack prepare yarn@4.9.4 --activate
           yarn -v
 
-      # ★ Yarn Berry 用 --immutable，而不是 --frozen-lockfile
       - run: yarn install --immutable
-
       - run: yarn docs:build
 
       - name: Add CNAME
