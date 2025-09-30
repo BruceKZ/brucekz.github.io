@@ -1,4 +1,4 @@
-# Lecture5
+# Lecture 5
 
 ## 1. 点覆盖
 
