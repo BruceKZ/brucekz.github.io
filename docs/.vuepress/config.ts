@@ -75,4 +75,7 @@ export default defineUserConfig({
     lang: 'en-US',
     title: 'Bruce12138\'s BLOG',
     description: 'The blogs for CS',
+    head: [
+        ['link', {rel: 'icon', href:'/favicon.ico'}]
+    ]
 })
