@@ -94,39 +94,39 @@ $$
 
 **笔者补充证明**
 
-> 在这个定理中，强调了 max 问题的可行解总是不超过 min 问题的可行解。所以在这里我们定义原始 LP 为
->
-> $$
-> \begin{align*}
-> \text{min}\quad & \sum_{i=1}^{n} c_ix_i\\
-> \text{s.t.}\quad
-> & \sum_{i=1}^{n} A_{ji} x_i \geq b_j \quad \forall j = 1,\dots,m,\\
-> & x\geq 0.
-> \end{align*}
-> $$
-> 由该定义，得到对偶 LP 为
-> $$
-> \begin{align*}
-> \text{max}\quad & \sum_{j=1}^{m} b_jy_j\\
-> \text{s.t.}\quad
-> & \sum_{j=1}^{m} A_{ji} y_j \leq c_i \quad \forall i = 1,\dots,n,\\
-> & y\geq 0.
-> \end{align*}
-> $$
-> 那么 ，我们可以由式子的右侧开始
-> $$
-> 因为 &\sum_{i=1}^{n} A_{ji} x_i \geq b_j \qquad\text{(来自于原始LP的限制)}\\
-> 所以 &\sum_{j=1}^{m} b_j y_j \leq \sum_{j=1}^{m} \sum_{i=1}^{n} A_{ji} x_i y_j \quad\text{(带入)}
-> $$
-> 然后再交换 求和的顺序得到
-> $$
-> \sum_{j=1}^{m}\sum_{i=1}^{n}A_{ji}x_iy_j = \sum_{i=1}^{n}\Big(\sum_{j=1}^mA_{ji}y_j\Big)x_i
-> $$
-> 再由对偶 LP 的限制就可以推出
-> $$
-> \sum_{i=1}^{n}\Big(\sum_{j=1}^mA_{ji}y_j\Big)x_i \leq \sum_{i=1}^{n} c_ix_i
-> $$
-> 证毕。也就是用两个LP的限制互相带入得到了这么一个不等式。
+在这个定理中，强调了 max 问题的可行解总是不超过 min 问题的可行解。所以在这里我们定义原始 LP 为
+
+$$
+\begin{align*}
+\text{min}\quad & \sum_{i=1}^{n} c_ix_i\\
+\text{s.t.}\quad
+& \sum_{i=1}^{n} A_{ji} x_i \geq b_j \quad \forall j = 1,\dots,m,\\
+& x\geq 0.
+\end{align*}
+$$
+由该定义，得到对偶 LP 为
+$$
+\begin{align*}
+\text{max}\quad & \sum_{j=1}^{m} b_jy_j\\
+\text{s.t.}\quad
+& \sum_{j=1}^{m} A_{ji} y_j \leq c_i \quad \forall i = 1,\dots,n,\\
+& y\geq 0.
+\end{align*}
+$$
+那么 ，我们可以由式子的右侧开始
+$$
+因为 &\sum_{i=1}^{n} A_{ji} x_i \geq b_j \qquad\text{(来自于原始LP的限制)}\\
+所以 &\sum_{j=1}^{m} b_j y_j \leq \sum_{j=1}^{m} \sum_{i=1}^{n} A_{ji} x_i y_j \quad\text{(带入)}
+$$
+然后再交换 求和的顺序得到
+$$
+\sum_{j=1}^{m}\sum_{i=1}^{n}A_{ji}x_iy_j = \sum_{i=1}^{n}\Big(\sum_{j=1}^mA_{ji}y_j\Big)x_i
+$$
+再由对偶 LP 的限制就可以推出
+$$
+\sum_{i=1}^{n}\Big(\sum_{j=1}^mA_{ji}y_j\Big)x_i \leq \sum_{i=1}^{n} c_ix_i
+$$
+证毕。也就是用两个LP的限制互相带入得到了这么一个不等式。
 
 **定理-强对偶性 strong duality**:
 如果 $x$ 是一个原始最优解， $y$ 是一个对偶最优解，那么
