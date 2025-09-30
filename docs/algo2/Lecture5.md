@@ -19,7 +19,7 @@ $$
 对于二分图，这个点覆盖 LP 的任意极点都是整数。
 
 证明：
-//TODO
+//TODO，考虑假设有非整数的极点，然后推反，不一定对，回头学了再补。
 
 ## 2. 线性规划的对偶性(duality)
 
@@ -84,7 +84,7 @@ $$
 \sum_{i=1}^{n}c_ix_i \geq \sum_{j=1}^{m}b_jy_j
 $$
 
-**证明**： 
+**证明（讲义）**： 
 
 $$
 \sum_{j=1}^{m}b_jy_j \leq \sum_{j=1}^{m}\sum_{i=1}^{n}A_{ji}x_iy_j = \sum_{i=1}^{n}\Big(\sum_{j=1}^mA_{ji}y_j\Big)x_i \leq \sum_{i=1}^{n} c_ix_i
@@ -92,9 +92,44 @@ $$
 
 这个定理告诉我们，每个对偶可行解都是任何原始解的下界。原始 LP 和对偶 LP 的最优解是重合的，从而得到以下定理。
 
+**笔者补充证明**
+
+> 在这个定理中，强调了 max 问题的可行解总是不超过 min 问题的可行解。所以在这里我们定义原始 LP 为
+>
+> $$
+> \begin{align*}
+> \text{min}\quad & \sum_{i=1}^{n} c_ix_i\\
+> \text{s.t.}\quad
+> & \sum_{i=1}^{n} A_{ji} x_i \geq b_j \quad \forall j = 1,\dots,m,\\
+> & x\geq 0.
+> \end{align*}
+> $$
+> 由该定义，得到对偶 LP 为
+> $$
+> \begin{align*}
+> \text{max}\quad & \sum_{j=1}^{m} b_jy_j\\
+> \text{s.t.}\quad
+> & \sum_{j=1}^{m} A_{ji} y_j \leq c_i \quad \forall i = 1,\dots,n,\\
+> & y\geq 0.
+> \end{align*}
+> $$
+> 那么 ，我们可以由式子的右侧开始
+> $$
+> \because &\sum_{i=1}^{n} A_{ji} x_i \geq b_j \qquad\text{(来自于原始LP的限制)}\\
+> \therefore &\sum_{j=1}^{m} b_j y_j \leq \sum_{j=1}^{m} \sum_{i=1}^{n} A_{ji} x_i y_j \quad\text{(带入)}
+> $$
+> 然后再交换 求和的顺序得到
+> $$
+> \sum_{j=1}^{m}\sum_{i=1}^{n}A_{ji}x_iy_j = \sum_{i=1}^{n}\Big(\sum_{j=1}^mA_{ji}y_j\Big)x_i
+> $$
+> 再由对偶 LP 的限制就可以推出
+> $$
+> \sum_{i=1}^{n}\Big(\sum_{j=1}^mA_{ji}y_j\Big)x_i \leq \sum_{i=1}^{n} c_ix_i
+> $$
+> 证毕。也就是用两个LP的限制互相带入得到了这么一个不等式。
+
 **定理-强对偶性 strong duality**:
 如果 $x$ 是一个原始最优解， $y$ 是一个对偶最优解，那么
-
 $$
 \sum_{i=1}^{n}c_ix_i = \sum_{j=1}^{m}b_jy_j
 $$
@@ -140,4 +175,22 @@ $$
 另一个众所周知的对偶性，也是线性规划对偶性的一个特例，是最大流最小割定理 (max-flow=min-cost theorem)。
 
 
+### 互补松弛 
+
+互补松弛：Complementarity Slackness. 强对偶性在原问题和对偶问题的最优解之间提供了一个重要的关系。
+
+**定理**： 设 $x\in \mathbb{R}^n$ 是原问题的一个可行解，$y\in \mathbb{R}^m$ 是对偶问题的一个可行解，那么
+
+$$
+x, y \text{ 都是最优解}
+\iff
+\begin{cases}
+x_i > 0 \;\Rightarrow\; c_i = \sum_{j=1}^m A_{ji} y_j, & \forall i=1,\dots,n, \\[1em]
+y_j > 0 \;\Rightarrow\; b_j = \sum_{i=1}^n A_{ji} x_i, & \forall j=1,\dots,m.
+\end{cases}
+$$
+两个问题的可行解 $x,y$ 同时是最优解的充要条件为：
+
+原始变量 $x_i$ 和它对应的对偶约束 $(A^\top y)_i\geq c_i$ 至少有一侧是取等号的。要么 $x_i=0$ 要么 $c_i = \sum_{j=1}^m A_{ji} y_j$。对于对偶问题那一侧也同理。
+**证明**：// TODO, 考虑由最优解推出互补松弛，再由互补松弛+可行解推出这是最优解。
 
