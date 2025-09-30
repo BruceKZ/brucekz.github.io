@@ -28,6 +28,15 @@ let swent_sidebar = [
     },
 ]
 
+let algo2_sidebar = [
+    {
+        text: 'Algorithm II',
+        children: [
+            '/algo2/Lecture5.md'
+        ],
+    }
+]
+
 export default defineUserConfig({
     bundler: viteBundler(),
     theme: defaultTheme({
@@ -52,6 +61,7 @@ export default defineUserConfig({
         sidebar: {
             '/ml/': ml_sidebar,
             '/swent/': swent_sidebar,
+            '/algo2/': algo2_sidebar
         },
     }),
     plugins: [
