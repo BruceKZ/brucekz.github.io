@@ -1,6 +1,16 @@
-# Algorithn II
+# Contents
 
 This is the notes for EPFL CS-450 Algorithm II.
+
+Syllabus:
+
+- Lecture 1: TODO
+- Lecture 2: TODO
+- Lecture 3: TODO
+- Lecture 4: TODO
+- Lecture 5: TODO
+- Lecture 6: TODO
+- Lecture 7: TODO
 
 Original PDF:
 
