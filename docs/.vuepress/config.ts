@@ -24,6 +24,7 @@ let swent_sidebar = [
             '/swent/README.md',
             '/swent/idea.md',
             '/swent/commit_message.md',
+            '/swent/meeting/01102025.md'
         ],
     },
 ]
