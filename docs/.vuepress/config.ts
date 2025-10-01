@@ -3,6 +3,7 @@ import {defaultTheme} from '@vuepress/theme-default'
 import {defineUserConfig} from 'vuepress'
 import {markdownMathPlugin} from '@vuepress/plugin-markdown-math'
 import {mdEnhancePlugin} from 'vuepress-plugin-md-enhance'
+import {tasklist} from "@mdit/plugin-tasklist";
 
 let ml_sidebar = [
     {
@@ -79,5 +80,8 @@ export default defineUserConfig({
     description: '',
     head: [
         ['link', {rel: 'icon', href:'/favicon.ico'}]
-    ]
+    ],
+    extendsMarkdown: (md) => {
+        md.use(tasklist)
+    }
 })

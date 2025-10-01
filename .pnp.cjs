@@ -28,6 +28,7 @@ const RAW_RUNTIME_STATE =
       [null, {\
         "packageLocation": "./",\
         "packageDependencies": [\
+          ["@mdit/plugin-tasklist", "virtual:1fc6044c0afaef02dcf086d19a0e8b6adbe69a8721eca1cc03640403783e9a84c0db43461b91d7e040df7fc727c632e3681f80080e87719bb5ac3c8a52d05f43#npm:0.22.1"],\
           ["@vuepress/bundler-vite", "npm:2.0.0-rc.25"],\
           ["@vuepress/helper", "virtual:1fc6044c0afaef02dcf086d19a0e8b6adbe69a8721eca1cc03640403783e9a84c0db43461b91d7e040df7fc727c632e3681f80080e87719bb5ac3c8a52d05f43#npm:2.0.0-rc.112"],\
           ["@vuepress/plugin-markdown-math", "virtual:1fc6044c0afaef02dcf086d19a0e8b6adbe69a8721eca1cc03640403783e9a84c0db43461b91d7e040df7fc727c632e3681f80080e87719bb5ac3c8a52d05f43#npm:2.0.0-rc.112"],\
@@ -617,6 +618,27 @@ const RAW_RUNTIME_STATE =
           ["@mdit/plugin-tab", "virtual:6a6def9173c5e68912aafbda01391de031eb4d7ec4d068d0ba1152d9c35fc0edf96df7146f52157805c7065838ef37a9831654ebaf2c922a1ffea9829a830ca8#npm:0.22.2"],\
           ["@types/markdown-it", "npm:14.1.2"],\
           ["markdown-it", null]\
+        ],\
+        "packagePeers": [\
+          "markdown-it"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@mdit/plugin-tasklist", [\
+      ["npm:0.22.1", {\
+        "packageLocation": "../../../.yarn/berry/cache/@mdit-plugin-tasklist-npm-0.22.1-986f81d55a-10c0.zip/node_modules/@mdit/plugin-tasklist/",\
+        "packageDependencies": [\
+          ["@mdit/plugin-tasklist", "npm:0.22.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:1fc6044c0afaef02dcf086d19a0e8b6adbe69a8721eca1cc03640403783e9a84c0db43461b91d7e040df7fc727c632e3681f80080e87719bb5ac3c8a52d05f43#npm:0.22.1", {\
+        "packageLocation": "./.yarn/__virtual__/@mdit-plugin-tasklist-virtual-66a4798af4/4/.yarn/berry/cache/@mdit-plugin-tasklist-npm-0.22.1-986f81d55a-10c0.zip/node_modules/@mdit/plugin-tasklist/",\
+        "packageDependencies": [\
+          ["@mdit/plugin-tasklist", "virtual:1fc6044c0afaef02dcf086d19a0e8b6adbe69a8721eca1cc03640403783e9a84c0db43461b91d7e040df7fc727c632e3681f80080e87719bb5ac3c8a52d05f43#npm:0.22.1"],\
+          ["@types/markdown-it", "npm:14.1.2"],\
+          ["markdown-it", "npm:14.1.0"]\
         ],\
         "packagePeers": [\
           "markdown-it"\
@@ -5163,6 +5185,7 @@ const RAW_RUNTIME_STATE =
       ["workspace:.", {\
         "packageLocation": "./",\
         "packageDependencies": [\
+          ["@mdit/plugin-tasklist", "virtual:1fc6044c0afaef02dcf086d19a0e8b6adbe69a8721eca1cc03640403783e9a84c0db43461b91d7e040df7fc727c632e3681f80080e87719bb5ac3c8a52d05f43#npm:0.22.1"],\
           ["@vuepress/bundler-vite", "npm:2.0.0-rc.25"],\
           ["@vuepress/helper", "virtual:1fc6044c0afaef02dcf086d19a0e8b6adbe69a8721eca1cc03640403783e9a84c0db43461b91d7e040df7fc727c632e3681f80080e87719bb5ac3c8a52d05f43#npm:2.0.0-rc.112"],\
           ["@vuepress/plugin-markdown-math", "virtual:1fc6044c0afaef02dcf086d19a0e8b6adbe69a8721eca1cc03640403783e9a84c0db43461b91d7e040df7fc727c632e3681f80080e87719bb5ac3c8a52d05f43#npm:2.0.0-rc.112"],\

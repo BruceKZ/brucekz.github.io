@@ -455,6 +455,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mdit/plugin-tasklist@npm:^0.22.1":
+  version: 0.22.1
+  resolution: "@mdit/plugin-tasklist@npm:0.22.1"
+  dependencies:
+    "@types/markdown-it": "npm:^14.1.2"
+  peerDependencies:
+    markdown-it: ^14.1.0
+  peerDependenciesMeta:
+    markdown-it:
+      optional: true
+  checksum: 10c0/a96ff15525e19d96d8ad4477e903c55ea5393f6d8f62dbb1d5166463c06b3deebab824d50410229ffbe0a31f03a72c05d95e99791baef9d3601108e39e7f817d
+  languageName: node
+  linkType: hard
+
 "@mdit/plugin-tex@npm:0.22.1":
   version: 0.22.1
   resolution: "@mdit/plugin-tex@npm:0.22.1"
@@ -4336,6 +4350,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "vuepress@workspace:."
   dependencies:
+    "@mdit/plugin-tasklist": "npm:^0.22.1"
     "@vuepress/bundler-vite": "npm:^2.0.0-rc.24"
     "@vuepress/helper": "npm:^2.0.0-rc.112"
     "@vuepress/plugin-markdown-math": "npm:^2.0.0-rc.112"

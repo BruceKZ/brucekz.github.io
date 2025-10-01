@@ -5,6 +5,7 @@
     "author": "Zhixiang Dai <hnhnuh@126.com>",
     "license": "MIT",
     "devDependencies": {
+        "@mdit/plugin-tasklist": "^0.22.1",
         "@vuepress/bundler-vite": "^2.0.0-rc.24",
         "@vuepress/helper": "^2.0.0-rc.112",
         "@vuepress/theme-default": "^2.0.0-rc.112",
