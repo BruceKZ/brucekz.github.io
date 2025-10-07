@@ -21,3 +21,4 @@ Original PDF:
 - [Lecture5.pdf](https://blog.daiz.cc/pdf/algo2/Lecture5.pdf)
 - [Lecture6.pdf](https://blog.daiz.cc/pdf/algo2/Lecture6.pdf)
 - [Lecture7.pdf](https://blog.daiz.cc/pdf/algo2/Lecture7.pdf)
+- [Lecture8.pdf](https://blog.daiz.cc/pdf/algo2/Lecture8.pdf)

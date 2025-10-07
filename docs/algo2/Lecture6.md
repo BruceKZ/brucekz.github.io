@@ -118,6 +118,32 @@ $$
 \end{align*}
 $$
 
+在这种简化方式下，互补松弛告诉我们，如果 $x,(u,v))$ 是可行的，那么他们当且仅当下式成立的时候最优。
+$$
+\begin{align}
+x_e>0 &\Rightarrow u_a+v_b = c(e) &&\forall e=(a,b)\in E,\\
+u_a\neq 0 &\Rightarrow \sum_{b\in B:(a,b)\in E} x_{ab} = 1 &&\forall a\in A,\\
+v_b\neq 0 &\Rightarrow \sum_{a\in A:(a,b)\in E} x_{ab} = 1 &&\forall b\in B
+\end{align}
+$$
+最后，我们发现后两个等式总是成立，因为他们直接源于 $x$ 是原始可行的事实（回顾原始的线性规划，我们的表达形式恰为这样的等式）。因此，我们总结以上内容
+
+**引理**
+
+一个完美匹配 $M$ 的成本是最小的，当且仅当存在一个可行的对偶解 $u,v$ 使得
+$$
+u_a+v_b=c(e)\qquad \forall e\in(a,b)\in M.
+$$
+
+
+## 匈牙利算法
+
+
+
+
+
+
+
 /
 
 /
