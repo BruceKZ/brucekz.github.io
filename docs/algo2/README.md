@@ -3,14 +3,21 @@
 This is the notes for EPFL CS-450 Algorithm II.
 
 Syllabus:
+TBD
 
-- Lecture 1: TODO
-- Lecture 2: TODO
-- Lecture 3: TODO
-- Lecture 4: TODO
-- Lecture 5: TODO
-- Lecture 6: TODO
-- Lecture 7: TODO
+[//]: # (- Lecture 1: TODO)
+
+[//]: # (- Lecture 2: TODO)
+
+[//]: # (- Lecture 3: TODO)
+
+[//]: # (- Lecture 4: TODO)
+
+[//]: # (- Lecture 5: TODO)
+
+[//]: # (- Lecture 6: TODO)
+
+[//]: # (- Lecture 7: TODO)
 
 Original PDF:
 
@@ -34,3 +41,4 @@ Original PDF:
 - [Lecture18.pdf](https://blog.daiz.cc/pdf/algo2/Lecture18.pdf)
 - [Lecture19-20.pdf](https://blog.daiz.cc/pdf/algo2/Lecture19-20.pdf)
 - [Lecture20b.pdf](https://blog.daiz.cc/pdf/algo2/Lecture20b.pdf)
+- [Lecture21.pdf](https://blog.daiz.cc/pdf/algo2/Lecture21.pdf)
