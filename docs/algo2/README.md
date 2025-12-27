@@ -42,3 +42,8 @@ Original PDF:
 - [Lecture19-20.pdf](https://blog.daiz.cc/pdf/algo2/Lecture19-20.pdf)
 - [Lecture20b.pdf](https://blog.daiz.cc/pdf/algo2/Lecture20b.pdf)
 - [Lecture21.pdf](https://blog.daiz.cc/pdf/algo2/Lecture21.pdf)
+- [Lecture21-22.pdf](https://blog.daiz.cc/pdf/algo2/Lecture21-22.pdf)
+- [Lecture23.pdf](https://blog.daiz.cc/pdf/algo2/Lecture23.pdf)
+- [Lecture24.pdf](https://blog.daiz.cc/pdf/algo2/Lecture24.pdf)
+- [Lecture25.pdf](https://blog.daiz.cc/pdf/algo2/Lecture25.pdf)
+- [Lecture26.pdf](https://blog.daiz.cc/pdf/algo2/Lecture26.pdf)
