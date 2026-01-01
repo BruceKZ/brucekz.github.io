@@ -1,6 +1,8 @@
 # Contents
 
+::: info
 This is the notes for EPFL CS-450 Algorithm II.
+:::
 
 Syllabus:
 TBD
