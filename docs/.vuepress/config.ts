@@ -73,7 +73,9 @@ export default defineUserConfig({
         markdownMathPlugin({
             type: 'katex',
         }),
-        mdEnhancePlugin({}),
+        mdEnhancePlugin({
+            hint: true,
+        }),
     ],
     lang: 'en-US',
     title: 'Bruce12138',

@@ -19,7 +19,7 @@ TBD
 
 [//]: # (- Lecture 7: TODO)
 
-:::Original PDF:
+::: details Original PDF
 
 - [Lecture1.pdf](https://blog.daiz.cc/pdf/algo2/Lecture1.pdf)
 - [Lecture2.pdf](https://blog.daiz.cc/pdf/algo2/Lecture2.pdf)
