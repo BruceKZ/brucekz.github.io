@@ -17,28 +17,29 @@ let ml_sidebar = [
     },
 ]
 
-
-let swent_sidebar = [
-    {
-        text: 'Software Enterprise',
-        children: [
-            '/swent/README.md',
-            '/swent/idea.md',
-            '/swent/commit_message.md',
-            '/swent/meeting/01102025.md'
-        ],
-    },
-]
-
 let algo2_sidebar = [
     {
         text: 'Algorithm II',
         children: [
             '/algo2/README.md',
-            '/algo2/Lecture_Notes.md',
-            '/algo2/Lecture5.md',
-            '/algo2/Lecture6.md',
-            '/algo2/Lecture7.md'
+            {
+                text: 'Notes',
+                collapsible: true,
+                children: [
+                    '/algo2/Lecture5.md',
+                    '/algo2/Lecture6.md',
+                    '/algo2/Lecture7.md'
+                ]
+            },
+            {
+                text: 'PDFs',
+                collapsible: true,
+                children: [
+                    '/algo2/Lecture_Notes.md',
+                    '/algo2/Exercises.md',
+                    '/algo2/Exams.md'
+                ]
+            }
         ],
     }
 ]
@@ -52,10 +53,6 @@ export default defineUserConfig({
                 link: '/ml/',
             },
             {
-                text: 'Software Enterprise',
-                link: '/swent/',
-            },
-            {
                 text: 'Graph Theory',
                 link: '/gt/',
             },
@@ -66,7 +63,6 @@ export default defineUserConfig({
         ],
         sidebar: {
             '/ml/': ml_sidebar,
-            '/swent/': swent_sidebar,
             '/algo2/': algo2_sidebar
         },
     }),
@@ -75,7 +71,6 @@ export default defineUserConfig({
             type: 'katex',
         }),
         mdEnhancePlugin({
-            hint: true,
         }),
     ],
     lang: 'en-US',

@@ -1,3 +1,16 @@
 import comp from "/Users/bruce12138/Projects/blogs/vuepress/docs/.vuepress/.temp/pages/swent/index.html.vue"
 const data = JSON.parse("{\"path\":\"/swent/\",\"title\":\"\",\"lang\":\"en-US\",\"frontmatter\":{},\"git\":{\"updatedTime\":1758137349000,\"contributors\":[{\"name\":\"Zhixiang Dai\",\"username\":\"\",\"email\":\"hnhnuh@126.com\",\"commits\":2}],\"changelog\":[{\"hash\":\"f41b6f14149475a3b3c647540ce794c929c43b93\",\"time\":1758137349000,\"email\":\"hnhnuh@126.com\",\"author\":\"Zhixiang Dai\",\"message\":\"Update at 2025-09-17 21:29:09\"},{\"hash\":\"1dbd6ab40500028b3dc9142ea9f0666b397567c7\",\"time\":1758099839000,\"email\":\"hnhnuh@126.com\",\"author\":\"Zhixiang Dai\",\"message\":\"init\"}]},\"filePathRelative\":\"swent/README.md\"}")
 export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}

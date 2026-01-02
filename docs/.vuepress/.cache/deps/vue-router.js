@@ -16,9 +16,9 @@ import {
   unref,
   watch,
   watchEffect
-} from "./chunk-7XPGAGRY.js";
+} from "./chunk-YOD7HHYU.js";
 
-// node_modules/vue-router/node_modules/@vue/devtools-api/lib/esm/env.js
+// ../../../.yarn/berry/cache/@vue-devtools-api-npm-6.6.4-495c1fc100-10c0.zip/node_modules/@vue/devtools-api/lib/esm/env.js
 function getDevtoolsGlobalHook() {
   return getTarget().__VUE_DEVTOOLS_GLOBAL_HOOK__;
 }
@@ -27,11 +27,11 @@ function getTarget() {
 }
 var isProxyAvailable = typeof Proxy === "function";
 
-// node_modules/vue-router/node_modules/@vue/devtools-api/lib/esm/const.js
+// ../../../.yarn/berry/cache/@vue-devtools-api-npm-6.6.4-495c1fc100-10c0.zip/node_modules/@vue/devtools-api/lib/esm/const.js
 var HOOK_SETUP = "devtools-plugin:setup";
 var HOOK_PLUGIN_SETTINGS_SET = "plugin:settings:set";
 
-// node_modules/vue-router/node_modules/@vue/devtools-api/lib/esm/time.js
+// ../../../.yarn/berry/cache/@vue-devtools-api-npm-6.6.4-495c1fc100-10c0.zip/node_modules/@vue/devtools-api/lib/esm/time.js
 var supported;
 var perf;
 function isPerformanceSupported() {
@@ -54,7 +54,7 @@ function now() {
   return isPerformanceSupported() ? perf.now() : Date.now();
 }
 
-// node_modules/vue-router/node_modules/@vue/devtools-api/lib/esm/proxy.js
+// ../../../.yarn/berry/cache/@vue-devtools-api-npm-6.6.4-495c1fc100-10c0.zip/node_modules/@vue/devtools-api/lib/esm/proxy.js
 var ApiProxy = class {
   constructor(plugin, hook) {
     this.target = null;
@@ -154,7 +154,7 @@ var ApiProxy = class {
   }
 };
 
-// node_modules/vue-router/node_modules/@vue/devtools-api/lib/esm/index.js
+// ../../../.yarn/berry/cache/@vue-devtools-api-npm-6.6.4-495c1fc100-10c0.zip/node_modules/@vue/devtools-api/lib/esm/index.js
 function setupDevtoolsPlugin(pluginDescriptor, setupFn) {
   const descriptor = pluginDescriptor;
   const target = getTarget();
@@ -176,7 +176,7 @@ function setupDevtoolsPlugin(pluginDescriptor, setupFn) {
   }
 }
 
-// node_modules/vue-router/dist/vue-router.mjs
+// .yarn/__virtual__/vue-router-virtual-b08d322565/4/.yarn/berry/cache/vue-router-npm-4.5.1-e1e2c95bb4-10c0.zip/node_modules/vue-router/dist/vue-router.mjs
 var isBrowser = typeof document !== "undefined";
 function isRouteComponent(component) {
   return typeof component === "object" || "displayName" in component || "props" in component || "__vccOpts" in component;

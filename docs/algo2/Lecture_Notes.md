@@ -1,3 +1,5 @@
+# Lecture Notes
+
 ::: info
 This is the lecture notes for EPFL CS-450 Algorithm II.
 :::

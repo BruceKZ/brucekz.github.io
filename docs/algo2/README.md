@@ -1,19 +1,21 @@
 # Algorithm II
 
 ::: info
-EPFL CS-450 Algorithm II 课程资料
+EPFL CS-450 Algorithm II Course Materials
 :::
 
-## 个人笔记
+## PDFs
 
-- [Lecture 5](/algo2/Lecture5.md) - 点覆盖、线性规划对偶性
-- [Lecture 6](/algo2/Lecture6.md) - 最小费用完美匹配、匈牙利算法
+Course materials:
+
+- [Lecture Notes](/algo2/Lecture_Notes.md) - Lecture PDFs (Lecture 1-26)
+- [Exercises](/algo2/Exercises.md) - Exercise PDFs (Exercise 1-5 with solutions)
+- [Exams](/algo2/Exams.md) - Exam materials
+
+## Notes
+
+Personal lecture notes:
+
+- [Lecture 5](/algo2/Lecture5.md) - Vertex Cover, LP Duality
+- [Lecture 6](/algo2/Lecture6.md) - Min-Cost Perfect Matching, Hungarian Algorithm
 - [Lecture 7](/algo2/Lecture7.md)
-
-## 课程讲义
-
-::: details 查看所有课程讲义 PDF
-
-[Lecture Notes](/algo2/Lecture_Notes.md) - 包含 Lecture 1-26 的官方讲义 PDF 链接
-
-:::
