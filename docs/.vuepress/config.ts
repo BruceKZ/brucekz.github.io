@@ -71,6 +71,7 @@ export default defineUserConfig({
             type: 'katex',
         }),
         mdEnhancePlugin({
+            attrs: true,
         }),
     ],
     lang: 'en-US',
