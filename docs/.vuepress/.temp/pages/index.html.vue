@@ -1,4 +1,7 @@
-<template><div><h1 id="never-regret-the-choices-you-make" tabindex="-1"><a class="header-anchor" href="#never-regret-the-choices-you-make"><span>Never regret the choices you make.</span></a></h1>
+<template><div><h1 id="home" tabindex="-1"><a class="header-anchor" href="#home"><span>Home</span></a></h1>
+<blockquote>
+<p>Never regret the choices you make.</p>
+</blockquote>
 <p>Category:</p>
 <ul>
 <li><RouteLink to="/ml/">Machine Learning</RouteLink></li>

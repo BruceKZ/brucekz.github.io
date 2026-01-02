@@ -1,14 +1,1 @@
-export const themeData = JSON.parse("{\"navbar\":[{\"text\":\"Machine Learning\",\"link\":\"/ml/\"},{\"text\":\"Software Enterprise\",\"link\":\"/swent/\"},{\"text\":\"Graph Theory\",\"link\":\"/gt/\"},{\"text\":\"Algorithm II\",\"link\":\"/algo2/\"}],\"sidebar\":{\"/ml/\":[{\"text\":\"Machine Learning\",\"children\":[\"/ml/README.md\",\"/ml/regression.md\"]}],\"/swent/\":[{\"text\":\"Software Enterprise\",\"children\":[\"/swent/README.md\",\"/swent/Dog Community App Ideabook.md\"]}]},\"locales\":{\"/\":{\"selectLanguageName\":\"English\"}},\"colorMode\":\"auto\",\"colorModeSwitch\":true,\"logo\":null,\"repo\":null,\"selectLanguageText\":\"Languages\",\"selectLanguageAriaLabel\":\"Select language\",\"sidebarDepth\":2,\"editLink\":true,\"editLinkText\":\"Edit this page\",\"lastUpdated\":true,\"contributors\":true,\"contributorsText\":\"Contributors\",\"notFound\":[\"There's nothing here.\",\"How did we get here?\",\"That's a Four-Oh-Four.\",\"Looks like we've got some broken links.\"],\"backToHome\":\"Take me home\",\"openInNewWindow\":\"open in new window\",\"toggleColorMode\":\"toggle color mode\",\"toggleSidebar\":\"toggle sidebar\"}")
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updateThemeData) {
-    __VUE_HMR_RUNTIME__.updateThemeData(themeData)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ themeData }) => {
-    __VUE_HMR_RUNTIME__.updateThemeData(themeData)
-  })
-}
+export const themeData = JSON.parse("{\"navbar\":[{\"text\":\"Machine Learning\",\"link\":\"/ml/\"},{\"text\":\"Software Enterprise\",\"link\":\"/swent/\"},{\"text\":\"Graph Theory\",\"link\":\"/gt/\"},{\"text\":\"Algorithm II\",\"link\":\"/algo2/\"}],\"sidebar\":{\"/ml/\":[{\"text\":\"Machine Learning\",\"children\":[\"/ml/README.md\",\"/ml/regression.md\",\"/ml/linear_regression.md\",\"/ml/loss_functions.md\"]}],\"/swent/\":[{\"text\":\"Software Enterprise\",\"children\":[\"/swent/README.md\",\"/swent/idea.md\",\"/swent/commit_message.md\",\"/swent/meeting/01102025.md\"]}],\"/algo2/\":[{\"text\":\"Algorithm II\",\"children\":[\"/algo2/README.md\",\"/algo2/Lecture_Notes.md\",\"/algo2/Lecture5.md\",\"/algo2/Lecture6.md\",\"/algo2/Lecture7.md\"]}]},\"locales\":{\"/\":{\"selectLanguageName\":\"English\"}},\"colorMode\":\"auto\",\"colorModeSwitch\":true,\"logo\":null,\"repo\":null,\"selectLanguageText\":\"Languages\",\"selectLanguageAriaLabel\":\"Select language\",\"sidebarDepth\":2,\"editLink\":true,\"editLinkText\":\"Edit this page\",\"lastUpdated\":true,\"contributors\":true,\"contributorsText\":\"Contributors\",\"notFound\":[\"There's nothing here.\",\"How did we get here?\",\"That's a Four-Oh-Four.\",\"Looks like we've got some broken links.\"],\"backToHome\":\"Take me home\",\"openInNewWindow\":\"open in new window\",\"toggleColorMode\":\"toggle color mode\",\"toggleSidebar\":\"toggle sidebar\"}")

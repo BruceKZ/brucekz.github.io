@@ -35,6 +35,7 @@ let algo2_sidebar = [
         text: 'Algorithm II',
         children: [
             '/algo2/README.md',
+            '/algo2/Lecture_Notes.md',
             '/algo2/Lecture5.md',
             '/algo2/Lecture6.md',
             '/algo2/Lecture7.md'

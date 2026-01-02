@@ -1,2 +1,2 @@
-import "/Users/bruce12138/Projects/blogs/vuepress/node_modules/katex/dist/katex.min.css";
-import "/Users/bruce12138/Projects/blogs/vuepress/node_modules/@vuepress/plugin-markdown-math/lib/client/styles/katex.css";
+import "/Users/bruce12138/.yarn/berry/cache/katex-npm-0.16.22-6546b0e2ce-10c0.zip/node_modules/katex/dist/katex.min.css";
+import "/Users/bruce12138/Projects/blogs/vuepress/.yarn/__virtual__/@vuepress-plugin-markdown-math-virtual-5aa97290a4/4/.yarn/berry/cache/@vuepress-plugin-markdown-math-npm-2.0.0-rc.112-3d6fc80b5d-10c0.zip/node_modules/@vuepress/plugin-markdown-math/lib/client/styles/katex.css";

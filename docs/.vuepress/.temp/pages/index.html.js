@@ -1,16 +1,3 @@
 import comp from "/Users/bruce12138/Projects/blogs/vuepress/docs/.vuepress/.temp/pages/index.html.vue"
-const data = JSON.parse("{\"path\":\"/\",\"title\":\"Never regret the choices you make.\",\"lang\":\"en-US\",\"frontmatter\":{},\"git\":{},\"filePathRelative\":\"README.md\"}")
+const data = JSON.parse("{\"path\":\"/\",\"title\":\"Home\",\"lang\":\"en-US\",\"frontmatter\":{},\"git\":{\"updatedTime\":1759241347000,\"contributors\":[{\"name\":\"Zhixiang Dai\",\"username\":\"\",\"email\":\"hnhnuh@126.com\",\"commits\":2}],\"changelog\":[{\"hash\":\"65ab99a6c74dd9c3232742f937ab409b838bbb35\",\"time\":1759241347000,\"email\":\"hnhnuh@126.com\",\"author\":\"Zhixiang Dai\",\"message\":\"Update at 2025-09-30 16:09:07\"},{\"hash\":\"1dbd6ab40500028b3dc9142ea9f0666b397567c7\",\"time\":1758099839000,\"email\":\"hnhnuh@126.com\",\"author\":\"Zhixiang Dai\",\"message\":\"init\"}]},\"filePathRelative\":\"README.md\"}")
 export { comp, data }
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updatePageData) {
-    __VUE_HMR_RUNTIME__.updatePageData(data)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ data }) => {
-    __VUE_HMR_RUNTIME__.updatePageData(data)
-  })
-}
