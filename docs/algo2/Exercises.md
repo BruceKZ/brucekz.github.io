@@ -4,38 +4,27 @@
 EPFL CS-450 Algorithm II Course Exercises
 :::
 
-## Exercise 1
+## Exercises
 
 ::: details PDF Downloads
-- Exercise 1: *To be added*
-- Solution 1: *To be added*
+- **Exercise 1**: [Questions](/pdf/algo2/Exercises1.pdf) | [Solutions](/pdf/algo2/Exercises1-sol.pdf)
+- **Exercise 2**: [Questions](/pdf/algo2/Exercises2.pdf) | [Solutions](/pdf/algo2/Exercises2-sol.pdf)
+- **Exercise 3**: [Questions](/pdf/algo2/Exercises3.pdf) | [Solutions](/pdf/algo2/Exercises3-sol.pdf)
+- **Exercise 4**: [Questions](/pdf/algo2/Exercises4.pdf) | [Solutions](/pdf/algo2/Exercises4-sol.pdf)
+- **Exercise 5**: [Questions](/pdf/algo2/Exercises5.pdf) | [Solutions](/pdf/algo2/Exercises5-sol.pdf)
+- **Exercise 6**: [Questions](/pdf/algo2/Exercises6.pdf) | [Solutions](/pdf/algo2/Exercises6-sol.pdf)
+- **Exercise 7**: [Questions](/pdf/algo2/Exercises7.pdf) | [Solutions](/pdf/algo2/Exercises7-sol.pdf)
+- **Exercise 8**: [Questions](/pdf/algo2/Exercises8.pdf) | [Solutions](/pdf/algo2/Exercises8-sol.pdf)
+- **Exercise 9**: [Questions](/pdf/algo2/Exercises9.pdf) | [Solutions](/pdf/algo2/Exercises9-sol.pdf)
+- **Exercise 10**: [Questions](/pdf/algo2/Exercises10.pdf) | [Solutions](/pdf/algo2/Exercises10-sol.pdf)
+- **Exercise 11**: [Questions](/pdf/algo2/Exercises11.pdf) | [Solutions](/pdf/algo2/Exercises11-sol.pdf)
+- **Exercise 12**: [Questions](/pdf/algo2/Exercises12.pdf) | [Solutions](/pdf/algo2/Exercises12-sol.pdf)
+- **Exercise 13**: [Questions](/pdf/algo2/Exercises13.pdf) | [Solutions](/pdf/algo2/Exercises13-sol.pdf)
 :::
 
-## Exercise 2
+## Problem Sets
 
 ::: details PDF Downloads
-- Exercise 2: *To be added*
-- Solution 2: *To be added*
+- **Problem Set 1**: [Questions](/pdf/algo2/ProblemSet1.pdf) | [Solutions](/pdf/algo2/ProblemSet1-sol.pdf)
+- **Problem Set 2**: [Questions](/pdf/algo2/ProblemSet2.pdf)
 :::
-
-## Exercise 3
-
-::: details PDF Downloads
-- Exercise 3: *To be added*
-- Solution 3: *To be added*
-:::
-
-## Exercise 4
-
-::: details PDF Downloads
-- Exercise 4: *To be added*
-- Solution 4: *To be added*
-:::
-
-## Exercise 5
-
-::: details PDF Downloads
-- Exercise 5: *To be added*
-- Solution 5: *To be added*
-:::
-

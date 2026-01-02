@@ -9,7 +9,7 @@ EPFL CS-450 Algorithm II Course Materials
 Course materials:
 
 - [Lecture Notes](/algo2/Lecture_Notes.md) - Lecture PDFs (Lecture 1-26)
-- [Exercises](/algo2/Exercises.md) - Exercise PDFs (Exercise 1-5 with solutions)
+- [Exercises](/algo2/Exercises.md) - Exercise PDFs (Exercise 1-13 with solutions)
 - [Exams](/algo2/Exams.md) - Exam materials
 
 ## Notes
