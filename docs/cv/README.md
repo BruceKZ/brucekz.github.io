@@ -2,6 +2,7 @@
 title: CV Generator
 sidebar: false
 layout: Layout
+pageClass: full-width-page
 ---
 
 <ClientOnly>
