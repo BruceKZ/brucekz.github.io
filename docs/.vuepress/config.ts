@@ -59,6 +59,10 @@ export default defineUserConfig({
             {
                 text: 'Algorithm II',
                 link: '/algo2/',
+            },
+            {
+                text: 'CV',
+                link: '/cv/',
             }
         ],
         sidebar: {
