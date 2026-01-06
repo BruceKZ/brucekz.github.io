@@ -63,7 +63,7 @@ jobs:
       - run: yarn docs:build
 
       - name: Add CNAME
-        run: echo 'blog.daiz.cc' > docs/.vuepress/dist/CNAME
+        run: echo 'www.bruce12138.com' > docs/.vuepress/dist/CNAME
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
