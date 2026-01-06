@@ -2,10 +2,10 @@
 
 ## 回顾
 
-- [LP 的对偶性](https://www.bruce12138.com/algo2/Lecture5.html#_2-%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92%E7%9A%84%E5%AF%B9%E5%81%B6%E6%80%A7-duality)
-- [Weak Duality](https://www.bruce12138.com/algo2/Lecture5.html#%E5%AF%B9%E5%81%B6%E6%80%A7%E5%AE%9A%E7%90%86)
-- [String Duality](https://www.bruce12138.com/algo2/Lecture5.html#%E5%AF%B9%E5%81%B6%E6%80%A7%E5%AE%9A%E7%90%86)
-- [Complementarity slackness](https://www.bruce12138.com/algo2/Lecture5.html#%E4%BA%92%E8%A1%A5%E6%9D%BE%E5%BC%9B)
+- [LP 的对偶性](https://blog.bruce12138.com/algo2/Lecture5.html#_2-%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92%E7%9A%84%E5%AF%B9%E5%81%B6%E6%80%A7-duality)
+- [Weak Duality](https://blog.bruce12138.com/algo2/Lecture5.html#%E5%AF%B9%E5%81%B6%E6%80%A7%E5%AE%9A%E7%90%86)
+- [String Duality](https://blog.bruce12138.com/algo2/Lecture5.html#%E5%AF%B9%E5%81%B6%E6%80%A7%E5%AE%9A%E7%90%86)
+- [Complementarity slackness](https://blog.bruce12138.com/algo2/Lecture5.html#%E4%BA%92%E8%A1%A5%E6%9D%BE%E5%BC%9B)
 
 ## 最小费用完美匹配的对偶性与互补松弛性
 
