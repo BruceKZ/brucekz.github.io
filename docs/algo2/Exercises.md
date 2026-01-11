@@ -26,5 +26,5 @@ EPFL CS-450 Algorithm II Course Exercises
 
 ::: details PDF Downloads
 - **Problem Set 1**: [Questions](https://blog.bruce12138.com/pdf/algo2/ProblemSet1.pdf) | [Solutions](https://blog.bruce12138.com/pdf/algo2/ProblemSet1-sol.pdf)
-- **Problem Set 2**: [Questions](https://blog.bruce12138.com/pdf/algo2/ProblemSet2.pdf) | Solutions
+- **Problem Set 2**: [Questions](https://blog.bruce12138.com/pdf/algo2/ProblemSet2.pdf) | [Solutions](https://blog.bruce12138.com/pdf/algo2/ProblemSet2-sol.pdf)
 :::
