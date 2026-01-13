@@ -13,6 +13,7 @@ let ml_sidebar = [
             '/ml/regression.md',
             '/ml/linear_regression.md',
             '/ml/loss_functions.md',
+            '/ml/Exams.md',
         ],
     },
 ]
