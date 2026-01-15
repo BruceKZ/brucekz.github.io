@@ -26,3 +26,12 @@ EPFL CS-433 Machine Learning Exam Materials
 - **2015**: [Exam](https://blog.bruce12138.com/pdf/ml/mock-midterm-exam/mock-exam-2015.pdf) | [Solution](https://blog.bruce12138.com/pdf/ml/mock-midterm-exam/mock-exam-2015-solutions.pdf)
 - **2014**: [Exam](https://blog.bruce12138.com/pdf/ml/mock-midterm-exam/mock-exam-2014.pdf) | [Solution](https://blog.bruce12138.com/pdf/ml/mock-midterm-exam/mock-exam-2014-solutions.pdf)
 :::
+
+## Cheatsheets
+
+::: details PDF Downloads
+- [ML Cheatsheet 1](https://blog.bruce12138.com/pdf/ml/ml_cheatsheet.pdf)
+- [ML Cheatsheet 2](https://blog.bruce12138.com/pdf/ml/ml_cheatsheet_2.pdf)
+- [ML Cheatsheet Arthur](https://blog.bruce12138.com/pdf/ml/ml_cheatsheet_arthur.pdf)
+:::
+
