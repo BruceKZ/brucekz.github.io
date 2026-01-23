@@ -45,6 +45,16 @@ let algo2_sidebar = [
     }
 ]
 
+let gt_sidebar = [
+    {
+        text: 'Graph Theory',
+        children: [
+            '/gt/README.md',
+            '/gt/EPFL_Graph_Theory.md',
+        ],
+    },
+]
+
 export default defineUserConfig({
     bundler: viteBundler(),
     theme: defaultTheme({
@@ -68,7 +78,8 @@ export default defineUserConfig({
         ],
         sidebar: {
             '/ml/': ml_sidebar,
-            '/algo2/': algo2_sidebar
+            '/algo2/': algo2_sidebar,
+            '/gt/': gt_sidebar,
         },
     }),
     plugins: [
