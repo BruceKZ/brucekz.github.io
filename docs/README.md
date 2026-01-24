@@ -4,6 +4,7 @@
 
 ## Categories
 
-- [Machine Learning](/ml/)
+- [Courses](/courses/)
+  - [Machine Learning](/courses/ml/)
+  - [Algorithm II](/courses/algo2/)
 - [Graph Theory](/gt/)
-- [Algorithm II](/algo2/)

@@ -1,19 +1,19 @@
-import {viteBundler} from '@vuepress/bundler-vite'
-import {defaultTheme} from '@vuepress/theme-default'
-import {defineUserConfig} from 'vuepress'
-import {markdownMathPlugin} from '@vuepress/plugin-markdown-math'
-import {mdEnhancePlugin} from 'vuepress-plugin-md-enhance'
-import {tasklist} from "@mdit/plugin-tasklist";
+import { viteBundler } from '@vuepress/bundler-vite'
+import { defaultTheme } from '@vuepress/theme-default'
+import { defineUserConfig } from 'vuepress'
+import { markdownMathPlugin } from '@vuepress/plugin-markdown-math'
+import { mdEnhancePlugin } from 'vuepress-plugin-md-enhance'
+import { tasklist } from "@mdit/plugin-tasklist";
 
 let ml_sidebar = [
     {
         text: 'Machine Learning',
         children: [
-            '/ml/README.md',
-            '/ml/regression.md',
-            '/ml/linear_regression.md',
-            '/ml/loss_functions.md',
-            '/ml/Exams.md',
+            '/courses/ml/README.md',
+            '/courses/ml/regression.md',
+            '/courses/ml/linear_regression.md',
+            '/courses/ml/loss_functions.md',
+            '/courses/ml/Exams.md',
         ],
     },
 ]
@@ -22,23 +22,23 @@ let algo2_sidebar = [
     {
         text: 'Algorithm II',
         children: [
-            '/algo2/README.md',
+            '/courses/algo2/README.md',
             {
                 text: 'Notes',
                 collapsible: true,
                 children: [
-                    '/algo2/Lecture5.md',
-                    '/algo2/Lecture6.md',
-                    '/algo2/Lecture7.md'
+                    '/courses/algo2/Lecture5.md',
+                    '/courses/algo2/Lecture6.md',
+                    '/courses/algo2/Lecture7.md'
                 ]
             },
             {
                 text: 'PDFs',
                 collapsible: true,
                 children: [
-                    '/algo2/Lecture_Notes.md',
-                    '/algo2/Exercises.md',
-                    '/algo2/Exams.md'
+                    '/courses/algo2/Lecture_Notes.md',
+                    '/courses/algo2/Exercises.md',
+                    '/courses/algo2/Exams.md'
                 ]
             }
         ],
@@ -60,22 +60,26 @@ export default defineUserConfig({
     theme: defaultTheme({
         navbar: [
             {
-                text: 'Machine Learning',
-                link: '/ml/',
+                text: 'Courses',
+                children: [
+                    {
+                        text: 'Machine Learning',
+                        link: '/courses/ml/',
+                    },
+                    {
+                        text: 'Algorithm II',
+                        link: '/courses/algo2/',
+                    },
+                ]
             },
             {
                 text: 'Graph Theory',
                 link: '/gt/',
             },
-            {
-                text: 'Algorithm II',
-                link: '/algo2/',
-            },
-
         ],
         sidebar: {
-            '/ml/': ml_sidebar,
-            '/algo2/': algo2_sidebar,
+            '/courses/ml/': ml_sidebar,
+            '/courses/algo2/': algo2_sidebar,
             '/gt/': gt_sidebar,
         },
     }),
@@ -91,7 +95,7 @@ export default defineUserConfig({
     title: 'Bruce12138',
     description: '',
     head: [
-        ['link', {rel: 'icon', href:'/favicon.ico'}]
+        ['link', { rel: 'icon', href: '/favicon.ico' }]
     ],
     extendsMarkdown: (md) => {
         md.use(tasklist)
