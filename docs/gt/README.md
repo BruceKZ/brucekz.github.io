@@ -6,7 +6,7 @@ This is the notes for EPFL MATH-360 Graph theory.
 - [Graph Theory Lecture Notes](/pdf/gt/Graph_Theory_Lecture_Notes.pdf)
 
 ## Problem Sets
-| Problem Set | PDF | Solution | Problem Set | PDF | Solution |
+| No. | PDF | Solution | No. | PDF | Solution |
 | :---: | :---: | :---: | :---: | :---: | :---: |
 | 1 | [Problem Set 01](/pdf/gt/ProblemSet_01.pdf) | [Solution 01](/pdf/gt/ProblemSet_01_Solution.pdf) | 2 | [Problem Set 02](/pdf/gt/ProblemSet_02.pdf) | [Solution 02](/pdf/gt/ProblemSet_02_Solution.pdf) |
 | 3 | [Problem Set 03](/pdf/gt/ProblemSet_03.pdf) | [Solution 03](/pdf/gt/ProblemSet_03_Solution.pdf) | 4 | [Problem Set 04](/pdf/gt/ProblemSet_04.pdf) | [Solution 04](/pdf/gt/ProblemSet_04_Solution.pdf) |
