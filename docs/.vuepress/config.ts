@@ -50,7 +50,6 @@ let gt_sidebar = [
         text: 'Graph Theory',
         children: [
             '/gt/README.md',
-            '/gt/EPFL_Graph_Theory.md',
         ],
     },
 ]
