@@ -16,16 +16,9 @@ This is the notes for EPFL MATH-360 Graph theory.
 | 11 | [Problem Set 11](/pdf/gt/ProblemSet_11.pdf) | [Solution 11](/pdf/gt/ProblemSet_11_Solution.pdf) | 12 | [Problem Set 12](/pdf/gt/ProblemSet_12.pdf) | [Solution 12](/pdf/gt/ProblemSet_12_Solution.pdf) |
 | 13 | [Problem Set 13](/pdf/gt/ProblemSet_13.pdf) | [Solution 13](/pdf/gt/ProblemSet_13_Solution.pdf) | 14 | [Problem Set 14](/pdf/gt/ProblemSet_14.pdf) | [Solution 14](/pdf/gt/ProblemSet_14_Solution.pdf) |
 
-## Exams
-| Year | Exam | Solution |
-| :---: | :---: | :---: |
-| 2017 | [Exam 2017](/pdf/gt/Exam_2017.pdf) | [Solution 2017](/pdf/gt/Exam_2017_Solution.pdf) |
-| 2018 | [Exam 2018](/pdf/gt/Exam_2018.pdf) | [Solution 2018](/pdf/gt/Exam_2018_Solution.pdf) |
-| 2019 | [Exam 2019](/pdf/gt/Exam_2019.pdf) | [Solution 2019](/pdf/gt/Exam_2019_Solution.pdf) |
-| 2024 | [Exam 2024](/pdf/gt/Exam_2024.pdf) | [Solution 2024](/pdf/gt/Exam_2024_Solution.pdf) |
-
-## Practice Exams
-| Exam | PDF | Solution |
-| :---: | :---: | :---: |
-| 1 | [Practice Exam 01](/pdf/gt/Practice_Exam_01.pdf) | [Solution 01](/pdf/gt/Practice_Exam_01_Solution.pdf) |
-| 2 | [Practice Exam 02](/pdf/gt/Practice_Exam_02.pdf) | [Solution 02](/pdf/gt/Practice_Exam_02_Solution.pdf) |
+## Exams and Practice Exams
+| Exam | PDF | Solution | Exam | PDF | Solution |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| 2017 | [Exam 2017](/pdf/gt/Exam_2017.pdf) | [Solution 2017](/pdf/gt/Exam_2017_Solution.pdf) | 2018 | [Exam 2018](/pdf/gt/Exam_2018.pdf) | [Solution 2018](/pdf/gt/Exam_2018_Solution.pdf) |
+| 2019 | [Exam 2019](/pdf/gt/Exam_2019.pdf) | [Solution 2019](/pdf/gt/Exam_2019_Solution.pdf) | 2024 | [Exam 2024](/pdf/gt/Exam_2024.pdf) | [Solution 2024](/pdf/gt/Exam_2024_Solution.pdf) |
+| Practice 1 | [Practice Exam 01](/pdf/gt/Practice_Exam_01.pdf) | [Solution 01](/pdf/gt/Practice_Exam_01_Solution.pdf) | Practice 2 | [Practice Exam 02](/pdf/gt/Practice_Exam_02.pdf) | [Solution 02](/pdf/gt/Practice_Exam_02_Solution.pdf) |
