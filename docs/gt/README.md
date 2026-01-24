@@ -21,4 +21,4 @@ This is the notes for EPFL MATH-360 Graph theory.
 | :---: | :---: | :---: | :---: | :---: | :---: |
 | 2017 | [Exam 2017](/pdf/gt/Exam_2017.pdf) | [Solution 2017](/pdf/gt/Exam_2017_Solution.pdf) | 2018 | [Exam 2018](/pdf/gt/Exam_2018.pdf) | [Solution 2018](/pdf/gt/Exam_2018_Solution.pdf) |
 | 2019 | [Exam 2019](/pdf/gt/Exam_2019.pdf) | [Solution 2019](/pdf/gt/Exam_2019_Solution.pdf) | 2024 | [Exam 2024](/pdf/gt/Exam_2024.pdf) | [Solution 2024](/pdf/gt/Exam_2024_Solution.pdf) |
-| Practice 1 | [Practice Exam 01](/pdf/gt/Practice_Exam_01.pdf) | [Solution 01](/pdf/gt/Practice_Exam_01_Solution.pdf) | Practice 2 | [Practice Exam 02](/pdf/gt/Practice_Exam_02.pdf) | [Solution 02](/pdf/gt/Practice_Exam_02_Solution.pdf) |
+| Practice1 | [Practice 01](/pdf/gt/Practice_Exam_01.pdf) | [Solution 01](/pdf/gt/Practice_Exam_01_Solution.pdf) | Practice2 | [Practice 02](/pdf/gt/Practice_Exam_02.pdf) | [Solution 02](/pdf/gt/Practice_Exam_02_Solution.pdf) |
