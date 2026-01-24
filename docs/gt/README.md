@@ -2,4 +2,4 @@
 
 This is the notes for EPFL MATH-360 Graph theory.
 
-<iframe src="/notes/Graph Theory Notes.pdf" width="100%" height="800"></iframe>
+- [EPFL_Graph_Theory.pdf](https://blog.bruce12138.com/pdf/gt/EPFL_Graph_Theory.pdf)
