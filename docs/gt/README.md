@@ -1,9 +1,20 @@
-# Graph Theory
+# PDFs
 
 This is the notes for EPFL MATH-360 Graph theory.
 
 ## Lecture Notes
-- [Graph Theory Lecture Notes](https://blog.bruce12138.com/pdf/gt/Graph_Theory_Lecture_Notes.pdf)
+- [Graph Theory Lecture Notes (PDF)](https://blog.bruce12138.com/pdf/gt/Graph_Theory_Lecture_Notes.pdf)
+
+## Lecture Notes (Markdown)
+| No. | Title | No. | Title |
+| :---: | :---: | :---: | :---: |
+| 1 | [Lecture 1](./Lecture1.md) | 2 | [Lecture 2](./Lecture2.md) |
+| 3 | [Lecture 3](./Lecture3.md) | 4 | [Lecture 4](./Lecture4.md) |
+| 5 | [Lecture 5](./Lecture5.md) | 6 | [Lecture 6](./Lecture6.md) |
+| 7 | [Lecture 7](./Lecture7.md) | 8 | [Lecture 8](./Lecture8.md) |
+| 9 | [Lecture 9](./Lecture9.md) | 10 | [Lecture 10](./Lecture10.md) |
+| 11 | [Lecture 11](./Lecture11.md) | 12 | [Lecture 12](./Lecture12.md) |
+| 13 | [Lecture 13](./Lecture13.md) | 14 | [Lecture 14](./Lecture14.md) |
 
 ## Problem Sets
 | No. | PDF | Solution | No. | PDF | Solution |
