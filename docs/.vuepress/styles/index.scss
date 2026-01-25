@@ -1,9 +1,13 @@
+:root {
+  --content-width: 90%;
+}
+
 .full-width-page {
   .theme-default-content {
     max-width: 100% !important;
     padding: 0 !important;
   }
-  
+
   /* Also remove padding from the page container if necessary */
   .page {
     padding-bottom: 0 !important;
