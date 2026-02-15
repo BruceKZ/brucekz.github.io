@@ -59,4 +59,13 @@ export const sidebar = {
             ],
         },
     ],
+    '/tech/': [
+        {
+            text: 'Tech Notes',
+            children: [
+                '/tech/README.md',
+                '/tech/hpc.md',
+            ],
+        },
+    ],
 }

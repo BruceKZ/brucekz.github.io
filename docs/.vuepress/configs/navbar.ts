@@ -16,4 +16,8 @@ export const navbar = [
         text: 'Graph Theory',
         link: '/courses/gt/',
     },
+    {
+        text: 'Tech Notes',
+        link: '/tech/',
+    },
 ]
