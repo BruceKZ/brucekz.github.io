@@ -10,11 +10,11 @@ export const navbar = [
                 text: 'Algorithm II',
                 link: '/courses/algo2/',
             },
+            {
+                text: 'Graph Theory',
+                link: '/courses/gt/',
+            },
         ]
-    },
-    {
-        text: 'Graph Theory',
-        link: '/courses/gt/',
     },
     {
         text: 'Tech Notes',

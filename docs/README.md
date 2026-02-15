@@ -7,4 +7,5 @@
 - [Courses](/courses/)
   - [Machine Learning](/courses/ml/)
   - [Algorithm II](/courses/algo2/)
-- [Graph Theory](/gt/)
+  - [Graph Theory](/courses/gt/)
+- [Tech Notes](/tech/)
