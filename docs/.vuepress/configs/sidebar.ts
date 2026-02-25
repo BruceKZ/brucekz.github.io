@@ -72,7 +72,7 @@ export const sidebar = {
         {
             text: 'Modern NLP',
             children: [
-                '/courses/nlp/README.md',
+                '/courses/nlp/course-homepage.md',
             ],
         },
     ],

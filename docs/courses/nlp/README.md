@@ -1,6 +1,11 @@
 # CS552 Modern NLP
 
-这是 CS552 课程相关内容的记录。
+This is the repository for the notes and materials related to the EPFL CS552 Modern NLP course.
 
-- [课程主页 (同步拷贝)](./course-homepage.md)
-- [课程 GitHub 仓库](https://github.com/epfl-nlp/cs-552-modern-nlp/tree/main)
+::: info 🌐 Course References
+
+📚 **Course Homepage:** [Official Site](https://nlp.epfl.ch/cs-552-modern-nlp/) | 📥 **[Local Sync Copy](./course-homepage.md)**
+
+💻 **Source Code:** [Course GitHub Repository](https://github.com/epfl-nlp/cs-552-modern-nlp/tree/main)
+
+:::
