@@ -41,7 +41,7 @@ jobs:
           echo "contributors: false" >> "$MARKDOWN_FILE"
           echo "---" >> "$MARKDOWN_FILE"
           echo "" >> "$MARKDOWN_FILE"
-          echo "# CS-552 Course Slides" >> "$MARKDOWN_FILE"
+          echo "# Course Slides" >> "$MARKDOWN_FILE"
           echo "" >> "$MARKDOWN_FILE"
 
           for week_dir in $(find "$REPO_DIR/Lectures" -mindepth 1 -maxdepth 1 -type d | sort -V); do
