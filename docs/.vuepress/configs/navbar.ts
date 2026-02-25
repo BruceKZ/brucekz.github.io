@@ -3,17 +3,38 @@ export const navbar = [
         text: 'Courses',
         children: [
             {
-                text: 'Machine Learning',
-                link: '/courses/ml/',
+                text: 'Modern NLP',
+                link: '/courses/nlp/',
             },
             {
-                text: 'Algorithm II',
-                link: '/courses/algo2/',
+                text: 'Data Visualization',
+                link: '/courses/dataviz/',
             },
             {
-                text: 'Graph Theory',
-                link: '/courses/gt/',
+                text: 'Large-Scale Data Science',
+                link: '/courses/bigdata/',
             },
+            {
+                text: 'Theory of Computation',
+                link: '/courses/toc/',
+            },
+            {
+                text: 'Archived',
+                children: [
+                    {
+                        text: 'Machine Learning',
+                        link: '/courses/archive/ml/',
+                    },
+                    {
+                        text: 'Algorithm II',
+                        link: '/courses/archive/algo2/',
+                    },
+                    {
+                        text: 'Graph Theory',
+                        link: '/courses/archive/gt/',
+                    },
+                ]
+            }
         ]
     },
     {
