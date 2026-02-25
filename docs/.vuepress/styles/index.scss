@@ -15,11 +15,17 @@
 }
 
 .custom-home-page {
-  .theme-default-content {
+  .theme-default-content, .vp-doc, [vp-content] {
     max-width: 100% !important;
     padding: 0 !important;
+    margin: 0 !important;
   }
-  .page {
+  .page, .vp-page {
     padding-bottom: 0 !important;
+  }
+  .vp-page-meta, .vp-page-nav, .page-meta, .page-nav {
+    display: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 }
