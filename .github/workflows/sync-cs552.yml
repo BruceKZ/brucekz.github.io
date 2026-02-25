@@ -1,0 +1,35 @@
+name: Sync CS-552 Course Homepage
+
+on:
+  schedule:
+    # Run everyday at 00:00 UTC
+    - cron: '0 0 * * *'
+  workflow_dispatch: # Allows manual trigger
+
+jobs:
+  sync_course_content:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Fetch CS-552 README
+        run: |
+          curl -s -L "https://raw.githubusercontent.com/epfl-nlp/cs-552-modern-nlp/main/README.md" > docs/courses/nlp/course-homepage.md
+
+      - name: Check for changes and commit
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/courses/nlp/course-homepage.md
+          if git diff --staged --quiet; then
+            echo "No changes in CS-552 course homepage."
+          else
+            git commit -m "chore(sync): update CS-552 course homepage"
+            git push
+            echo "Changes pushed successfully."
+          fi
