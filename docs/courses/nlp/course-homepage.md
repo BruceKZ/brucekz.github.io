@@ -1,3 +1,8 @@
+---
+author: GitHub Actions
+contributors: false
+---
+
 # CS-552: Modern Natural Language Processing
 
 
