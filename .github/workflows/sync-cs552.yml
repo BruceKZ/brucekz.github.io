@@ -25,11 +25,51 @@ jobs:
           echo "" >> docs/courses/nlp/course-homepage.md
           curl -s -L "https://raw.githubusercontent.com/epfl-nlp/cs-552-modern-nlp/main/README.md" >> docs/courses/nlp/course-homepage.md
 
+      - name: Fetch CS-552 Slides and generate markdown
+        run: |
+          git clone --depth 1 https://github.com/epfl-nlp/cs-552-modern-nlp.git /tmp/cs552-repo
+          
+          REPO_DIR="/tmp/cs552-repo"
+          TARGET_DIR="docs/.vuepress/public/pdf/nlp"
+          MARKDOWN_FILE="docs/courses/nlp/course-slides.md"
+
+          mkdir -p "$TARGET_DIR"
+
+          echo "---" > "$MARKDOWN_FILE"
+          echo "title: Course Slides" >> "$MARKDOWN_FILE"
+          echo "author: GitHub Actions" >> "$MARKDOWN_FILE"
+          echo "contributors: false" >> "$MARKDOWN_FILE"
+          echo "---" >> "$MARKDOWN_FILE"
+          echo "" >> "$MARKDOWN_FILE"
+          echo "# CS-552 Course Slides" >> "$MARKDOWN_FILE"
+          echo "" >> "$MARKDOWN_FILE"
+
+          for week_dir in $(find "$REPO_DIR/Lectures" -mindepth 1 -maxdepth 1 -type d | sort -V); do
+              week_name=$(basename "$week_dir")
+              pdf_count=$(find "$week_dir" -maxdepth 1 -name "*.pdf" | wc -l)
+              if [ "$pdf_count" -gt 0 ]; then
+                  week_num=$(echo "$week_name" | sed 's/Week_//')
+                  echo "## Week $week_num" >> "$MARKDOWN_FILE"
+                  echo "" >> "$MARKDOWN_FILE"
+                  echo "| Slide Name | Link |" >> "$MARKDOWN_FILE"
+                  echo "|---|---|" >> "$MARKDOWN_FILE"
+                  
+                  for pdf in $(find "$week_dir" -maxdepth 1 -name "*.pdf" | sort -V); do
+                      filename=$(basename "$pdf")
+                      cp "$pdf" "$TARGET_DIR/$filename"
+                      
+                      display_name="${filename%.*}"
+                      echo "| $display_name | [Download](/pdf/nlp/$filename) |" >> "$MARKDOWN_FILE"
+                  done
+                  echo "" >> "$MARKDOWN_FILE"
+              fi
+          done
+
       - name: Check for changes and commit
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/courses/nlp/course-homepage.md
+          git add docs/courses/nlp/course-homepage.md docs/courses/nlp/course-slides.md docs/.vuepress/public/pdf/nlp/
           if git diff --staged --quiet; then
             echo "No changes in CS-552 course homepage."
           else
