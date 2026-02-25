@@ -1,8 +1,7 @@
 # COM490 Large-Scale Data Science
 
-- JupyterLab Link: https://iccluster098.iccluster.epfl.ch/user/zdai/lab
-
-- Dalab Gitlab Link: https://gitlab.epfl.ch/zdai/dalab
+- JupyterLab Link: [https://iccluster098.iccluster.epfl.ch/user/zdai/lab](https://iccluster098.iccluster.epfl.ch/user/zdai/lab)
+- Dalab Gitlab Link: [https://gitlab.epfl.ch/zdai/dalab](https://gitlab.epfl.ch/zdai/dalab)
 
 
 ## Slides   
