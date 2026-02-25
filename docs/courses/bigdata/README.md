@@ -6,5 +6,5 @@
 
 
 ## Slides   
-- [COM490_week1_module_1a.pdf](https://blog.bruce12138.com/pdf/bigdata/COM490_week1_module_1a.pdf)
-- [COM490_week1_module_1b.pdf](https://blog.bruce12138.com/pdf/bigdata/COM490_week1_module_1b.pdf)
+- [module_1a.pdf](https://blog.bruce12138.com/pdf/bigdata/COM490_week1_module_1a.pdf)
+- [module_1b.pdf](https://blog.bruce12138.com/pdf/bigdata/COM490_module_1b.pdf)
