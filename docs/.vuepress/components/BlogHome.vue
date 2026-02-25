@@ -7,27 +7,10 @@
     <div class="hero-content">
       <h1 class="main-title">Bruce's Space</h1>
       <p class="slogan">Never regret the choices you make.</p>
+      <p class="slogan">随便记点什么。</p>
     </div>
 
-    <div class="categories-grid">
-      <!-- Courses Card -->
-      <a href="/courses/" class="category-card">
-        <div class="card-icon">📚</div>
-        <div class="card-info">
-          <h2>Courses</h2>
-          <p>Machine Learning, Algorithm II, Graph Theory & more...</p>
-        </div>
-      </a>
-      
-      <!-- Tech Notes Card -->
-      <a href="/tech/" class="category-card">
-        <div class="card-icon">💻</div>
-        <div class="card-info">
-          <h2>Tech Notes</h2>
-          <p>Records of my technical journey, notes, bugs, and solutions.</p>
-        </div>
-      </a>
-    </div>
+
   </div>
 </template>
 
