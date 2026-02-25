@@ -1,5 +1,21 @@
 export const navbar = [
     {
+        text: 'Modern NLP',
+        link: '/courses/nlp/',
+    },
+    {
+        text: 'Data Visualization',
+        link: '/courses/dataviz/',
+    },
+    {
+        text: 'Large-Scale Data Science',
+        link: '/courses/bigdata/',
+    },
+    {
+        text: 'Theory of Computation',
+        link: '/courses/toc/',
+    },
+    {
         text: 'Courses',
         children: [
             {
