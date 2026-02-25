@@ -73,6 +73,7 @@ export const sidebar = {
             text: 'Modern NLP',
             children: [
                 '/courses/nlp/course-homepage.md',
+                '/courses/nlp/course-slides.md',
             ],
         },
     ],
