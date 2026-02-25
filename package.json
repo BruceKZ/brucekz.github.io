@@ -9,6 +9,7 @@
         "@vuepress/bundler-vite": "^2.0.0-rc.24",
         "@vuepress/helper": "^2.0.0-rc.112",
         "@vuepress/theme-default": "^2.0.0-rc.112",
+        "baseline-browser-mapping": "^2.10.0",
         "katex": "^0.16.22",
         "markdown-it": "^14",
         "typescript": "^5.9.2",
