@@ -10,13 +10,13 @@ contributors: false
 
 | Slide Name | Link |
 |---|---|
-| 1-Intro | [Download](/pdf/nlp/1-Intro.pdf) |
-| 2-NeuralClassifier | [Download](/pdf/nlp/2-NeuralClassifier.pdf) |
-| 3-NeuralEmbeddings | [Download](/pdf/nlp/3-NeuralEmbeddings.pdf) |
+| Introduction \| Building a simple neural classifier <br>Word embeddings | [1-Intro.pdf](https://blog.bruce12138.com/pdf/nlp/1-Intro.pdf) |
+| Introduction \| Building a simple neural classifier <br>Word embeddings | [2-NeuralClassifier.pdf](https://blog.bruce12138.com/pdf/nlp/2-NeuralClassifier.pdf) |
+| Introduction \| Building a simple neural classifier <br>Word embeddings | [3-NeuralEmbeddings.pdf](https://blog.bruce12138.com/pdf/nlp/3-NeuralEmbeddings.pdf) |
 
 ## Week 2
 
 | Slide Name | Link |
 |---|---|
-| 4+5-EarlyLMs+RNNs-Start | [Download](/pdf/nlp/4+5-EarlyLMs+RNNs-Start.pdf) |
+| Classical LMs \| Neural LMs: Fixed Context Models <br>Neural LMs: RNNs | [4+5-EarlyLMs+RNNs-Start.pdf](https://blog.bruce12138.com/pdf/nlp/4+5-EarlyLMs+RNNs-Start.pdf) |
 
