@@ -1,6 +1,5 @@
 ---
-author: GitHub Actions
-contributors: false
+contributors: GitHub Actions
 ---
 
 # Course Homepage
