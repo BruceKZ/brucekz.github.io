@@ -19,8 +19,7 @@ jobs:
       - name: Fetch CS-552 README
         run: |
           echo "---" > docs/courses/nlp/course-homepage.md
-          echo "author: GitHub Actions" >> docs/courses/nlp/course-homepage.md
-          echo "contributors: false" >> docs/courses/nlp/course-homepage.md
+          echo "contributors: GitHub Actions" >> docs/courses/nlp/course-homepage.md
           echo "---" >> docs/courses/nlp/course-homepage.md
           echo "" >> docs/courses/nlp/course-homepage.md
           curl -s -L "https://raw.githubusercontent.com/epfl-nlp/cs-552-modern-nlp/main/README.md" | sed 's/^# CS-552: Modern Natural Language Processing/# Course Homepage/' >> docs/courses/nlp/course-homepage.md
