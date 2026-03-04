@@ -19,7 +19,7 @@ export default defineUserConfig({
         mdEnhancePlugin({
         }),
     ],
-    lang: 'en-US',
+    lang: 'zh-CN',
     title: 'Bruce12138',
     description: '',
     head: [
