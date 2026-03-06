@@ -1,7 +1,7 @@
 # CS251 Theory of Computation
 
 ## Homework
-Homework 1 [pdf](https://blog.bruce12138.com/pdf/toc/HW1.pdf)
+[Homework 1](https://blog.bruce12138.com/pdf/toc/HW1.pdf)
 
 30% — 3 homeworks in groups of 2–4 students
 - HW1: post March 3 @ 17:00, due March 13 @ 20:00
