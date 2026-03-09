@@ -63,12 +63,21 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: 'yarn'
+          # Note: do NOT use cache: 'yarn' here — it runs before Corepack and
+          # picks up yarn 1.x, which conflicts with packageManager: yarn@4.9.4
 
       - name: Use Yarn 4 via Corepack
         run: |
           corepack enable
           corepack prepare yarn@4.9.4 --activate
+
+      # Cache yarn berry's download cache (must be after corepack activates yarn 4)
+      - name: Cache Yarn berry cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.yarn/berry/cache
+          key: yarn-berry-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: yarn-berry-${{ runner.os }}-
 
       - run: yarn install --immutable
       - run: yarn docs:build
