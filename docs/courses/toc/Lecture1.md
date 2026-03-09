@@ -1,5 +1,8 @@
 # Lecture 1
 
+Lecture 1: Introduction and Finite Automata
+Chapters 0 and 1.1 from Sipser's book. A few recommended exercises from Sipser's book: 1.4-1.6
+
 [Lecture 1 Slides](https://blog.bruce12138.com/pdf/toc/Lecture1.pdf)
 
 ## 一、 宏观计算宇宙 (The Computational Universe)
