@@ -13,4 +13,5 @@ EPFL CS-251 Theory of Computation: [Coursebook](https://edu.epfl.ch/coursebook/e
 
 - HW2: post March 31 @ 17:00, due April 17 @ 20:00
 - HW3: post April 28 @ 17:00, due May 8 @ 20:00
+
 70% — Final exam in June/July
