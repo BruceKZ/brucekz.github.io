@@ -21,43 +21,54 @@ jobs:
         with:
           fetch-depth: 0
 
-      # 缓存本地 PDF，供下次比对
-      - name: Cache Graph Theory Notes
+      # [Graph Theory course ended — steps below are kept for reference but disabled]
+      # - name: Cache Graph Theory Notes
+      #   uses: actions/cache@v4
+      #   with:
+      #     path: |
+      #       docs/.vuepress/public/notes/Graph Theory Notes.pdf
+      #     key: graph-theory-notes-v1
+
+      # - name: Install rclone
+      #   run: |
+      #     curl -fsSL https://rclone.org/install.sh | sudo bash
+
+      # - name: Configure rclone
+      #   run: |
+      #     mkdir -p ~/.config/rclone
+      #     printf "%s\n" "${RCLONE_CONF}" > ~/.config/rclone/rclone.conf
+      #   env:
+      #     RCLONE_CONF: ${{ secrets.RCLONE_CONF }}
+
+      # - name: Pull Graph Theory Notes PDF (auto-detect remote changes)
+      #   run: |
+      #     set -euo pipefail
+      #     mkdir -p "docs/.vuepress/public/notes"
+      #     rclone copy "gd:GoodNotes/Graph Theory/Graph Theory Notes.pdf" "docs/.vuepress/public/notes" --update --checksum --progress
+      #     ls -lah "docs/.vuepress/public/notes"
+
+      - name: Cache Corepack / Yarn binary
         uses: actions/cache@v4
         with:
-          path: |
-            docs/.vuepress/public/notes/Graph Theory Notes.pdf
-          key: graph-theory-notes-v1
+          path: ~/.cache/node/corepack
+          key: corepack-yarn-4.9.4
 
-      - name: Install rclone
-        run: |
-          curl -fsSL https://rclone.org/install.sh | sudo bash
-
-      - name: Configure rclone
-        run: |
-          mkdir -p ~/.config/rclone
-          printf "%s\n" "${RCLONE_CONF}" > ~/.config/rclone/rclone.conf
-        env:
-          RCLONE_CONF: ${{ secrets.RCLONE_CONF }}
-
-      - name: Pull Graph Theory Notes PDF (auto-detect remote changes)
-        run: |
-          set -euo pipefail
-          mkdir -p "docs/.vuepress/public/notes"
-          # --update: 仅当源较新时覆盖
-          # --checksum: 通过校验和比较（Drive 支持 MD5），更稳妥
-          rclone copy "gd:GoodNotes/Graph Theory/Graph Theory Notes.pdf" "docs/.vuepress/public/notes" --update --checksum --progress
-          ls -lah "docs/.vuepress/public/notes"
+      - name: Cache VuePress build cache
+        uses: actions/cache@v4
+        with:
+          path: docs/.vuepress/.cache
+          key: vuepress-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: vuepress-${{ runner.os }}-
 
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: 'yarn'
 
       - name: Use Yarn 4 via Corepack
         run: |
           corepack enable
           corepack prepare yarn@4.9.4 --activate
-          yarn -v
 
       - run: yarn install --immutable
       - run: yarn docs:build
