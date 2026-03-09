@@ -16,7 +16,7 @@ Chapters 0 and 1.1 from Sipser's book. A few recommended exercises from Sipser's
 ---
 
 ## 二、 确定性有限自动机 (DFA) 的数学形式化
-在算法竞赛中，状态机通常表现为 DP 的状态转移；而在计算理论中，DFA $M$ 必须被严谨地定义为 **五元组 (5-tuple)** $M = (Q, \Sigma, \delta, q_0, F)$：
+DFA $M$ 必须被严谨地定义为 **五元组 (5-tuple)** $M = (Q, \Sigma, \delta, q_0, F)$：
 * $Q$：有限状态集（反映常数内存）。
 * $\Sigma$：有限的字母表。
 * $\delta: Q \times \Sigma \rightarrow Q$：转移函数，决定了系统在给定当前状态和输入字符时的唯一后继状态。
@@ -29,7 +29,7 @@ Chapters 0 and 1.1 from Sipser's book. A few recommended exercises from Sipser's
 ---
 
 ## 三、 DFA 正确性的严密证明 (Proof by Induction)
-要证明 DFA 准确无误地识别了目标语言 $L$，必须使用**结构归纳法 (Structural Induction)** 证明状态的正确性。这类似于证明算法中的“循环不变式”。
+要证明 DFA 准确无误地识别了目标语言 $L$，必须使用**结构归纳法 (Structural Induction)** 证明状态的正确性。
 
 ### 证明核心步骤 (强化归纳假设法)
 为了避免在归纳推导时因状态不明而卡壳，必须为**每一个状态**赋予明确的物理或数学意义：

@@ -40,7 +40,6 @@ $$\delta: Q \times (\Sigma \cup \{\epsilon\}) \rightarrow 2^Q$$
 1. **新状态集**：$Q_M = 2^{Q_N}$。DFA 的每一个状态都是 NFA 状态的一个子集。
 2. **新转移函数**：对于任意状态集合 $A \subseteq Q_N$ 和字符 $a \in \Sigma$：
    $$\tilde{\delta}(A, a) = \bigcup_{q \in A} \delta_N(q, a)$$
-   *(算法视角：这相当于查出当前所有活跃状态，把它们读入字符 $a$ 后能到达的所有新状态求并集。)*
 3. **新接受状态**：$F_M = \{A \subseteq Q_N \mid A \cap F_N \ne \emptyset\}$。只要子集中包含哪怕一个 NFA 的接受状态，该超级状态就是 DFA 的接受状态。
 
 ---
