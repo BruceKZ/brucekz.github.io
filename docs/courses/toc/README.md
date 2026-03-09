@@ -2,8 +2,8 @@
 
 :::info
 EPFL CS-251 Theory of Computation
-https://edu.epfl.ch/coursebook/en/theory-of-computation-CS-251
-https://moodle.epfl.ch/course/view.php?id=14459
+
+[Coursebook](https://edu.epfl.ch/coursebook/en/theory-of-computation-CS-251) | [Moodle](https://moodle.epfl.ch/course/view.php?id=14459)
 :::
 
 ## Homework
