@@ -1,9 +1,7 @@
 # 概览
 
 :::info
-EPFL CS-251 Theory of Computation
-
-[Coursebook](https://edu.epfl.ch/coursebook/en/theory-of-computation-CS-251) | [Moodle](https://moodle.epfl.ch/course/view.php?id=14459)
+EPFL CS-251 Theory of Computation: [Coursebook](https://edu.epfl.ch/coursebook/en/theory-of-computation-CS-251) | [Moodle](https://moodle.epfl.ch/course/view.php?id=14459)
 :::
 
 ## Homework
