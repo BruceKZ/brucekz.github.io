@@ -1,4 +1,4 @@
-# CS251 Theory of Computation
+# 概览
 
 ## Homework
 [Homework 1](https://blog.bruce12138.com/pdf/toc/HW1.pdf)
