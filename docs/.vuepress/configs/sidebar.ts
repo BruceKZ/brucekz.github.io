@@ -98,6 +98,9 @@ export const sidebar = {
             text: 'Theory of Computation',
             children: [
                 '/courses/toc/README.md',
+                '/courses/toc/Lecture1.md',
+                '/courses/toc/Lecture2.md',
+                '/courses/toc/Lecture3.md',
             ],
         },
     ],
