@@ -65,6 +65,7 @@ export const sidebar = {
             children: [
                 '/tech/README.md',
                 '/tech/hpc.md',
+                '/tech/local_latex.md',
             ],
         },
     ],
