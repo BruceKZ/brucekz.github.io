@@ -4,10 +4,6 @@ export const navbar = [
         link: '/courses/nlp/',
     },
     {
-        text: 'Data Visualization',
-        link: '/courses/dataviz/',
-    },
-    {
         text: 'Large-Scale Data Science',
         link: '/courses/bigdata/',
     },
@@ -21,10 +17,6 @@ export const navbar = [
             {
                 text: 'Modern NLP',
                 link: '/courses/nlp/',
-            },
-            {
-                text: 'Data Visualization',
-                link: '/courses/dataviz/',
             },
             {
                 text: 'Large-Scale Data Science',
@@ -49,6 +41,10 @@ export const navbar = [
                         text: 'Graph Theory',
                         link: '/courses/archive/gt/',
                     },
+                    {
+                        text: 'Data Visualization',
+                        link: '/courses/archive/dataviz/',
+                    }
                 ]
             }
         ]
