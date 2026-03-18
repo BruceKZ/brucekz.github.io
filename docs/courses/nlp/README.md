@@ -9,11 +9,11 @@ This is the repository for the notes and materials related to the EPFL CS552 Mod
 
 ::: info 🌐 Course References
 
-[**Course Homepage:**](https://blog.bruce12138.com/courses/nlp/course-homepage.md)
+[**Course Homepage:**](/courses/nlp/course-homepage.md)
 
 [Official Course Homepage](https://nlp.epfl.ch/cs-552-modern-nlp/)
 
-[**Course Slides:**](https://blog.bruce12138.com/courses/nlp/course-slides.md)
+[**Course Slides:**](/courses/nlp/course-slides.md)
 
 [**Source Code Github Repository:**](https://github.com/epfl-nlp/cs-552-modern-nlp/tree/main)
 
