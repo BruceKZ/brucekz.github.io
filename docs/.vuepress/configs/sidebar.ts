@@ -1,4 +1,12 @@
 export const sidebar = {
+    '/courses/': [
+        {
+            text: 'Courses',
+            children: [
+                '/courses/README.md',
+            ],
+        },
+    ],
     '/courses/archive/ml/': [
         {
             text: 'Machine Learning',
@@ -73,8 +81,90 @@ export const sidebar = {
         {
             text: 'Modern NLP',
             children: [
-                '/courses/nlp/course-homepage.md',
-                '/courses/nlp/course-slides.md',
+                {
+                    text: 'Home',
+                    link: '/courses/nlp/README.md',
+                },
+                {
+                    text: 'Course Homepage',
+                    link: '/courses/nlp/course-homepage.md',
+                },
+                {
+                    text: 'Slides',
+                    link: '/courses/nlp/course-slides.md',
+                },
+                {
+                    text: 'Notes Index',
+                    link: '/courses/nlp/notes/README.md',
+                },
+                {
+                    text: 'Foundations',
+                    collapsible: true,
+                    children: [
+                        {
+                            text: 'Basics',
+                            link: '/courses/nlp/notes/01-neural-text-classification.md',
+                        },
+                        {
+                            text: 'Embeddings',
+                            link: '/courses/nlp/notes/02-word-embeddings.md',
+                        },
+                        {
+                            text: 'Count-Based LMs',
+                            link: '/courses/nlp/notes/03-count-based-language-models.md',
+                        },
+                    ],
+                },
+                {
+                    text: 'Sequence Models',
+                    collapsible: true,
+                    children: [
+                        {
+                            text: 'Neural LMs and RNNs',
+                            link: '/courses/nlp/notes/04-neural-language-models-and-rnns.md',
+                        },
+                        {
+                            text: 'LSTMs and GRUs',
+                            link: '/courses/nlp/notes/05-lstms-grus-and-training-issues.md',
+                        },
+                        {
+                            text: 'Seq2Seq and Attention',
+                            link: '/courses/nlp/notes/06-seq2seq-and-attention.md',
+                        },
+                        {
+                            text: 'Transformers',
+                            link: '/courses/nlp/notes/07-transformers.md',
+                        },
+                        {
+                            text: 'Tokenization',
+                            link: '/courses/nlp/notes/08-tokenization.md',
+                        },
+                    ],
+                },
+                {
+                    text: 'Modern Pretraining',
+                    collapsible: true,
+                    children: [
+                        {
+                            text: 'Pretraining and Transfer',
+                            link: '/courses/nlp/notes/09-pretraining-and-transfer-learning.md',
+                        },
+                    ],
+                },
+                {
+                    text: 'Data and Evaluation',
+                    collapsible: true,
+                    children: [
+                        {
+                            text: 'Annotation and Bias',
+                            link: '/courses/nlp/notes/10-data-annotation-and-bias.md',
+                        },
+                        {
+                            text: 'AI Evaluation',
+                            link: '/courses/nlp/notes/11-evaluation-of-ai-systems.md',
+                        },
+                    ],
+                },
             ],
         },
     ],
