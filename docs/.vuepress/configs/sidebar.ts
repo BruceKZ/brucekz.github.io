@@ -79,7 +79,7 @@ export const sidebar = {
     ],
     '/courses/nlp/': [
         {
-            text: 'Modern NLP',
+            text: 'Overview',
             items: [
                 {
                     text: 'Home',
@@ -93,6 +93,11 @@ export const sidebar = {
                     text: 'Slides',
                     link: '/courses/nlp/course-slides.md',
                 },
+            ],
+        },
+        {
+            text: 'Notes',
+            items: [
                 {
                     text: 'Notes Index',
                     link: '/courses/nlp/notes/README.md',
