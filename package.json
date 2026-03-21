@@ -21,6 +21,9 @@
         "docs:build": "vuepress build docs"
     },
     "dependencies": {
+        "@iconify/vue": "^5.0.0",
+        "@vueuse/integrations": "^14.2.1",
+        "focus-trap": "^8.0.0",
         "sass-embedded": "^1.92.1"
     },
     "packageManager": "yarn@4.9.4"
