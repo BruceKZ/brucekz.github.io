@@ -13,7 +13,7 @@ export const navbar = [
     },
     {
         text: 'Courses',
-        children: [
+        items: [
             {
                 text: 'Modern NLP',
                 link: '/courses/nlp/',
@@ -28,7 +28,7 @@ export const navbar = [
             },
             {
                 text: 'Archived',
-                children: [
+                items: [
                     {
                         text: 'Machine Learning',
                         link: '/courses/archive/ml/',

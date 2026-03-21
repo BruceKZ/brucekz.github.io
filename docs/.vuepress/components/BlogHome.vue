@@ -20,8 +20,8 @@
 .blog-home-container {
   position: relative;
   /* strictly fit exactly the remaining height */
-  height: calc(100vh - var(--navbar-height, 3.6rem));
-  height: calc(100dvh - var(--navbar-height, 3.6rem));
+  height: calc(100vh - var(--vp-nav-height, 3.6rem));
+  height: calc(100dvh - var(--vp-nav-height, 3.6rem));
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -81,7 +81,7 @@ html.dark .orb-2 { background: rgba(199, 21, 133, 0.15); }
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: min(1rem, 2vh);
-  background: linear-gradient(135deg, var(--c-text), var(--c-text-light));
+  background: linear-gradient(135deg, var(--vp-c-text-1), var(--vp-c-text-2));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -90,7 +90,7 @@ html.dark .orb-2 { background: rgba(199, 21, 133, 0.15); }
 
 .slogan {
   font-size: clamp(1rem, min(3vw, 4vh), 1.8rem);
-  color: var(--c-text-light);
+  color: var(--vp-c-text-2);
   font-style: italic;
   font-family: 'JetBrains Mono', monospace;
   margin-top: min(1rem, 2vh);
@@ -113,7 +113,7 @@ html.dark .orb-2 { background: rgba(199, 21, 133, 0.15); }
   border-radius: 24px;
   padding: min(2.5rem, 4vh) min(2rem, 3vw);
   text-decoration: none !important;
-  color: var(--c-text);
+  color: var(--vp-c-text-1);
   display: flex;
   align-items: center;
   gap: min(1.5rem, 3vh);
@@ -173,7 +173,7 @@ html.dark .card-icon {
 }
 .card-info p {
   margin: 0;
-  color: var(--c-text-light);
+  color: var(--vp-c-text-2);
   line-height: 1.4;
   font-size: min(1.05rem, 2.5vh);
   /* Truncate text if it gets too small/overflows */

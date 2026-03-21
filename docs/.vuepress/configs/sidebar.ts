@@ -2,7 +2,7 @@ export const sidebar = {
     '/courses/': [
         {
             text: 'Courses',
-            children: [
+            items: [
                 '/courses/README.md',
             ],
         },
@@ -10,7 +10,7 @@ export const sidebar = {
     '/courses/archive/ml/': [
         {
             text: 'Machine Learning',
-            children: [
+            items: [
                 '/courses/archive/ml/README.md',
                 '/courses/archive/ml/regression.md',
                 '/courses/archive/ml/linear_regression.md',
@@ -22,12 +22,12 @@ export const sidebar = {
     '/courses/archive/algo2/': [
         {
             text: 'Algorithm II',
-            children: [
+            items: [
                 '/courses/archive/algo2/README.md',
                 {
                     text: 'Notes',
-                    collapsible: true,
-                    children: [
+                    collapsed: true,
+                    items: [
                         '/courses/archive/algo2/Lecture5.md',
                         '/courses/archive/algo2/Lecture6.md',
                         '/courses/archive/algo2/Lecture7.md'
@@ -35,8 +35,8 @@ export const sidebar = {
                 },
                 {
                     text: 'PDFs',
-                    collapsible: true,
-                    children: [
+                    collapsed: true,
+                    items: [
                         '/courses/archive/algo2/Lecture_Notes.md',
                         '/courses/archive/algo2/Exercises.md',
                         '/courses/archive/algo2/Exams.md'
@@ -48,7 +48,7 @@ export const sidebar = {
     '/courses/archive/gt/': [
         {
             text: 'Graph Theory',
-            children: [
+            items: [
                 '/courses/archive/gt/README.md',
                 '/courses/archive/gt/Lecture1.md',
                 '/courses/archive/gt/Lecture2.md',
@@ -70,7 +70,7 @@ export const sidebar = {
     '/tech/': [
         {
             text: 'Tech Notes',
-            children: [
+            items: [
                 '/tech/README.md',
                 '/tech/hpc.md',
                 '/tech/local_latex.md',
@@ -80,7 +80,7 @@ export const sidebar = {
     '/courses/nlp/': [
         {
             text: 'Modern NLP',
-            children: [
+            items: [
                 {
                     text: 'Home',
                     link: '/courses/nlp/README.md',
@@ -99,8 +99,8 @@ export const sidebar = {
                 },
                 {
                     text: 'Foundations',
-                    collapsible: true,
-                    children: [
+                    collapsed: true,
+                    items: [
                         {
                             text: 'Basics',
                             link: '/courses/nlp/notes/01-neural-text-classification.md',
@@ -117,8 +117,8 @@ export const sidebar = {
                 },
                 {
                     text: 'Sequence Models',
-                    collapsible: true,
-                    children: [
+                    collapsed: true,
+                    items: [
                         {
                             text: 'Neural LMs and RNNs',
                             link: '/courses/nlp/notes/04-neural-language-models-and-rnns.md',
@@ -143,8 +143,8 @@ export const sidebar = {
                 },
                 {
                     text: 'Modern Pretraining',
-                    collapsible: true,
-                    children: [
+                    collapsed: true,
+                    items: [
                         {
                             text: 'Pretraining and Transfer',
                             link: '/courses/nlp/notes/09-pretraining-and-transfer-learning.md',
@@ -153,8 +153,8 @@ export const sidebar = {
                 },
                 {
                     text: 'Data and Evaluation',
-                    collapsible: true,
-                    children: [
+                    collapsed: true,
+                    items: [
                         {
                             text: 'Annotation and Bias',
                             link: '/courses/nlp/notes/10-data-annotation-and-bias.md',
@@ -171,15 +171,23 @@ export const sidebar = {
     '/courses/dataviz/': [
         {
             text: 'Data Visualization',
-            children: [
-                '/courses/dataviz/README.md',
+            items: [
+                '/courses/archive/dataviz/README.md',
+            ],
+        },
+    ],
+    '/courses/archive/dataviz/': [
+        {
+            text: 'Data Visualization',
+            items: [
+                '/courses/archive/dataviz/README.md',
             ],
         },
     ],
     '/courses/bigdata/': [
         {
             text: 'Large-Scale Data Science',
-            children: [
+            items: [
                 '/courses/bigdata/README.md',
             ],
         },
@@ -187,7 +195,7 @@ export const sidebar = {
     '/courses/toc/': [
         {
             text: 'Theory of Computation',
-            children: [
+            items: [
                 '/courses/toc/README.md',
                 '/courses/toc/Lecture1.md',
                 '/courses/toc/Lecture2.md',
