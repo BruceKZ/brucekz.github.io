@@ -10,9 +10,9 @@ contributors: false
 
 | Slide Name | Link |
 |---|---|
-| Introduction| [1-Intro.pdf](https://blog.bruce12138.com/pdf/nlp/1-Intro.pdf) |
-| Building a simple neural classifier| [2-NeuralClassifier.pdf](https://blog.bruce12138.com/pdf/nlp/2-NeuralClassifier.pdf) |
-|Word embeddings | [3-NeuralEmbeddings.pdf](https://blog.bruce12138.com/pdf/nlp/3-NeuralEmbeddings.pdf) |
+| Introduction | [1-Intro.pdf](https://blog.bruce12138.com/pdf/nlp/1-Intro.pdf) |
+| Building a simple neural classifier | [2-NeuralClassifier.pdf](https://blog.bruce12138.com/pdf/nlp/2-NeuralClassifier.pdf) |
+| Word embeddings | [3-NeuralEmbeddings.pdf](https://blog.bruce12138.com/pdf/nlp/3-NeuralEmbeddings.pdf) |
 
 ## Week 2
 
@@ -27,3 +27,19 @@ contributors: false
 |---|---|
 | Sequence-to-sequence Models | [7-Seq2seq.pdf](https://blog.bruce12138.com/pdf/nlp/7-Seq2seq.pdf) |
 | Transformers | [8-Transformers.pdf](https://blog.bruce12138.com/pdf/nlp/8-Transformers.pdf) |
+| Tokenization | [9-Tokenization.pdf](https://blog.bruce12138.com/pdf/nlp/9-Tokenization.pdf) |
+
+## Week 4
+
+| Slide Name | Link |
+|---|---|
+| Pretraining | [10-PLMs_1.pdf](https://blog.bruce12138.com/pdf/nlp/10-PLMs_1.pdf) |
+| Transfer Learning | [11-PLMs_2.pdf](https://blog.bruce12138.com/pdf/nlp/11-PLMs_2.pdf) |
+| Guest Lecture: Training Data for LLMs | [leandro-von-werra-hf-datasets-guest-lecture.pdf](https://blog.bruce12138.com/pdf/nlp/leandro-von-werra-hf-datasets-guest-lecture.pdf) |
+
+## Week 5
+
+| Slide Name | Link |
+|---|---|
+| Evaluation and Dataset Biases | [13+14-data-artifacts.pdf](https://blog.bruce12138.com/pdf/nlp/13+14-data-artifacts.pdf) |
+| Guest Lecture: Evaluation of AI systems | [angelika_romanou-nlp-evaluation-guest-lecture.pdf](https://blog.bruce12138.com/pdf/nlp/angelika_romanou-nlp-evaluation-guest-lecture.pdf) |
