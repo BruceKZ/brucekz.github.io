@@ -2,6 +2,35 @@
   --content-width: 70%;
 }
 
+/* Tighten the default article header spacing from plume theme. */
+.vp-doc-title .page-title.padding {
+  padding-bottom: 0.5rem !important;
+}
+
+.vp-doc-meta {
+  padding-top: 0.75rem !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Remove extra gap before the first visible content block. */
+.vp-doc > div > h1:first-child,
+.vp-doc > div > h2:first-child,
+.vp-doc > div > h3:first-child,
+.vp-doc > div > h4:first-child,
+.vp-doc > div > h5:first-child,
+.vp-doc > div > h6:first-child,
+.vp-doc > div > p:first-child,
+.vp-doc > div > ul:first-child,
+.vp-doc > div > ol:first-child,
+.vp-doc > div > table:first-child,
+.vp-doc > div > blockquote:first-child {
+  margin-top: 0 !important;
+}
+
+.vp-doc > div > h2:first-child {
+  padding-top: 0 !important;
+}
+
 .full-width-page {
   .theme-default-content,
   .vp-doc,
