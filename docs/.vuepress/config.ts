@@ -11,6 +11,8 @@ export default defineUserConfig({
         navbar: navbar,
         sidebar: sidebar,
         appearance: true,
+        readingTime: false,
+        footer: false,
         markdownMath: {
             type: 'katex',
         },
