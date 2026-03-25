@@ -43,3 +43,9 @@ contributors: false
 |---|---|
 | Evaluation and Dataset Biases | [13+14-data-artifacts.pdf](https://blog.bruce12138.com/pdf/nlp/13+14-data-artifacts.pdf) |
 | Guest Lecture: Evaluation of AI systems | [angelika_romanou-nlp-evaluation-guest-lecture.pdf](https://blog.bruce12138.com/pdf/nlp/angelika_romanou-nlp-evaluation-guest-lecture.pdf) |
+
+## Week 6
+
+| Slide Name | Link |
+|---|---|
+| Text Generation: Decoding, Training, and Evaluation | [19+20-Text_Generation_part1.pdf](https://blog.bruce12138.com/pdf/nlp/19+20-Text_Generation_part1.pdf) |
