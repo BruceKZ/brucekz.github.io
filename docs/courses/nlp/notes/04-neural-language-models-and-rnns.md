@@ -1,103 +1,107 @@
-# Neural Language Models and RNN Foundations
+# Neural Language Models and RNN Foundations / 神经语言模型与 RNN 基础
 
 Covered in: Week 2, Lectures 4-6 (`4+5-EarlyLMs+RNNs-Start`, `6-RNNs-continued+LSTMs+GRUs`)
 
-## Why move beyond n-grams?
+这一部分可以看成从 `n-gram` 走向 `RNN` 的过渡：先用连续表示替代计数表，再把固定窗口换成递归状态。
 
-N-grams fail to share meaning across similar contexts.
-They also need explicit smoothing and still have a fixed context horizon.
+## 从 n-gram 到神经语言模型
 
-Neural language models try to fix this by replacing discrete context tables with learned continuous representations.
+`n-gram` 的问题在于，它只能记精确共现，几乎不会在相似上下文之间共享统计强度。
+而且它既依赖显式 `smoothing`，又永远受固定窗口限制。
 
-## Fixed-context neural language model
+`neural language model` 的思路，是用连续表示去替代离散计数表。
+这样模型就不再只会记“这个上下文是否见过”，而是能学到“这个上下文和另一个上下文是否相似”。
 
-The Bengio-style neural LM takes a fixed window of previous words:
+## 固定上下文的神经语言模型
+
+经典的 Bengio 风格神经语言模型，会取前面固定长度的若干个词：
 
 $$
 x = [e_{w_{t-n+1}}; \dots; e_{w_{t-1}}]
 $$
 
-Then applies:
+然后做一个前馈变换：
 
 $$
 h = \tanh(Wx + b)
 $$
 
-and predicts the next token with a softmax over the vocabulary.
+最后用 `softmax` 去预测下一个词。
 
-Important idea:
-- embeddings allow similar contexts to share statistical strength
-- the model no longer memorizes only exact symbolic matches
+这里最重要的变化是：
 
-## Why this is better than n-grams
+- `embedding` 让相似上下文可以共享信息
+- 模型不再只依赖符号完全匹配
 
-- dense embeddings encode similarity
-- all probabilities stay non-zero through the neural parameterization
-- the model can generalize across related contexts
+## 相比 n-gram 的改进
 
-Example intuition:
-if the model learned from `students opened their books`,
-it can transfer some knowledge to `pupils opened their ___`.
+和 `n-gram` 相比，这类模型的主要提升有：
 
-## But the model is still limited
+- 稠密向量能表达相似性
+- 概率通过神经参数化得到，不会像未平滑计数那样大量变成 0
+- 相关上下文之间可以互相泛化
 
-This architecture is called fixed-context for a reason:
-- only the last `n` words are visible
-- increasing `n` increases parameter cost
-- position-specific weights make sharing inefficient
+例如模型如果见过 `students opened their books`，就可能把一部分知识迁移到 `pupils opened their ___`。
 
-So it still cannot naturally capture long dependencies.
+## 固定窗口的剩余限制
 
-## Recurrent neural networks
+虽然它已经比 `n-gram` 强，但仍然是 `fixed-context model`。
+这意味着：
 
-RNNs replace a fixed window with a recurrent state:
+- 模型只能看到最近 `n` 个词
+- `n` 变大时参数成本会上升
+- 每个位置都用不同权重，不利于共享
+
+所以它依然不擅长真正的长距离依赖。
+
+## 循环神经网络 RNN
+
+`RNN` 的关键变化，是用递归状态替代固定窗口：
 
 $$
 h_t = \sigma(W_{hx}x_t + W_{hh}h_{t-1} + b_h)
 $$
 
-Now the hidden state summarizes previous context.
+这样当前的 `hidden state` 会同时依赖当前输入和上一步状态。
+直观上，`hidden state` 就是在不断压缩历史信息。
 
-Main conceptual upgrade:
-- same recurrent weights are reused at every time step
-- context length is no longer explicitly bounded by a window size
+## 参数共享的意义
 
-中文理解：
-RNN 的核心不是“记住所有历史细节”，而是用一个不断更新的 hidden state 去压缩历史。
+`RNN` 的另一个核心优点是时间维度上的参数共享。
 
-## Why weight sharing matters
+有了这种共享之后：
 
-With RNNs:
-- model size does not grow with sequence length
-- the same transformation is reused through time
-- the model can in principle process arbitrarily long sequences
+- 模型大小不会随着序列长度增长
+- 同一个变换会在每个时间步反复使用
+- 理论上可以处理任意长的序列
 
-This is much more elegant than expanding a fixed input window.
+这比不断扩展输入窗口要自然得多。
 
-## Training with backpropagation through time
+## 时间反向传播 BPTT
 
-Because each hidden state depends on previous hidden states, gradients must be propagated through the unrolled computation graph over time.
-
-This is called:
+因为每个时刻的状态都依赖之前的状态，训练时梯度也必须沿着时间展开后的计算图往回传。
+这个过程就叫：
 
 $$
 \text{BPTT} = \text{Backpropagation Through Time}
 $$
 
-So an RNN is trained like a deep network whose depth is sequence length.
+所以从训练视角看，`RNN` 很像一个深度等于序列长度的网络。
 
-## What RNNs solve and what they do not
+## RNN 解决了什么，还没解决什么
 
-Solved:
-- fixed context bottleneck, in theory
-- better parameter sharing
+`RNN` 确实解决了一些关键问题：
 
-Not fully solved:
-- long-range dependency learning is still difficult in practice
-- gradient flow across many steps becomes unstable
+- 不再被固定窗口死死卡住
+- 参数共享更自然
 
-That leads directly to the next topic: vanishing gradients, LSTMs, and GRUs.
+但它没有彻底解决所有问题：
 
-## One-sentence takeaway
+- 长距离依赖在实践里仍然难学
+- 跨很多步的梯度传播仍然不稳定
 
-Neural language models improve over n-grams by using continuous representations, and RNNs further generalize this by replacing fixed windows with a recurrent state shared across time.
+这也就直接引出了下一步的主题：`vanishing gradients`、`LSTM` 和 `GRU`。
+
+## 小结
+
+神经语言模型先用连续表示替代离散计数，再由 `RNN` 把固定窗口推进到递归状态建模。方向是对的，但训练稳定性和长期依赖问题并没有自动消失。

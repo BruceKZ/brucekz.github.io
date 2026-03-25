@@ -1,129 +1,133 @@
-# Neural Text Classification Basics
+# Neural Text Classification Basics / 文本分类基础
 
 Covered in: Week 1, Lectures 1-2 (`1-Intro`, `2-NeuralClassifier`)
 
-## What problem are we solving?
+文本分类里最基础的 NLP pipeline 是：`token` 先变成向量，再压成句子表示，最后映射到 `label`。
 
-A simple NLP system takes a sequence of discrete tokens and predicts something useful about it.
-Typical example in class: sentiment classification for a movie review.
+## 任务形式与基本目标
 
-In abstract form:
+最简单的 NLP 系统，会把一个离散 `token sequence` 映射成某个有用的输出。
+课上最典型的例子是情感分类，也就是把一段影评映射成正面或负面的 `label`。
+
+抽象地写，就是：
 
 $$
 S = (x_1, x_2, \dots, x_T) \rightarrow y
 $$
 
-where `S` is the input sequence and `y` is the label.
+这里 `S` 是输入序列，`y` 是输出标签。
 
-## Core pipeline
+## 基本流水线
 
-1. Define a vocabulary `V`.
-2. Map each token to an embedding vector.
-3. Compose token embeddings into a sequence representation.
-4. Feed that representation into a prediction layer.
-5. Compute loss and update parameters with backpropagation.
+这类模型通常按下面的顺序工作：
 
-Quick intuition:
-- Words start as IDs.
-- IDs become vectors.
-- Vectors become one sentence-level representation.
-- That representation becomes a decision.
+1. 先定义词表 `V`。
+2. 把每个 `token` 映射成一个 `embedding vector`。
+3. 把一串 `token embeddings` 组合成一个句子级表示。
+4. 把这个表示送进预测层。
+5. 根据 `loss` 做 `backpropagation`，更新参数。
 
-中文理解：
-这就是从 `word ids -> vectors -> sentence meaning -> label` 的最基础流水线。
+压缩成一句话，就是 `word ids -> vectors -> sentence representation -> label`。
 
-## Vocabulary and `<UNK>`
+## 词表与 `<UNK>`
 
-Language is messy:
-- huge vocabulary
-- many rare words
-- typos, emojis, multilingual text, special symbols
+自然语言本身很脏，常见问题包括：
 
-So we usually define a manageable vocabulary `V`.
-Tokens outside `V` are mapped to a special unknown token:
+- 词表非常大
+- 稀有词很多
+- 会有 typo、emoji、多语言混杂和特殊符号
+
+所以实际建模时通常不会保留所有词，而是先定义一个可控的 `vocabulary`。
+不在词表里的词，会被映射成特殊符号：
 
 $$
 \texttt{<UNK>}
 $$
 
-This is a practical approximation, not a perfect linguistic decision.
+这不是语言学上的完美处理，而是工程上的近似。
 
-## Embedding lookup
+## Embedding lookup 与向量查表
 
-Instead of treating words as isolated symbols, we assign each token a dense vector from a shared embedding matrix:
+模型不会把词当成彼此完全独立的符号，而是会从共享的 `embedding matrix` 里查一个稠密向量：
 
 $$
 \mathbb{E} \in \mathbb{R}^{|V| \times d}
 $$
 
-Every token type points to one row of this matrix.
-Repeated words reuse the same embedding parameters.
+词表中的每个词类型，都对应矩阵里的一行。
+同一个词在不同位置出现时，查到的是同一组参数。
 
-## Sequence composition
+## 序列表示的组合方式
 
-The simplest composition function shown in class is sum-pooling:
+最简单的组合方法是 `sum-pooling`：
 
 $$
 h_T = \sum_{t=1}^{T} x_t
 $$
 
-Other simple variants:
-- average pooling
-- max pooling
+常见的简单变体还有：
 
-Important point:
-the model is not yet "understanding syntax" here; it is just compressing token vectors into one sequence vector.
+- `average pooling`
+- `max pooling`
 
-## Prediction layer
+这里的关键点是，这类模型还没有真正显式地建模 `syntax`。
+它做的事情更接近把一串词向量压缩成一个句子级向量。
 
-For binary classification, we can use logistic regression:
+## 预测层
+
+如果是二分类，可以用 `logistic regression`：
 
 $$
 P(y) = \sigma(W_o h_T)
 $$
 
-For multi-class prediction over a label set:
+如果是多分类，可以用：
 
 $$
 P(y) = \text{softmax}(W_o h_T)
 $$
 
-If the label set is the whole vocabulary, the same pattern becomes next-word prediction.
+如果输出空间不是标签集合，而是整个词表，那这个形式也可以变成 `next-word prediction`。
 
-## Loss and learning
+## 损失函数与学习过程
 
-Training means:
-- compare prediction with gold label
-- compute a loss
-- backpropagate gradients
-- update parameters
+训练时通常会做几件事：
 
-The key insight is:
-we are not only learning the classifier weights, we are also learning the embeddings.
+- 把预测结果和 `gold label` 比较
+- 计算 `loss`
+- 通过 `backpropagation` 回传梯度
+- 更新模型参数
 
-Learnable parameters in the simple setup:
-- embedding matrix `E`
-- output matrix `W_o`
+最重要的一点是，模型学到的不只是分类器权重，也包括 `embedding` 本身。
 
-## Why embeddings matter even in this simple model
+这个最简单的设定里，可学习参数主要包括：
 
-If two words behave similarly in many tasks, gradient updates may move their vectors into similar regions.
-That is the beginning of semantic generalization.
+- `embedding matrix` `E`
+- 输出矩阵 `W_o`
 
-Example intuition:
-- `great` and `excellent` may become close
-- `terrible` and `awful` may become close
+## Embedding 的语义泛化作用
 
-## Limitations
+如果两个词在很多任务里表现相似，梯度更新就可能把它们推到向量空间里相近的位置。
+这就是语义泛化的起点。
 
-This simple pipeline is useful, but weak:
-- pooling loses word order
-- long-range structure is ignored
-- syntax is mostly invisible
-- all tokens contribute in a crude way
+直观上：
 
-This is why the course moves from simple composition to recurrent models, attention, and transformers.
+- `great` 和 `excellent` 可能会变近
+- `terrible` 和 `awful` 可能会变近
 
-## One-sentence takeaway
+也就是说，模型开始通过参数共享学到某种“相似词应该有相似表示”的结构。
 
-The first modern NLP lesson is that a text model is built by turning tokens into vectors, composing those vectors into a sequence representation, and learning both the representation and the classifier end-to-end.
+## 局限
+
+这条基础流水线虽然清楚，但能力很有限：
+
+- `pooling` 会丢失词序
+- 长距离结构基本看不到
+- `syntax` 几乎没有被显式利用
+- 每个词对最终表示的贡献方式比较粗糙
+
+也正因为这些限制，后面的课程才会继续引出 `RNN`、`attention` 和 `transformer`。
+
+## 小结
+
+现代 NLP 的第一个核心观念是：文本模型不是直接处理词，而是先把 `token` 变成向量，再把这些向量组合成序列表示，并且把表示学习和分类器训练放在同一个端到端过程里完成。

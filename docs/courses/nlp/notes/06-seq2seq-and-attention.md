@@ -1,63 +1,71 @@
-# Sequence-to-Sequence Models and Attention
+# Sequence-to-Sequence Models and Attention / Seq2Seq 与注意力
 
 Covered in: Week 3, Lecture 7 (`7-Seq2seq`)
 
-## Why seq2seq?
+这里进入输入序列到输出序列的建模，重点是 `encoder-decoder` 结构以及 `attention` 如何缓解单向压缩瓶颈。
 
-Language modeling predicts the next token in the same sequence.
-But many NLP tasks map one sequence to another sequence with different structure:
-- machine translation
-- summarization
-- code generation
-- image captioning
+## Seq2Seq 的任务形式
 
-This requires a more general architecture.
+普通 `language modeling` 处理的是“同一条序列的下一个词是什么”。
+但很多 NLP 任务并不是这样，它们需要把一个输入序列变成另一个输出序列，例如：
 
-## Encoder-decoder idea
+- `machine translation`
+- `summarization`
+- `code generation`
+- `image captioning`
 
-A sequence-to-sequence model has:
-- an encoder that reads the source sequence
-- a decoder that generates the target sequence autoregressively
+这类任务需要更一般的 `sequence-to-sequence` 架构。
 
-The encoder compresses the input into a representation.
-The decoder uses that representation to produce:
+## 编码器-解码器结构
+
+经典 `seq2seq model` 包含两个部分：
+
+- `encoder` 负责读入源序列
+- `decoder` 负责自回归地产生目标序列
+
+`encoder` 会把输入压缩成表示，`decoder` 再基于这个表示生成：
 
 $$
 y_1, y_2, \dots, y_T
 $$
 
-## Training objective
+这个结构的本质，是把“理解输入”和“生成输出”拆成两个相互配合的过程。
 
-With paired data, training is still cross-entropy over target tokens:
+## 条件语言模型训练目标
+
+有配对数据时，训练目标依然可以写成目标端的 `cross-entropy`：
 
 $$
 \mathcal{L} = \sum_{t=1}^{T} -\log P(y_t \mid y_{<t}, x_{1:n})
 $$
 
-So the decoder is trained as a conditional language model.
+所以 `decoder` 本质上还是一个 `conditional language model`。
 
-Key difference from plain LM training:
-- we now need aligned input-output pairs
-- data collection is much harder
+和普通语言模型相比，最大的差别在于：
 
-## The temporal bottleneck
+- 现在需要成对的输入输出样本
+- 这类数据通常更难收集
 
-Early seq2seq models used a single final encoder state to seed the decoder.
+## 时间瓶颈 temporal bottleneck
 
-That creates a bottleneck:
-- all source information must fit into one vector
-- long inputs become hard to compress faithfully
-- long-range dependencies suffer
+早期 `seq2seq` 往往让 `encoder` 只输出一个最终状态，再把它交给 `decoder`。
 
-## Attention as the fix
+问题在于，这会形成严重的 `temporal bottleneck`：
 
-Attention lets the decoder look back at all encoder states rather than only one summary vector.
+- 所有源信息都要塞进一个向量
+- 输入一长，就很难压得完整
+- 长距离依赖更容易丢失
 
-At decoder step `t`:
-- decoder state acts like a query
-- encoder states act like keys and values
+## Attention 机制
 
-The decoder computes similarity scores, normalizes them with softmax, and forms a weighted average:
+`attention` 的作用，就是让 `decoder` 不只依赖一个总结向量，而是能在生成每一步时重新查看所有 `encoder states`。
+
+在第 `t` 步解码时：
+
+- `decoder state` 像 `query`
+- `encoder states` 像 `keys` 和 `values`
+
+模型会先算相似度，再经过 `softmax` 得到权重，最后做加权平均：
 
 $$
 \alpha_i = \text{softmax}(a_i)
@@ -67,37 +75,39 @@ $$
 \tilde{h}_t = \sum_i \alpha_i h_i^{enc}
 $$
 
-This context vector is then combined with the decoder state to predict the next token.
+这个 `context vector` 会和当前 `decoder state` 一起决定下一个词。
 
-## What attention buys us
+## Attention 带来的改进
 
-- direct access to source positions
-- less temporal bottleneck
-- better long-range modeling
-- improved gradient flow
-- interpretability through attention maps
+`attention` 带来的提升很直接：
 
-## Query, key, value intuition
+- 可以直接访问源序列的不同位置
+- 单向压缩瓶颈被显著缓解
+- 长距离信息更容易保留
+- 梯度传播路径更短
+- `attention map` 还能提供一定可解释性
 
-For classic encoder-decoder attention:
-- query = "what the decoder currently needs"
-- keys = "addresses" of encoder states
-- values = "content" stored in encoder states
+## Query / Key / Value 的直观理解
 
-So attention is basically content-based retrieval.
+在经典 `encoder-decoder attention` 里，可以把三者理解成：
 
-中文理解：
-解码器不是把源句子一次性背下来，而是每一步生成时都“回头看一眼”最相关的源位置。
+- `query`：当前解码器到底需要什么信息
+- `key`：每个源位置的“地址”或匹配线索
+- `value`：每个源位置真正携带的内容
 
-## Remaining weakness
+所以 `attention` 本质上很像一次基于内容的检索。
+`decoder` 不是把整句源文本死记住，而是在每一步生成时，动态地去取当前最相关的 `source positions`。
 
-Even with attention, the encoder and decoder are still recurrent in classical seq2seq.
-That means:
-- hidden states are computed sequentially
-- parallelization is limited
+## 经典 Seq2Seq 的剩余限制
 
-This motivates transformers.
+即便加了 `attention`，经典 `seq2seq` 的 `encoder` 和 `decoder` 仍然往往是循环结构。
+这意味着：
 
-## One-sentence takeaway
+- 隐状态还是要按时间顺序计算
+- 并行化能力依然有限
 
-Sequence-to-sequence models generalize language modeling to input-output mappings, and attention removes the single-vector bottleneck by letting the decoder dynamically retrieve relevant encoder information.
+这也是后面 `transformer` 会出现的直接背景。
+
+## 小结
+
+`seq2seq` 把语言建模推广成输入序列到输出序列的映射，而 `attention` 则把“只靠一个向量传递全部信息”的老问题拆开，让 `decoder` 能在生成过程中动态取回真正需要的源端信息。

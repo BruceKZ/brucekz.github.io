@@ -1,45 +1,56 @@
-# LSTMs, GRUs, and Training Issues in RNNs
+# LSTMs, GRUs, and Training Issues in RNNs / LSTM、GRU 与训练问题
 
 Covered in: Week 2, Lecture 6 (`6-RNNs-continued+LSTMs+GRUs`) and Week 3 recap
 
-## The vanishing gradient problem
+这里讨论的是 `RNN` 真正难用的地方，也就是梯度传播和长期依赖，然后引出 `LSTM` / `GRU` 这种门控结构。
 
-When an RNN is unrolled over many time steps, gradients are multiplied through many Jacobians.
-If these factors are often smaller than 1, the gradient shrinks exponentially.
+## 梯度消失问题
 
-Consequence:
-- early tokens receive almost no learning signal
-- long-range dependencies become very hard to learn
+当 `RNN` 沿时间展开很多步之后，梯度会连续乘上一串 `Jacobians`。
+如果这些因子经常小于 1，梯度就会指数级缩小。
 
-This is especially bad in vanilla RNNs with saturating activations.
+直接后果是：
 
-## Why this matters
+- 早期 `tokens` 几乎收不到学习信号
+- 长距离依赖会变得很难学
 
-A vanilla RNN may technically have unbounded context, but practically it often cannot use it.
+对使用饱和激活函数的 `vanilla RNN` 来说，这个问题尤其明显。
 
-So there is a difference between:
-- theoretical capacity
-- effective trainability
+## 训练可达性与有效上下文
 
-## Gated recurrent networks
+从表达能力上说，`vanilla RNN` 理论上可以拥有无限长上下文。
+但从训练角度说，它常常根本用不上这么长的历史。
 
-The general fix is to introduce gates that control information flow.
+所以这里要区分两件事：
 
-Instead of forcing all memory updates through one squashing nonlinearity, we let the model decide:
-- what to keep
-- what to overwrite
-- what to expose
+- `theoretical capacity`
+- `effective trainability`
 
-## LSTM
+模型“理论上能表示”，不等于它“训练时真能学到”。
 
-An LSTM introduces:
-- forget gate `f_t`
-- input gate `i_t`
-- output gate `o_t`
-- candidate content `\tilde{c}_t`
-- cell state `c_t`
+## 门控循环网络
 
-Core updates:
+一个自然的修正思路，就是让模型自己控制信息流。
+
+也就是说，不再把所有记忆更新都塞进同一个非线性变换里，而是显式地让网络决定：
+
+- 什么该保留
+- 什么该覆盖
+- 什么该暴露到当前输出
+
+这就是 `gated recurrent networks` 的基本想法。
+
+## LSTM 结构
+
+`LSTM` 引入了几类关键部件：
+
+- `forget gate` `f_t`
+- `input gate` `i_t`
+- `output gate` `o_t`
+- 候选内容 `\tilde{c}_t`
+- `cell state` `c_t`
+
+核心更新公式是：
 
 $$
 c_t = i_t \odot \tilde{c}_t + f_t \odot c_{t-1}
@@ -49,67 +60,69 @@ $$
 h_t = o_t \odot \phi(c_t)
 $$
 
-### Intuition for each gate
+### 各个 gate 的直观含义
 
-- Forget gate: how much of old memory should remain?
-- Input gate: how much new information should be written?
-- Output gate: how much of memory should influence the current hidden state?
+- `forget gate` 决定旧记忆留多少
+- `input gate` 决定新信息写多少
+- `output gate` 决定当前暴露多少内部记忆
 
-Short Chinese version:
-- forget = 忘多少
-- input = 写多少
-- output = 露出多少
+如果用最粗糙的话记，就是“忘多少、写多少、露出多少”。
 
-## Why LSTMs help
+## LSTM 为什么有效
 
-The cell state creates a more direct path for gradient flow.
+`LSTM` 的关键不是多了几个门这么简单，而是 `cell state` 给梯度提供了更直接的通路。
 
-In simplified form:
+简化地看：
 
 $$
 \frac{\partial c_t}{\partial c_{t-1}} = f_t
 $$
 
-So if the forget gate stays open, information and gradients can survive much longer.
+如果 `forget gate` 长时间保持开放，信息和梯度都可以更稳定地穿过很多时间步。
+这就是它比 `vanilla RNN` 更能处理长期依赖的原因。
 
-## GRU
+## GRU 结构
 
-The GRU is a simpler gated alternative.
-It uses fewer components, usually:
-- update gate
-- reset gate
+`GRU` 可以看成更简化的门控版本。
+它通常只保留较少部件，例如：
 
-Compared with LSTM:
-- simpler
-- fewer parameters
-- often faster
-- sometimes performs similarly or even better
+- `update gate`
+- `reset gate`
 
-But it may be less expressive than a full LSTM in some settings.
+和 `LSTM` 相比，它一般有这些特点：
 
-## Trade-offs
+- 结构更简单
+- 参数更少
+- 训练和推理通常更快
+- 某些任务上效果和 `LSTM` 很接近，甚至更好
 
-Advantages of LSTM / GRU:
-- better long-range learning than vanilla RNN
-- reduced vanishing-gradient pain
-- still sequential and natural for token-by-token processing
+但在某些场景下，它也可能不如完整 `LSTM` 灵活。
 
-Disadvantages:
-- more parameters than vanilla RNN
-- harder to parallelize than transformer models
-- still not perfect for very long contexts
+## 实践中的权衡
 
-## What the cell state can encode
+`LSTM` / `GRU` 的优点是：
 
-An important conceptual point from the slides:
-individual memory dimensions can end up tracking interpretable patterns,
-such as:
-- whether we are inside quotation marks
-- indentation level in code
-- other persistent latent signals
+- 比 `vanilla RNN` 更能学习长距离依赖
+- 显著缓解 `vanishing gradient`
+- 仍然适合逐 token 处理的场景
 
-So recurrent memory is not just an abstract vector; it can develop structured behavior.
+代价也很明确：
 
-## One-sentence takeaway
+- 参数量高于 `vanilla RNN`
+- 时序计算仍然是串行的
+- 面对非常长的上下文时，仍然不如后来的 `transformer`
 
-LSTMs and GRUs make recurrent models trainable over longer spans by controlling memory flow with gates, reducing the vanishing-gradient problem that cripples vanilla RNNs.
+## Cell state 可能编码的内容
+
+课上还强调了一个重要直觉：`cell state` 不是纯黑盒。
+单个记忆维度有时会学到相当可解释的模式，例如：
+
+- 当前是否在引号内部
+- 代码里当前缩进层级
+- 某些持续很多步存在的潜在状态
+
+所以循环记忆并不只是“一个抽象向量”，它经常会发展出结构化行为。
+
+## 小结
+
+`LSTM` 和 `GRU` 的意义，在于它们通过 `gates` 控制记忆和梯度流动，让循环模型终于能在更长时间跨度上被稳定训练，但它们仍然保留了序列计算的串行瓶颈。

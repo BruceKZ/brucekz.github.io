@@ -1,120 +1,133 @@
-# Transformers
+# Transformers / Transformer
 
 Covered in: Week 3, Lecture 8 (`8-Transformers`)
 
-## Why transformers replaced recurrent models
+这一章的核心是用 `self-attention` 替代 `recurrence`，让序列里所有位置都能并行地做上下文化表示。
 
-RNNs have two major bottlenecks:
-- temporal bottleneck: long-range credit assignment is hard
-- parallelization bottleneck: hidden states must be computed in order
+## Transformer 取代 RNN 的背景
 
-Transformers remove recurrence and rely on self-attention.
+`RNN` 有两个非常明显的瓶颈：
 
-## Self-attention
+- `temporal bottleneck`，也就是长距离依赖很难稳定传播
+- `parallelization bottleneck`，也就是隐藏状态必须按顺序计算
 
-In self-attention, every token representation can attend to every other token representation in the same sequence.
+`Transformer` 的基本策略，就是把循环结构拿掉，改用 `self-attention` 直接建模位置之间的关系。
 
-Each token is projected into:
-- query `Q`
-- key `K`
-- value `V`
+## 自注意力 self-attention
 
-The attention score between two positions is:
+在 `self-attention` 里，序列中的每个位置都可以和同一序列中的其他位置交互。
+
+每个位置的表示会被投影成三类向量：
+
+- `query` `Q`
+- `key` `K`
+- `value` `V`
+
+两个位置之间的打分可以写成：
 
 $$
 a_{st} = \frac{(W_Q h_s)^\top (W_K h_t)}{\sqrt{d}}
 $$
 
-Then:
+再经过 `softmax` 得到注意力权重：
 
 $$
 \alpha_{st} = \text{softmax}(a_{st})
 $$
 
-and the attended representation is a weighted sum of projected values.
+最终输出是对各个 `value` 的加权求和。
 
-## Intuition
+## 直观理解
 
-For one token:
-- query asks: what information am I looking for?
-- keys say: what kind of information do other tokens offer?
-- values carry the content to aggregate
+如果只看某一个位置：
 
-This lets each token build a contextualized representation in one layer.
+- `query` 表示“我现在想找什么信息”
+- `key` 表示“我这里提供的是什么类型的信息”
+- `value` 表示“我真正携带的内容是什么”
 
-## Multi-head attention
+这样一来，每个 `token` 都能在一层里直接聚合整个序列里对自己最重要的信息。
 
-Instead of one attention map, transformers use multiple heads.
+## 多头注意力
 
-Why?
-- different heads can capture different relations
-- syntax, semantics, coreference, position-like interactions, etc.
+`Transformer` 不只用一个注意力头，而是用 `multi-head attention`。
 
-Then all head outputs are concatenated and projected back.
+这样做的原因是，不同 `heads` 可以学到不同类型的关系，例如：
 
-## Transformer block
+- 局部句法关系
+- 语义相关性
+- 指代关系
+- 某种近似位置关系
 
-A standard transformer block contains:
-- multi-head attention
-- residual connection
-- layer normalization
-- feedforward network
+多个头的输出会先拼接，再投影回统一维度。
 
-Residual connections help optimization.
-LayerNorm stabilizes representations across modules.
+## Transformer block 的组成
 
-## Encoder vs decoder
+一个标准 `transformer block` 通常包括：
 
-Transformer encoder:
-- self-attention over the full sequence
-- fully parallel
+- `multi-head attention`
+- `residual connection`
+- `layer normalization`
+- `feedforward network`
 
-Transformer decoder:
-- masked self-attention first
-- cross-attention over encoder outputs
-- feedforward layer
+`residual connection` 让优化更稳定，`LayerNorm` 有助于控制表示分布，后面的前馈层则负责进一步做非线性变换。
 
-## Why masking is necessary
+## Encoder 与 Decoder
 
-In generation, token `t` must not see future tokens.
-So future attention scores are masked to `-\infty` before softmax.
+`transformer encoder` 的特点是：
 
-That enforces causal generation.
+- 对整段输入做 `self-attention`
+- 每一层都可以并行计算
 
-## Cross-attention
+`transformer decoder` 则通常包含：
 
-Cross-attention is the transformer version of classic encoder-decoder attention:
-- query comes from decoder state
-- keys and values come from encoder outputs
+- 先做带掩码的 `self-attention`
+- 再对 `encoder outputs` 做 `cross-attention`
+- 最后经过前馈层
 
-So the decoder can both:
-- model target-side history
-- retrieve source-side information
+## 因果 mask 的作用
 
-## Position embeddings
+做生成任务时，第 `t` 个位置不能偷看未来 `tokens`。
+所以未来位置对应的分数会先被 `mask` 成 `-\infty`，再做 `softmax`。
 
-Self-attention alone is permutation-invariant.
-Without extra information, it does not know token order.
+这就实现了 `causal generation`，保证模型只能利用当前位置之前的上下文。
 
-So transformers add positional information:
-- sinusoidal position embeddings
-- or learned position embeddings
+## 交叉注意力 cross-attention
 
-Learned positions are simple and effective, but may generalize poorly beyond trained sequence lengths.
+`cross-attention` 可以看成经典 `encoder-decoder attention` 在 `transformer` 里的版本：
 
-## Main advantages over RNNs
+- `query` 来自 `decoder state`
+- `keys` 和 `values` 来自 `encoder outputs`
 
-- fully parallel encoding
-- direct long-range interactions
-- easier scaling
-- no recurrent hidden-state bottleneck
+因此 `decoder` 一边建模目标端历史，一边按需从源端取信息。
 
-## Main caveats
+## 位置编码
 
-- attention cost grows quadratically with sequence length
-- positional modeling is not automatic
-- long-context efficiency remains an active research area
+纯粹的 `self-attention` 对顺序是置换不变的，也就是如果不额外加信息，它并不知道词序。
 
-## One-sentence takeaway
+所以 `transformer` 必须引入 `positional information`，常见方式有：
 
-Transformers replace recurrence with self-attention, enabling parallel contextualization of all tokens while preserving sequence structure through masking and positional information.
+- `sinusoidal position embeddings`
+- `learned position embeddings`
+
+学习式位置编码实现简单、效果通常也好，但它对超出训练长度的泛化有时会差一些。
+
+## 相比 RNN 的优势
+
+`Transformer` 相比 `RNN` 的优势主要体现在：
+
+- 编码可以完全并行
+- 长距离交互路径更短
+- 更容易扩展到大模型
+- 没有递归隐藏状态瓶颈
+
+## 主要代价与局限
+
+它也不是没有代价：
+
+- 注意力计算对序列长度通常是二次复杂度
+- 位置信息不会自动出现
+- 长上下文效率仍然是活跃研究问题
+
+## 小结
+
+`Transformer` 的关键突破，是用 `self-attention` 替代循环结构，让所有位置都能并行地做上下文化表示，同时再用 `mask` 和位置编码把生成约束与顺序信息补回来。

@@ -1,132 +1,137 @@
-# Count-Based Language Models
+# Count-Based Language Models / 计数语言模型
 
 Covered in: Week 2, Lectures 4-5 (`4+5-EarlyLMs+RNNs-Start`)
 
-## What is a language model?
+这里的核心问题是怎样把“句子有多自然”写成概率问题，以及 `n-gram` 为什么既有效又很快碰到上限。
 
-A language model assigns probability to a token sequence:
+## 语言模型的定义
+
+`language model` 的任务，是给一个词序列分配概率：
 
 $$
 P(w_1, w_2, \dots, w_n)
 $$
 
-This is the formal version of "how likely is this sentence?"
+这就是把“这句话看起来有多像自然语言”形式化成概率表达。
 
-## Chain rule
+## 概率链式法则
 
-By probability chain rule:
+根据概率的 `chain rule`：
 
 $$
 P(w_1, \dots, w_n) = \prod_{i=1}^{n} P(w_i \mid w_1, \dots, w_{i-1})
 $$
 
-This means language modeling can be reduced to repeated next-token prediction.
+这说明语言建模可以被拆成一连串 `next-token prediction`。
 
-中文理解：
-整句话的概率，本质上就是“前面都已经给定时，下一个词出现的概率”一路乘下去。
+用中文直说，就是整句话的概率等于“前面都给定时，下一个词出现的概率”一路乘下去。
 
-## Why exact modeling is impossible
+## 精确建模为什么不可行
 
-If we condition on the full prefix exactly, the parameter space explodes.
-Most long contexts are never observed in finite corpora.
+如果我们真的对完整前缀做精确条件建模，参数空间会迅速爆炸。
+有限语料里，绝大多数长上下文根本不会出现足够多次。
 
-So classical models add an approximation.
+所以经典语言模型必须做近似。
 
-## Markov assumption and n-grams
+## 马尔可夫假设与 n-gram
 
-The `k`-th order Markov assumption keeps only the recent past:
+最常见的近似就是 `Markov assumption`，也就是只保留最近的上下文：
 
 $$
 P(w_i \mid w_1, \dots, w_{i-1}) \approx P(w_i \mid w_{i-k}, \dots, w_{i-1})
 $$
 
-This gives us n-gram models:
-- unigram: independent words
-- bigram: depends on previous word
-- trigram: depends on previous two words
-- and so on
+这就得到 `n-gram` 模型：
 
-## What n-grams are good at
+- `unigram`：各词彼此独立
+- `bigram`：只看前一个词
+- `trigram`：只看前两个词
+- 更高阶也是同理
 
-- simple
-- interpretable
-- surprisingly effective with enough data
-- easy to train from counts
+## n-gram 的优点
 
-## Perplexity
+`n-gram` 的优势非常直接：
 
-Perplexity is the standard intrinsic evaluation metric for classical language models.
+- 结构简单
+- 可解释性强
+- 只要数据够多，效果并不差
+- 训练方式清楚，就是统计计数
 
-Intuition:
-- lower perplexity = less uncertainty about the next token
-- high perplexity = the model is confused
+这也是它在早期 NLP 里长期有效的原因。
 
-It is closely related to exponentiated average negative log-likelihood.
+## 困惑度 perplexity
 
-You can read it as:
-"On average, how many equally likely choices does the model behave as if it is choosing among?"
+`perplexity` 是经典语言模型最常见的 `intrinsic metric`。
 
-## The sparsity problem
+直觉上：
 
-The biggest issue:
-many n-grams never appear in training.
+- `perplexity` 越低，说明模型对下一个词越不迷惑
+- `perplexity` 越高，说明模型越不确定
 
-Then:
+它和平均负对数似然的指数形式密切相关。
+也可以把它理解成：模型平均看来，自己像是在多少个“同样可能的选项”里做选择。
+
+## 数据稀疏问题
+
+`n-gram` 最大的问题是稀疏。
+很多 `n-grams` 在训练集里根本没出现过。
+
+于是就会出现：
 
 $$
 P(\text{unseen n-gram}) = 0
 $$
 
-and once one factor is zero, an entire sentence probability becomes zero.
+只要乘积里有一项变成 0，整句话的概率就直接归零，`perplexity` 也会跟着失真。
 
-That also breaks perplexity.
+## 平滑 smoothing
 
-## Smoothing
+`smoothing` 的目标，是给没见过的事件也留下一点概率质量。
 
-Smoothing redistributes probability mass so unseen events are not impossible.
+课上提到的主要策略包括：
 
-Main strategies from the lecture:
-- additive / Laplace smoothing
-- discounting
-- back-off
-- interpolation
+- `additive / Laplace smoothing`
+- `discounting`
+- `back-off`
+- `interpolation`
 
 ### Laplace smoothing
 
-For a bigram:
+对 `bigram` 来说，可以写成：
 
 $$
 P(w_i \mid w_{i-1}) = \frac{C(w_{i-1}, w_i) + \alpha}{C(w_{i-1}) + \alpha |V|}
 $$
 
-Simple, but usually not the best in practice.
+它很直观，但通常不是实际效果最好的方案。
 
 ### Back-off
 
-If a higher-order n-gram is too sparse, use a lower-order one.
+如果高阶 `n-gram` 太稀疏，就退回到低一阶模型。
 
 ### Interpolation
 
-Combine several n-gram orders with learned weights:
+也可以把多个阶数的模型按权重混合：
 
 $$
 P = \lambda_1 P_{\text{unigram}} + \lambda_2 P_{\text{bigram}} + \cdots
 $$
 
-## Main weaknesses
+## 局限
 
-Even with smoothing, n-grams have structural limits:
-- context window is fixed
-- no semantic similarity between different but related words
-- parameter/data requirements grow quickly with `n`
+哪怕做了 `smoothing`，`n-gram` 仍然有明显结构上限：
 
-Example:
+- 上下文窗口是固定的
+- 不会在不同但相近的词之间共享语义
+- 阶数越高，对数据和参数的需求涨得越快
+
+例如：
+
 - `students opened their`
 - `pupils opened their`
 
-Humans know these prefixes are similar.
-Plain n-grams do not.
+人很容易知道这两个前缀很像，但朴素 `n-gram` 并不会自动共享这种知识。
 
-## One-sentence takeaway
+## 小结
 
-Count-based language models turn sequence probability into local count estimation, but they struggle with sparsity, fixed context windows, and lack of semantic sharing.
+计数语言模型把句子概率问题转成了局部条件概率估计问题，但它始终受制于稀疏性、固定窗口和缺乏语义共享，这也是后续神经语言模型要解决的核心缺陷。

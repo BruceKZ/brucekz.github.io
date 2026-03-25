@@ -1,150 +1,149 @@
-# Pretraining and Transfer Learning
+# Pretraining and Transfer Learning / 预训练与迁移学习
 
 Covered in: Week 4, Lectures 10-11 (`10-PLMs_1`, `11-PLMs_2`)
 
-## Why static embeddings were not enough
+这里讨论的是现代 NLP 最关键的范式变化：从训练局部表示，转向先预训练整个模型，再迁移到具体任务。
 
-Classic word embeddings assign one vector per word type.
-But many words change meaning with context.
+## 静态词向量的不足
 
-Example from the lecture:
-- `play` in baseball
-- `play` in theater
+传统 `word embeddings` 给每个词类型只分配一个固定向量。
+但很多词的含义会随上下文变化。
 
-A single static vector cannot cleanly represent both senses.
+例如：
 
-## Contextualized representations
+- `play` 在棒球语境里是一种意思
+- `play` 在戏剧语境里是另一种意思
 
-The modern idea is:
-- pretrain a model on massive raw text
-- use the model's contextual hidden states as representations
-- then adapt the model to downstream tasks
+单一静态向量很难同时表达这两种语义。
 
-This is the core of the pretrain-then-finetune paradigm.
+## 上下文化表示 contextualized representations
+
+现代方法的核心想法是：
+
+- 先在大规模原始语料上做 `pretraining`
+- 用模型内部的上下文化隐藏状态做表示
+- 再把整个模型迁移到下游任务
+
+这就是 `pretrain-then-finetune` 范式。
 
 ## ELMo
 
-ELMo uses bidirectional LSTMs trained as language models.
+`ELMo` 用的是双向 `LSTM language models`。
+它的基本做法是：
 
-Main idea:
-- train forward and backward LMs
-- use hidden states as contextual token embeddings
-- combine layers with learned weights
+- 分别训练前向和后向语言模型
+- 把隐藏状态当成上下文化 `token embeddings`
+- 再用学习到的权重去组合不同层
 
-Strength:
-- much better than static embeddings for many tasks
-
-Weakness:
-- bidirectionality is stitched together from two directional models
-- not fully integrated bidirectional conditioning in one transformer-style encoder
+它的优点是，相比静态词向量，很多任务上效果都明显更好。
+但它的双向性本质上还是两个方向模型的拼接，而不是统一编码器里的一体化双向条件建模。
 
 ## BERT
 
-BERT is an encoder-only transformer pretrained with masked language modeling.
+`BERT` 是 `encoder-only transformer`，主要通过 `masked language modeling` 做预训练。
 
-Instead of predicting the next token left-to-right, BERT masks part of the input and predicts masked tokens.
+它不是从左到右预测下一个词，而是把部分输入位置遮住，再去预测这些被遮住的词。
 
-Typical setup from the lecture:
-- 15% of tokens selected
-- 80% replaced with `[MASK]`
-- 10% replaced with a random token
-- 10% kept unchanged
+课上给出的典型设置是：
 
-Why this matters:
-- BERT learns bidirectional context
-- very strong for classification and sequence labeling
+- 选出 15% 的 `tokens`
+- 其中 80% 替换成 `[MASK]`
+- 10% 替换成随机词
+- 10% 保持原样
+
+这种训练方式的关键价值在于：
+
+- `BERT` 可以利用双向上下文
+- 它对分类和序列标注尤其强
 
 ### Fine-tuning BERT
 
-For classification:
-- prepend `[CLS]`
-- use its output embedding
-- attach a lightweight classifier
-- update the full model during fine-tuning
+做分类任务时，常见方式是：
 
-Important course point:
-full fine-tuning usually works better than using frozen BERT embeddings only.
+- 在开头加 `[CLS]`
+- 取它的输出表示
+- 接一个轻量分类头
+- 对整个模型做 `fine-tuning`
+
+课上强调的一点是，完整 `fine-tuning` 通常比只把 `BERT embeddings` 冻结起来当特征更有效。
 
 ## GPT
 
-GPT is decoder-style transformer pretraining with causal language modeling:
+`GPT` 走的是 `decoder-style transformer` 路线，预训练目标是 `causal language modeling`：
 
 $$
 P(x_t \mid x_{<t})
 $$
 
-Strengths:
-- natural for text generation
-- scalable autoregressive modeling
+它的强项是：
 
-Weakness compared with BERT:
-- no bidirectional conditioning during pretraining
+- 非常自然地做文本生成
+- 自回归扩展性很好
 
-So:
-- BERT is stronger for rich contextual encoding
-- GPT is more natural for generation
+和 `BERT` 相比，它的弱点在于预训练时不使用双向条件信息。
+所以如果任务更偏表示学习，`BERT` 往往更合适；如果任务更偏生成，`GPT` 更自然。
 
-## The paradigm shift
+## 预训练范式转变
 
-Old mindset:
-- train a task-specific architecture
-- maybe initialize with pretrained word embeddings
+旧范式通常是：
 
-New mindset:
-- pretrain a large full model
-- fine-tune that model for many downstream tasks
+- 为具体任务手工设计模型
+- 最多只拿预训练词向量做初始化
 
-This is one of the biggest conceptual transitions in modern NLP.
+新范式则是：
 
-中文理解：
-以前是“预训练词向量 + 自己搭模型”；
-现在是“直接拿大模型本体继续训”。
+- 先预训练一个大模型
+- 再把整个模型迁移到许多下游任务
 
-## Transfer learning
+这不是小修小补，而是现代 NLP 最重要的思路切换之一。
 
-The course contrasts:
+## 迁移学习 transfer learning
 
-Pretraining:
-- simple objectives
-- huge raw corpora
-- expensive and slow
+课上把两个阶段区分得很清楚。
 
-Fine-tuning:
-- smaller labeled datasets
-- task-specific supervision
-- cheaper and easier to iterate
+`Pretraining` 的特点是：
+
+- 目标通常比较通用
+- 语料规模很大
+- 训练昂贵而缓慢
+
+`Fine-tuning` 的特点是：
+
+- 用较小的有标签数据
+- 监督信号更贴近具体任务
+- 成本更低，迭代更快
 
 ## BART
 
-BART is an encoder-decoder transformer.
-It combines:
-- BERT-style corrupted input on the encoder side
-- GPT-style autoregressive decoding on the decoder side
+`BART` 是 `encoder-decoder transformer`。
+它把两种思路结合起来：
 
-It is strong for:
-- generation
-- summarization
-- translation
-- and still many understanding tasks
+- `encoder` 处理被破坏过的输入
+- `decoder` 负责自回归生成输出
+
+这使得它既适合生成任务，也能处理很多理解任务。
 
 ## T5
 
-T5 pushes the "everything is text-to-text" view.
+`T5` 把“万物皆可 `text-to-text`”这件事推得更彻底。
 
-Main idea:
-- cast many tasks into a unified sequence-to-sequence format
-- pretrain with span corruption / infilling-style objectives
+它的核心想法是：
 
-This makes the framework very general.
+- 把很多任务都统一改写成输入文本到输出文本
+- 用 `span corruption` 或 `infilling` 一类目标做预训练
 
-## Quick comparison
+这种统一格式让模型框架非常通用。
 
-- ELMo: contextual embeddings from biLSTMs
-- BERT: encoder-only masked LM
-- GPT: decoder-only causal LM
-- BART: encoder-decoder denoising seq2seq
-- T5: unified text-to-text seq2seq
+## 模型对比
 
-## One-sentence takeaway
+可以粗略地这样记：
 
-Modern NLP moved from learning isolated embeddings to pretraining whole contextual models, then transferring them to downstream tasks through fine-tuning.
+- `ELMo`：来自双向 `LSTM` 的上下文化表示
+- `BERT`：`encoder-only` 的 `masked LM`
+- `GPT`：`decoder-only` 的 `causal LM`
+- `BART`：做去噪的 `encoder-decoder seq2seq`
+- `T5`：统一成 `text-to-text` 的 `seq2seq`
+
+## 小结
+
+现代 NLP 的主线，已经从“先学词向量，再自己搭任务模型”转成了“先预训练完整模型，再把它迁移到具体任务”。真正被迁移的不再只是词表示，而是整套上下文化参数。

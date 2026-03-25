@@ -1,146 +1,159 @@
-# Tokenization
+# Tokenization / 分词与切分
 
 Covered in: Week 3, Lecture 9 (`9-Tokenization`)
 
-## Why tokenization exists
+这一章讨论模型究竟把文本切成什么单位来处理，也就是 `token` 这个离散基本单元怎么定义。
 
-Raw text is not directly a sequence of model-ready discrete units.
-Tokenization decides how text is chopped into units before modeling.
+## Tokenization 的作用
 
-A token can be:
-- a word
-- a subword
-- a character
-- a byte
-- sometimes something more specialized
+原始文本并不是模型能直接处理的离散序列。
+`tokenization` 的任务，就是先决定文本该被切成哪些基本单元。
 
-## Word tokenization
+一个 `token` 可以是：
 
-The most intuitive approach is to split text into words and punctuation.
+- 一个词
+- 一个子词
+- 一个字符
+- 一个字节
+- 某些任务里也可能是更特殊的单元
 
-Example:
+模型到底能看到什么、词表有多大、序列有多长，都受这一步影响。
+
+## 词级切分
+
+最直观的方式，是把文本切成词和标点。
+
+例如：
 
 `We all love the modern NLP course!`
 
-becomes:
+可以被切成：
 
 `["We", "all", "love", "the", "modern", "NLP", "course", "!"]`
 
-### Problems with word tokenization
+### 词级切分的问题
 
-- punctuation and abbreviations are tricky
-- many languages do not use whitespace cleanly
-- morphology causes huge vocabularies
-- OOV words are painful
+`word tokenization` 虽然直观，但问题不少：
 
-Examples from the lecture:
+- 标点和缩写不好处理
+- 很多语言并没有清晰空格分词
+- 形态变化会让词表迅速变大
+- `OOV` 问题很严重
+
+典型例子包括：
+
 - `Prof.`
 - `don't`
 - `3-year-old`
-- Chinese / Thai without whitespace
+- 中文、泰语这类空格边界不清楚的语言
 
-## Character tokenization
+## 字符级切分
 
-Character-level tokenization solves OOV much better because vocabulary is tiny.
+`character-level tokenization` 的优点是词表很小，对未知词天然更稳。
 
-Advantages:
-- small vocabulary
-- robust to noise
-- no unknown word problem in the usual sense
+它的好处包括：
 
-Disadvantages:
-- sequences become much longer
-- learning semantic composition becomes harder
+- 词表小
+- 对拼写噪声更鲁棒
+- 几乎没有传统意义上的未知词问题
 
-## Subword tokenization
+但代价也明显：
 
-Subword tokenization is the compromise between word and character levels.
+- 序列会长很多
+- 模型必须自己学会从字符组合出语义
 
-Desired behavior:
-- frequent words stay intact
-- rare words get decomposed into meaningful pieces
+## 子词切分
 
-This reduces vocabulary size while preserving more semantic structure than plain characters.
+`subword tokenization` 可以看成词级和字符级之间的折中。
+
+它想达到的效果通常是：
+
+- 高频词尽量保留成整体
+- 低频词拆成更小但仍有意义的片段
+
+这样既能压住词表大小，也比纯字符更容易保留语义结构。
 
 ## BPE
 
-Byte Pair Encoding is one of the most important subword methods.
+`BPE` 是最经典的子词算法之一。
 
-Training procedure:
-1. Split words into characters.
-2. Build an initial vocabulary of characters.
-3. Count adjacent pair frequencies.
-4. Merge the most frequent pair.
-5. Add the merged unit to the vocabulary.
-6. Repeat until reaching the token budget.
+训练过程可以概括成：
 
-Key property:
-BPE is greedy and frequency-driven.
+1. 先把词拆成字符
+2. 用字符构造初始词表
+3. 统计相邻片段对的频率
+4. 每次合并最常见的一对
+5. 把新片段加入词表
+6. 一直重复到达到 `token budget`
 
-## Pre-tokenization
+它的核心特征是：贪心，而且完全由频率驱动。
 
-BPE usually assumes some earlier rough segmentation into "word-like" units.
-That preliminary step is called pre-tokenization.
+## 预切分 pre-tokenization
 
-Examples:
-- whitespace splitting
-- punctuation splitting
-- unicode normalization
+很多 `BPE` 系统在真正训练子词之前，会先做一层粗切分，也就是 `pre-tokenization`。
 
-This matters because tokenization quality depends partly on what happens before BPE even starts.
+常见做法包括：
 
-## Other subword methods
+- 按空格切
+- 把标点单独切开
+- 做 `unicode normalization`
+
+这一步很重要，因为后续学到的子词边界，往往已经受这里的预处理决定。
+
+## 其他子词方法
 
 ### WordPiece
 
-Similar spirit to BPE, but merge decisions depend not only on raw pair frequency.
+`WordPiece` 和 `BPE` 的总体思路很接近，但合并决策不只看原始频率，还会结合更细的评分准则。
 
 ### SentencePiece
 
-Designed to work directly on raw text without classic pre-tokenization.
-It also treats whitespace as part of the modeling process.
+`SentencePiece` 更强调直接在原始文本上工作，不强依赖传统 `pre-tokenization`。
+它甚至把空格也当成建模对象的一部分。
 
-This is useful for multilingual settings and scripts where word boundaries are less obvious.
+这对多语言环境尤其有用，因为不同书写系统的词边界规则差异很大。
 
-## Byte-level tokenization
+## 字节级切分
 
-Byte-level methods represent text as UTF-8 bytes.
+`byte-level tokenization` 进一步把文本表示成 UTF-8 字节序列。
 
-Advantages:
-- essentially no OOV problem
-- robust to noisy text
-- avoids huge word vocabularies
+优点是：
 
-Disadvantage:
-- sequences get even longer
-- training and inference become slower
+- 几乎彻底消除 `OOV`
+- 对脏文本更鲁棒
+- 不需要超大的词级词表
 
-The lecture mentioned ByT5 as a tokenizer-free direction.
+缺点是：
 
-## How big should the vocabulary be?
+- 序列会更长
+- 训练和推理都更慢
 
-There is no universal answer.
-Vocabulary size depends on:
-- data size
-- number of languages
-- number of domains
-- task mix
+课上提到的 `ByT5` 就体现了这种更接近 `tokenizer-free` 的方向。
 
-Rule of thumb from the slides:
-- smaller datasets usually want smaller subword vocabularies
-- large corpora can support larger vocabularies
+## 词表大小
 
-## Important limitations
+词表到底该有多大，没有统一标准。
+它取决于：
 
-Subwords are not the same as linguistic morphemes.
-So tokenization is a modeling convenience, not a perfect theory of language.
+- 数据规模
+- 语言数量
+- 领域数量
+- 任务类型
 
-It can still behave poorly on:
-- agglutinative morphology
-- non-concatenative morphology
-- scripts with hard segmentation problems
-- noisy informal text
+经验上，小数据集通常更适合较小的 `subword vocabulary`，而大语料才撑得起更大的词表。
 
-## One-sentence takeaway
+## 局限
 
-Tokenization is the design choice that defines the model's input alphabet, and modern NLP usually uses subword methods because they balance vocabulary size, generalization, and robustness.
+`subword` 并不等于真正的语言学 `morpheme`。
+所以 `tokenization` 更像工程折中，而不是完整的语言理论。
+
+它在下面几类情况里仍然可能表现很差：
+
+- 黏着语形态
+- 非串接形态变化
+- 边界很难判断的书写系统
+- 高噪声的非正式文本
+
+## 小结
+
+`tokenization` 决定了模型看到的输入字母表。现代 NLP 通常偏好 `subword methods`，因为它们在词表大小、泛化能力和鲁棒性之间给出了一个比较平衡的工程方案。
