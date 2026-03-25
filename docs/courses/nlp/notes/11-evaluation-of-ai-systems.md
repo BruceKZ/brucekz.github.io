@@ -29,6 +29,8 @@ Covered in: Week 5 guest lecture (`angelika_romanou-nlp-evaluation-guest-lecture
 
 所以看到 `+0.5` 之类的提升时，不能默认它就一定有实质意义。
 
+对考试或论文阅读来说，这里的核心判断是：统计差异、实现差异和真实能力差异不是一回事。
+
 ## 评测不存在单一最优方案
 
 不同人关心的问题不一样：
@@ -58,6 +60,8 @@ Covered in: Week 5 guest lecture (`angelika_romanou-nlp-evaluation-guest-lecture
 - `RAG`
 - `tool use`
 
+也就是说，评测结果永远是“模型 + 提示方式 + 推理策略 + 后处理”的联合产物，而不是模型参数本身的纯净分数。
+
 ## 内在评测与下游评测
 
 ### Perplexity
@@ -83,6 +87,8 @@ Covered in: Week 5 guest lecture (`angelika_romanou-nlp-evaluation-guest-lecture
 
 它们的问题在于，`LLM outputs` 往往有很多正确答案，而语义等价并不等于字面重合。
 如果只看词面重叠，很多合理改写都会被误罚。
+
+所以这类指标在开放式生成任务里常常只能当粗糙参考，不能当最终裁决。
 
 ## 现代能力评测
 
@@ -130,6 +136,9 @@ Covered in: Week 5 guest lecture (`angelika_romanou-nlp-evaluation-guest-lecture
 
 所以这种方法必须被校验，不能直接当真值。
 
+一个常见的思维误区是把 judge model 当成人类评测的完美替代。
+更准确的看法是：它只是更便宜、更快的近似评测器，本身也需要被评测。
+
 ## 安全性与鲁棒性
 
 评测不能只看平均分，还要专门测失败模式。
@@ -168,6 +177,18 @@ Covered in: Week 5 guest lecture (`angelika_romanou-nlp-evaluation-guest-lecture
 
 `benchmark` 测到的通常只是行为切片，不是“通用智能总分”。
 一个模型在榜单上看起来很好，并不意味着它在真实环境里不会犯很严重的错。
+
+## 核心概念
+
+- **评测角色：** `evaluation` 决定了什么会被叫作“更强的模型”。
+- **设计原则：** 评测方案必须和具体目标、用户以及部署场景绑定。
+- **方法差异：** `perplexity`、词面重叠指标、能力 benchmark、人工评测覆盖的是不同维度。
+
+## 高频结论
+
+- **榜单边界：** 单一 leaderboard 排名不能稳定代表真实能力。
+- **Judge 风险：** `LLM-as-a-judge` 很可扩展，但会引入新的系统性偏差。
+- **组合评测：** 稳健评测通常依赖多种方法一起使用，而不是单一分数。
 
 ## 小结
 

@@ -38,6 +38,8 @@ Covered in: Week 4, Lectures 10-11 (`10-PLMs_1`, `11-PLMs_2`)
 它的优点是，相比静态词向量，很多任务上效果都明显更好。
 但它的双向性本质上还是两个方向模型的拼接，而不是统一编码器里的一体化双向条件建模。
 
+这也是 `ELMo` 的经典局限：它已经比静态词向量前进了一大步，但还不是后来 `BERT` 那种原生双向编码。
+
 ## BERT
 
 `BERT` 是 `encoder-only transformer`，主要通过 `masked language modeling` 做预训练。
@@ -56,6 +58,8 @@ Covered in: Week 4, Lectures 10-11 (`10-PLMs_1`, `11-PLMs_2`)
 - `BERT` 可以利用双向上下文
 - 它对分类和序列标注尤其强
 
+另一个容易考的点是：`BERT` 的预训练目标和 `GPT` 不同，所以它天然更偏表示学习，而不是左到右生成。
+
 ### Fine-tuning BERT
 
 做分类任务时，常见方式是：
@@ -66,6 +70,8 @@ Covered in: Week 4, Lectures 10-11 (`10-PLMs_1`, `11-PLMs_2`)
 - 对整个模型做 `fine-tuning`
 
 课上强调的一点是，完整 `fine-tuning` 通常比只把 `BERT embeddings` 冻结起来当特征更有效。
+
+这是现代预训练范式的核心结论之一：迁移的不只是词向量，而是整套模型参数。
 
 ## GPT
 
@@ -82,6 +88,11 @@ $$
 
 和 `BERT` 相比，它的弱点在于预训练时不使用双向条件信息。
 所以如果任务更偏表示学习，`BERT` 往往更合适；如果任务更偏生成，`GPT` 更自然。
+
+把它们放在一起记，常见比较就是：
+
+- `BERT`：强在编码和理解
+- `GPT`：强在自回归生成
 
 ## 预训练范式转变
 
@@ -123,6 +134,8 @@ $$
 
 这使得它既适合生成任务，也能处理很多理解任务。
 
+课上这部分的重点，是把 `BART` 看成把 `BERT` 风格的输入破坏和 `GPT` 风格的生成结合起来。
+
 ## T5
 
 `T5` 把“万物皆可 `text-to-text`”这件事推得更彻底。
@@ -134,6 +147,9 @@ $$
 
 这种统一格式让模型框架非常通用。
 
+`T5` 的重要性不只是模型结构，而是任务表述方式。
+它把大量 NLP 任务都重新写成统一的 `text-to-text` 接口。
+
 ## 模型对比
 
 可以粗略地这样记：
@@ -143,6 +159,18 @@ $$
 - `GPT`：`decoder-only` 的 `causal LM`
 - `BART`：做去噪的 `encoder-decoder seq2seq`
 - `T5`：统一成 `text-to-text` 的 `seq2seq`
+
+## 核心概念
+
+- **出现背景：** 静态词向量无法处理 `polysemy`，这推动了上下文化表示的发展。
+- **ELMo：** `ELMo` 通过双向 `LSTM` 隐状态提供上下文化表示。
+- **BERT / GPT：** `BERT` 是 `encoder-only + masked LM`，`GPT` 是 `decoder-only + causal LM`。
+
+## 高频结论
+
+- **能力分工：** `BERT` 更偏表示学习，`GPT` 更偏生成。
+- **迁移方式：** `fine-tuning` 通常强于只抽取冻结的预训练特征。
+- **Encoder-decoder 范式：** `BART` 和 `T5` 都属于更统一的 `encoder-decoder` 预训练路线。
 
 ## 小结
 

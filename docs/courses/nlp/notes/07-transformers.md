@@ -37,6 +37,9 @@ $$
 
 最终输出是对各个 `value` 的加权求和。
 
+这里常见的名字是 `scaled dot-product attention`。
+分母里的 `\sqrt{d}` 不是装饰，而是为了在维度变大时控制点积规模，避免 `softmax` 太快进入极端饱和区。
+
 ## 直观理解
 
 如果只看某一个位置：
@@ -60,6 +63,9 @@ $$
 
 多个头的输出会先拼接，再投影回统一维度。
 
+多头的意义，不只是“复制很多份注意力”。
+更准确地说，它让模型可以在不同子空间里并行学习不同关系。
+
 ## Transformer block 的组成
 
 一个标准 `transformer block` 通常包括：
@@ -70,6 +76,8 @@ $$
 - `feedforward network`
 
 `residual connection` 让优化更稳定，`LayerNorm` 有助于控制表示分布，后面的前馈层则负责进一步做非线性变换。
+
+这一块也是常见选择题来源：`transformer block` 不只有注意力，`residual`、`LayerNorm` 和 `feedforward network` 都是标准组成部分。
 
 ## Encoder 与 Decoder
 
@@ -91,6 +99,11 @@ $$
 
 这就实现了 `causal generation`，保证模型只能利用当前位置之前的上下文。
 
+所以要区分两种注意力：
+
+- `encoder self-attention` 通常可以看全序列
+- `decoder self-attention` 在生成场景下必须是 `masked`
+
 ## 交叉注意力 cross-attention
 
 `cross-attention` 可以看成经典 `encoder-decoder attention` 在 `transformer` 里的版本：
@@ -99,6 +112,9 @@ $$
 - `keys` 和 `values` 来自 `encoder outputs`
 
 因此 `decoder` 一边建模目标端历史，一边按需从源端取信息。
+
+这一层和经典 `seq2seq attention` 的关系非常紧密。
+如果把 `transformer` 放回课程主线里看，`cross-attention` 本质上就是把旧的 `encoder-decoder attention` 用更统一的注意力框架重写了一遍。
 
 ## 位置编码
 
@@ -127,6 +143,18 @@ $$
 - 注意力计算对序列长度通常是二次复杂度
 - 位置信息不会自动出现
 - 长上下文效率仍然是活跃研究问题
+
+## 核心概念
+
+- **结构替换：** `Transformer` 用 `self-attention` 替代循环结构。
+- **三元组：** `query / key / value` 是理解注意力机制的核心。
+- **缩放项：** `scaled dot-product attention` 里的缩放项用于稳定训练。
+
+## 高频结论
+
+- **多头意义：** `multi-head attention` 让模型在不同子空间并行建模关系。
+- **标准 block：** 一个典型 `transformer block` 不只有注意力，还包含残差、归一化和前馈层。
+- **因果生成：** `decoder` 里的 `masked self-attention` 用来保证不能偷看未来 token。
 
 ## 小结
 
