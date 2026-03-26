@@ -2,5 +2,125 @@
 contributors: GitHub Actions
 ---
 
-429: Too Many Requests
-For more on scraping GitHub and how it may affect your rights, please review our Terms of Service (https://docs.github.com/en/site-policy/github-terms/github-terms-of-service).
+# Course Homepage
+
+
+### Course Description
+Natural language processing is ubiquitous in modern intelligent technologies, serving as a foundation for language translators, virtual assistants, search engines, and many more. In this course, we cover the foundations of modern methods for natural language processing, such as word embeddings, recurrent neural networks, transformers, and pretraining, and how they can be applied to important tasks in the field, such as machine translation and text classification. We also cover issues with these state-of-the-art approaches (such as robustness, interpretability, sensitivity), identify their failure modes in different NLP applications, and discuss analysis and mitigation techniques for these issues. 
+
+#### Quick access links:
+- [Platforms](#class)
+- [Lecture Schedule](#lectures)
+- [Exercise Schedule](#exercises)
+- [Contact](#contact)
+
+<a name="class"></a>
+## Class
+
+| Platform           				| Where & when                                              																								   |
+|:------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Lectures           						| **Wednesdays: 11:15-13:00** [[STCC - Cloud C]()] & **Thursdays: 13:15-14:00** [[CE16]()]  |
+| Exercises Session  						| **Thursdays: 14:15-16:00** [[CE11]()] 											     	   |
+| Project Assistance <br />(not every week) | **Wednesdays: 13:15-14:00** [[STCC - Cloud C]()] 					   						   |
+| QA Forum & Annoucements   			    | Ed Forum [[link](https://edstem.org/eu/courses/3119/discussion)]                             | 
+| Grades             						| Moodle [[link](https://moodle.epfl.ch/course/view.php?id=17143)]     
+| Lecture Recordings						| Mediaspace [[link](https://mediaspace.epfl.ch/channel/CS-552%2BModern%2Bnatural%2Blanguage%2Bprocessing/31346)]			|
+
+All lectures will be given in person and live streamed on Zoom. The link to the Zoom is available on the Ed Forum (pinned post). Beware that, in the event of a technical failure during the lecture, continuing to accompany the lecture live via zoom might not be possible.
+
+Recording of the lectures will be made available on Mediaspace. We will reuse some of last year's recordings and we may record a few new lectures in case of different lecture contents.
+
+
+<a name="lectures"></a>
+## Lecture Schedule
+
+
+<table>
+    <tr>
+        <td>Week</td>
+        <td>Date</td>
+        <td>Topic</td>
+        <td>Suggested Reading</td>
+        <td>Instructor</td>
+    </tr>
+    <tr>
+        <td><strong>Week 1</strong></td>
+        <td>18 Feb <br />19 Feb</td>
+        <td>Introduction &#124; Building a simple neural classifier [<a href="https://github.com/epfl-nlp/cs-552-modern-nlp/tree/main/Lectures/Week_1">slides</a>] [<a href="https://mediaspace.epfl.ch/media/%5B2026%5D+1-2%3A+Introduction++Simple+Neural+Classifier/0_ifqg1g76/31346">video</a>]<br />Word embeddings [<a href="https://github.com/epfl-nlp/cs-552-modern-nlp/tree/main/Lectures/Week_1">slides</a>] [<a href="https://mediaspace.epfl.ch/media/%5B2026%5D+3%3A+Neural+Word+Embeddings/0_mt3wihw1/31346">video</a>]</td>
+        <td><ul><li><a href="https://mitpress.mit.edu/9780262042840/introduction-to-natural-language-processing">Introduction to natural language processing, chapter 3.1 - 3.3 & chapter 14.5 - 14.6</a></li><li><a href="https://arxiv.org/abs/1301.3781">Efficient Estimation of Word Representations in Vector Space</a></li><li><a href="https://aclanthology.org/D14-1162">GloVe: Global Vectors for Word Representation</a></li><li><a href="https://aclanthology.org/Q17-1010">Enriching word vectors with subword information</a></li><li><a href="https://aclanthology.org/L18-1008">Advances in pre-training distributed word representations</a></li></ul></td>
+        <td>Antoine Bosselut</td>
+    </tr>
+    <tr>
+        <td><strong>Week 2</strong></td>
+        <td>25 Feb <br />26 Feb</td>
+        <td>Classical LMs &#124; Neural LMs: Fixed Context Models  [<a href="https://github.com/epfl-nlp/cs-552-modern-nlp/tree/main/Lectures/Week_2">slides</a>] [<a href="https://mediaspace.epfl.ch/media/%5B2026%5D+4-5%3A+Classical+Language+Models/0_c5btu4l9/31346">video</a>]<br />Neural LMs: RNNs [<a href="https://github.com/epfl-nlp/cs-552-modern-nlp/tree/main/Lectures/Week_2">slides</a>] [<a href="https://mediaspace.epfl.ch/media/t/0_ixa2wa2o/31346">video</a>]</td>
+        <td>Suggested reading: <ul><li><a href="https://mitpress.mit.edu/9780262042840/introduction-to-natural-language-processing">Introduction to natural language processing, chapter 6.1-6.4</a></li><li><a href="http://www.jmlr.org/papers/volume3/bengio03a/bengio03a.pdf">A Neural Probabilistic Language Model</a></li><li><a href="https://proceedings.mlr.press/v28/pascanu13.html">On the difficulty of training recurrent neural networks</a></li><li><a href="https://mitpress.mit.edu/9780262042840/introduction-to-natural-language-processing">Introduction to natural language processing, chapter 3.1 - 3.3 & chapter 18.3, 18.4</a></li></ul></td>
+        <td>Antoine Bosselut</td>
+    </tr>
+    <tr>
+        <td><strong>Week 3</strong></td>
+        <td>4 Mar <br />5 Mar</td>
+        <td>Sequence-to-sequence Models &#124; Transformers [<a href="https://github.com/epfl-nlp/cs-552-modern-nlp/tree/main/Lectures/Week_3">slides</a>] [<a href="https://mediaspace.epfl.ch/media/%5B2026%5D+7-8%3A+Sequence-to-sequence+models/0_hmm0oor1/31346">video</a>]<br />Tokenization [<a href="https://github.com/epfl-nlp/cs-552-modern-nlp/tree/main/Lectures/Week_3">slides</a>] [<a href="https://mediaspace.epfl.ch/media/%5B2026%5D+9%3A+Tokenization/0_2x0gymgh/31346">video</a>] </td>
+        <td>Suggested reading: <ul><li><a href="https://arxiv.org/abs/1706.03762">Attention Is All You Need</a></li><li><a href="https://aclanthology.org/W18-2509">The Annotated Transformer</a></li><li><a href="https://jalammar.github.io/illustrated-transformer/">The illustrated transformer</a></li><li><a href="https://arxiv.org/abs/2112.10508">Between words and characters: A brief history of open-vocabulary modeling and tokenization in NLP</a></li><li><a href="https://arxiv.org/abs/2105.13626">Byt5: Towards a token-free future with pre-trained byte-to-byte models</a></li><li><a href="https://arxiv.org/abs/1508.07909">Neural machine translation of rare words with subword units</a></li></ul></td>
+        <td>Antoine Bosselut</td>
+    </tr>
+    <tr>
+        <td><strong>Week 4</strong></td>
+        <td>11 Mar <br />12 Mar</td>
+        <td><strong>[Online only]</strong> Pretraining &#124; Transfer Learning [<a href="https://github.com/epfl-nlp/cs-552-modern-nlp/tree/main/Lectures/Week_4">slides</a>] [<a href="https://mediaspace.epfl.ch/media/%5B2026%5D+10%3A+Pretained+Language+Models%3A+ELMo%2C+BERT%2C+GPT/0_kuphnc4t/31346">video</a>] [<a href="https://mediaspace.epfl.ch/media/%5B2026%5D+11%3A+Pretrained+Representations%3A+BART++T5/0_q1p75ish/31346">video</a>] <br /><strong>Guest Lecture</strong> [<a href="https://mediaspace.epfl.ch/media/%5B2026%5D+Guest+lecture+from+Leandro+von+Werra+%28HuggingFace%29%3A+Training+Data+for+LLMs/0_721i067b/31346">video</a>]</td>
+        <td>Suggested reading: <ul><li>Elmo: <a href="https://aclanthology.org/N18-1202">Deep Contextualized Word Representations</a></li><li>BERT: <a href="https://aclanthology.org/N19-1423">BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding</a></li><li>RoBERTa: <a href="https://arxiv.org/abs/1907.11692">RoBERTa: A Robustly Optimized BERT Pretraining Approach</a></li><li><a href="https://www.ruder.io/state-of-transfer-learning-in-nlp/">Transfer Learning in Natural Language Processing</a></li><li>T5: <a href="https://arxiv.org/abs/1910.10683">Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer</a></li><li>BART: <a href="https://arxiv.org/abs/1910.13461">BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension</a></li></ul></td>
+        <td>Antoine Bosselut<br /><strong>Leandro von Werra (HuggingFace)</strong></td>
+    </tr>
+        <tr>
+        <td><strong>Week 5</strong></td>
+        <td>18 Mar<br/>19 Mar</td>
+        <td>Evaluation &amp; Dataset Biases [<a href="https://github.com/epfl-nlp/cs-552-modern-nlp/tree/main/Lectures/Week_5">slides</a>] [<a href="https://mediaspace.epfl.ch/media/%5B2026%5D+13-14%3A+Evaluation++Dataset+Biases/0_38wmfktw/31346">video</a>]<br /><strong>Guest Lecture: Evaluation of AI systems</strong> [<a href="https://github.com/epfl-nlp/cs-552-modern-nlp/tree/main/Lectures/Week_5">slides</a>] [<a href="https://mediaspace.epfl.ch/media/%5B2026%5D+Guest+lecture+from+Angelika+Romanou+%28EPFL%29%3A+Evaluation+of+AI+systems/0_tjg4y7bb/31346">video</a>]</td>
+        <td>Suggested reading: -</td>
+        <td>Antoine Bosselut<br/><strong>  Angelika Romanou (EPFL)</strong></td>
+    </tr>
+    <tr>
+        <td><strong>Week 6</strong></td>
+        <td>25 Mar <br />26 Mar</td>
+        <td>Text Generation: Decoding  & Training [<a href="https://github.com/epfl-nlp/cs-552-modern-nlp/tree/main/Lectures/Week_6">slides</a>]<br />Text Generation: Evaluation [<a href="https://github.com/epfl-nlp/cs-552-modern-nlp/tree/main/Lectures/Week_6">slides</a>]</td>
+        <td>Suggested reading: <ul><li>Decoding: <a href="https://arxiv.org/abs/1503.03535">On Using Monolingual Corpora in Neural Machine Translation</a></li><li>Decoding: <a href="https://arxiv.org/abs/1805.04833">Hierarchical Neural Story Generation</a></li><li>Decoding: <a href="https://arxiv.org/abs/1912.02164">Plug and Play Language Models: A Simple Approach to Controlled Text Generation</a></li><li>Decoding: <a href="https://arxiv.org/abs/1904.09751">The Curious Case of Neural Text Degeneration</a></li><li>Decoding: <a href="https://arxiv.org/abs/1911.00172">Generalization through Memorization: Nearest Neighbor Language Models</a></li><li>Training: <a href="https://arxiv.org/abs/1511.06732">Sequence Level Training with Recurrent Neural Networks</a></li><li>Training: <a href="https://arxiv.org/abs/1609.08144"> Google's Neural Machine Translation System: Bridging the Gap between Human and Machine Translation</a></li><li>Training: <a href="https://arxiv.org/abs/1612.00563">Self-critical Sequence Training for Image Captioning</a></li><li>Training: <a href="https://arxiv.org/abs/1612.00370">Improved Image Captioning via Policy Gradient Optimization of SPIDEr</a></li><li>Training: <a href="https://arxiv.org/abs/1705.04304">A Deep Reinforced Model for Abstractive Summarization</a></li><li>Training: <a href="https://arxiv.org/abs/1805.03162">Polite Dialogue Generation Without Parallel Data</a></li></ul></td>
+        <td>Antoine Bosselut</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+</table>
+
+
+<a name="exercises"></a>
+## Exercise Schedule
+
+| Week        | Release Date    |  Exercise Session Date  | Topic                                                                                  |  Instructor   |
+|:------------|:--------|:------------------------------------------------------------------------------------------|:-------------------------------------------------------------------:|:-------------------------------------------------------------------:|
+| **Week 1**  | 19 Feb  | 26 Feb | Intro + Setup   |  Madhur Panwar |
+| **Week 2**  | 26 Feb  |  5 Mar |  LMs + Neural LMs: fixed-context models <br/>  Language and Sequence-to-sequence models | Badr AlKhamissi |
+| **Week 3**  | 5 Mar  | 12 Mar | Attention + Transformers + Tokenization   |  Badr AlKhamissi |
+| **Week 4**  | 12 Mar  | 19 Mar | Pretrained LLMs   |  Badr AlKhamissi |
+| **Week 5**  | 19 Mar  | 26 Mar | Transfer Learning   |  Madhur Panwar |
+| **Week 6**  | 26 Mar  | 2 Apr | Text Generation   |  Madhur Panwar |
+| **Week 7**  | 1 Apr   | 2 Apr | In-context Learning + Post-training   |  TBD |
+
+
+
+<a name="contact"></a>
+## Contacts
+
+Please email us at **nlp-cs552-spring2026-ta-team [at] groupes [dot] epfl [dot] ch** for any administrative questions, rather than emailing TAs individually. All course content questions need to be asked via [Ed](https://edstem.org/eu/courses/3119/discussion).
+
+**Lecturer**: [Antoine Bosselut](https://people.epfl.ch/antoine.bosselut)
+
+**Teaching assistants**: [Madhur Panwar](https://people.epfl.ch/madhur.panwar), [Badr AlKhamissi](https://people.epfl.ch/badr.alkhamissi), [Zeming (Eric) Chen](https://people.epfl.ch/zeming.chen?lang=en), [Sepideh Mamooler](https://people.epfl.ch/sepideh.mamooler), [Ayush Tarun](https://people.epfl.ch/ayush.tarun), [Lazar Milikic](https://people.epfl.ch/lazar.milikic), [Hao Zhao](https://people.epfl.ch/hao.zhao)
+
+
+
+[0e]:https://github.com/epfl-nlp/cs-552-modern-nlp/tree/main/Exercises/Setup
+[1e]:https://github.com/epfl-nlp/cs-552-modern-nlp/tree/main/Exercises/
