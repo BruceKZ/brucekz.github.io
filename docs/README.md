@@ -11,7 +11,6 @@ contributors: false
 hero:
   name: 比比拉布
   tagline: 咕咕嘎嘎
-  text: BSc Informatics @ USI · Exchange Year @ EPFL
   actions:
     - theme: alt
       text: Course Notes

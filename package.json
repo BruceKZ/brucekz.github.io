@@ -2,7 +2,7 @@
     "name": "vuepress",
     "version": "1.0.0",
     "main": "index.js",
-    "author": "Zhixiang Dai <hnhnuh@126.com>",
+    "author": "Bruce12138 <hnhnuh@126.com>",
     "license": "MIT",
     "devDependencies": {
         "@mdit/plugin-tasklist": "^0.22.1",
