@@ -42,7 +42,7 @@ $$
 \mathcal{L} = \sum_{t=1}^{T} -\log P(y_t \mid y_{<t}, x_{1:n})
 $$
 
-所以 `decoder` 本质上还是一个 `conditional language model`。
+因此 `decoder` 仍是一个 `conditional language model`。
 
 和普通语言模型相比，最大的差别在于：
 
@@ -104,7 +104,7 @@ $$
 - `key`：每个源位置的“地址”或匹配线索
 - `value`：每个源位置真正携带的内容
 
-所以 `attention` 本质上很像一次基于内容的检索。
+因此 `attention` 很像一次基于内容的检索。
 `decoder` 不是把整句源文本死记住，而是在每一步生成时，动态地去取当前最相关的 `source positions`。
 
 ## 核心概念

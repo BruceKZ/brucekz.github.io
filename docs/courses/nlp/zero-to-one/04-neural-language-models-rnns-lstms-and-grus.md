@@ -83,7 +83,7 @@ Covered in: Week 2 (`4+5-EarlyLMs+RNNs-Start`, `6-RNNs-continued+LSTMs+GRUs`)
 
 它的做法是：
 
-- 先把循环网络按时间展开
+- 将循环网络按时间展开
 - 再沿时间轴做反向传播
 
 这与普通前馈网络的主要区别在于：梯度不仅要穿过层，也要穿过很多时间步。
@@ -188,7 +188,7 @@ vanilla `RNN` 往往很难稳定学到这些关系。
 
 ## GRU
 
-`GRU` 可以看成 `LSTM` 的更简化版本。
+`GRU` 是 `LSTM` 的更简化版本。
 
 它和 `LSTM` 的共同点是：
 

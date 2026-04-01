@@ -1,7 +1,7 @@
 # CS552 NLP High-Yield / 提炼版
 
 这组笔记面向已经跟过课，或者已经读过详细版的人。
-目标是把最常考、最常混和最值得对比的内容压缩成可复习的多文档提纲。
+内容压缩为可复习的多文档提纲，集中保留最常考、最易混和最值得对比的部分。
 
 ## 主题总览
 
@@ -15,10 +15,10 @@
 | [Data and Evaluation / 数据与评测](./05-data-and-evaluation.md) | benchmark、artifacts、leaderboard illusion、LLM-as-a-judge |
 | [Text Generation / 文本生成](./06-text-generation.md) | greedy、beam search、sampling、teacher forcing、exposure bias、sequence-level training |
 | [In-Context Learning and Post-Training / 上下文学习与后训练](./07-in-context-learning-and-post-training.md) | ICL、CoT、instruction tuning、RLHF、PPO、DPO、RLVR |
-| [High-Risk Missing Points / 高风险漏点](./08-high-risk-missing-points.md) | 原 `notes/` 之外建议额外补的点 |
+| [High-Risk Missing Points / 高风险漏点](./08-high-risk-missing-points.md) | 原 `notes/` 之外需要额外补的点 |
 
-## 使用建议
+## 阅读顺序
 
 - 想快速建立全局框架，先看 `00`。
 - 想考前查漏，优先看 `08`。
-- 想做概念对比题，按 `01` 到 `07` 的顺序扫一遍。
+- 想做概念对比题，按 `01` 到 `07` 的顺序读。

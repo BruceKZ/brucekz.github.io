@@ -1,11 +1,11 @@
 # CS552 NLP Notes / 现代 NLP 笔记
 
 这组笔记按知识点组织，不按 lecture 时间顺序展开。
-写法以平述知识点为主，保留英文术语，并补一层中文提示，方便扫读和复习。
-每一章除了基础叙述外，也尽量补了核心概念、模型对比和高频结论，便于从头学和考前回看。
+写法以平述知识点为主，保留英文术语，并补中文说明。
+各章补了核心概念、模型对比和高频结论。
 
-Weeks 1-2 主要结合了我自己的草稿笔记和课程 slides。
-Weeks 3-7 主要根据 slides 重写成知识点笔记。
+Weeks 1-2 结合了课程 slides 和已有草稿笔记。
+Weeks 3-7 主要根据 slides 重写为知识点笔记。
 
 ## 主题总览
 
@@ -25,4 +25,4 @@ Weeks 3-7 主要根据 slides 重写成知识点笔记。
 | [Text Generation / 文本生成](./12-text-generation.md) | decoding、beam search、sampling、sequence-level training、generation evaluation | Week 6, Lectures 19-21 |
 | [In-Context Learning and Post-Training / 上下文学习与后训练](./13-in-context-learning-and-post-training.md) | GPT-3、few-shot prompting、instruction tuning、RLHF、DPO、alignment | Week 7, Lecture 23 |
 
-这些笔记整体上从表示学习、语言建模、序列建模，一直推进到预训练范式、数据构建、评测，再延伸到文本生成和大模型后训练。
+这些笔记从表示学习、语言建模、序列建模，推进到预训练范式、数据构建、评测，再延伸到文本生成和大模型后训练。

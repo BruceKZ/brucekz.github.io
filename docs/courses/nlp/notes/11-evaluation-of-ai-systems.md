@@ -60,7 +60,7 @@ Covered in: Week 5 guest lecture (`angelika_romanou-nlp-evaluation-guest-lecture
 - `RAG`
 - `tool use`
 
-也就是说，评测结果永远是“模型 + 提示方式 + 推理策略 + 后处理”的联合产物，而不是模型参数本身的纯净分数。
+评测结果永远是“模型 + 提示方式 + 推理策略 + 后处理”的联合产物，而不是模型参数本身的纯净分数。
 
 ## 内在评测与下游评测
 

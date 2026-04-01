@@ -106,7 +106,7 @@ $$
 
 ## 交叉注意力 cross-attention
 
-`cross-attention` 可以看成经典 `encoder-decoder attention` 在 `transformer` 里的版本：
+`cross-attention` 是经典 `encoder-decoder attention` 在 `transformer` 里的版本：
 
 - `query` 来自 `decoder state`
 - `keys` 和 `values` 来自 `encoder outputs`
@@ -114,7 +114,7 @@ $$
 因此 `decoder` 一边建模目标端历史，一边按需从源端取信息。
 
 这一层和经典 `seq2seq attention` 的关系非常紧密。
-如果把 `transformer` 放回课程主线里看，`cross-attention` 本质上就是把旧的 `encoder-decoder attention` 用更统一的注意力框架重写了一遍。
+如果把 `transformer` 放回课程主线里看，`cross-attention` 就是把旧的 `encoder-decoder attention` 用更统一的注意力框架重写了一遍。
 
 ## 位置编码
 

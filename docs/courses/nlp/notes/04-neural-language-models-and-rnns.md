@@ -2,7 +2,7 @@
 
 Covered in: Week 2, Lectures 4-6 (`4+5-EarlyLMs+RNNs-Start`, `6-RNNs-continued+LSTMs+GRUs`)
 
-这一部分可以看成从 `n-gram` 走向 `RNN` 的过渡：先用连续表示替代计数表，再把固定窗口换成递归状态。
+这一部分是从 `n-gram` 走向 `RNN` 的过渡：先用连续表示替代计数表，再把固定窗口换成递归状态。
 
 ## 从 n-gram 到神经语言模型
 
@@ -66,7 +66,7 @@ h_t = \sigma(W_{hx}x_t + W_{hh}h_{t-1} + b_h)
 $$
 
 这样当前的 `hidden state` 会同时依赖当前输入和上一步状态。
-直观上，`hidden state` 就是在不断压缩历史信息。
+`hidden state` 的作用相当于不断压缩历史信息。
 
 课上最基础的 `RNN` 形式就是 `Elman network`。
 它的意义不是“把所有历史原封不动存下来”，而是用递归状态不断保留对当前预测最有用的信息。

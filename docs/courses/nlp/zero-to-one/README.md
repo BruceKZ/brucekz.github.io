@@ -1,14 +1,13 @@
 # CS552 NLP Zero-to-One / 从零开始版
 
 这组笔记面向第一次系统接触 NLP 的读者。
-写法会比原始 `notes/` 更展开，尽量把课程里的默认前置知识补齐，但仍然按主题拆分，不做单篇长文。
+写法比原始 `notes/` 更展开，补齐课程默认前置知识，但仍按主题拆分，不写成单篇长文。
 
 内容组织原则：
 
 - 先交代问题背景，再讲模型结构
-- 解释为什么一代方法会过渡到下一代方法
+- 解释方法之间的过渡关系
 - 补齐对照 PDF 时发现的高风险漏点
-- 语气保持普通讲义风格，不做对话式铺陈
 
 ## 主题总览
 
@@ -27,8 +26,8 @@
 | [Text Generation / 文本生成](./10-text-generation.md) | greedy、beam search、sampling、exposure bias、teacher forcing、scheduled sampling、sequence-level training | Week 6, `19+20-Text_Generation_part1` |
 | [In-Context Learning and Post-Training / 上下文学习与后训练](./11-in-context-learning-and-post-training.md) | zero-shot、few-shot、CoT、instruction tuning、RLHF、PPO、DPO、RLVR、test-time scaling | Week 7, `23-gpt-3+prompting+post-training` |
 
-## 使用建议
+## 阅读顺序
 
-- 第一次学这门课，建议按上表顺序读。
-- 已经上过课但对部分基础不稳，可以从 `03` 开始补。
-- 考前复习建议配合提炼版一起使用。
+- 第一次学这门课，按上表顺序读。
+- 已经上过课但对部分基础不稳，可从 `03` 开始补。
+- 考前复习可配合提炼版。

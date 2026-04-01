@@ -6,7 +6,7 @@ Covered in: Week 7, Lecture 23 (`23-gpt-3+prompting+post-training`)
 
 ## 从预训练模型到可用助手
 
-一个只做 `next-token prediction` 训练的 `base model`，本质上学到的是：
+一个只做 `next-token prediction` 训练的 `base model`，主要学到的是：
 
 - 语言分布
 - 模式续写
@@ -35,7 +35,7 @@ Covered in: Week 7, Lecture 23 (`23-gpt-3+prompting+post-training`)
 
 ## Prompt 作为任务条件
 
-从这个角度看，`prompt` 不只是自然语言输入，它其实在扮演任务描述器的角色。
+在这里，`prompt` 不只是自然语言输入，它还扮演任务描述器的角色。
 
 上下文里可以包含：
 
@@ -86,7 +86,7 @@ Covered in: Week 7, Lecture 23 (`23-gpt-3+prompting+post-training`)
 
 调完之后，模型会更像一个 `assistant model`，而不只是续写器。
 
-直观上可以把它理解为：`pretraining` 教模型“会说话”，`instruction tuning` 教模型“听懂别人要你做什么”。
+可以概括为：`pretraining` 教模型“会说话”，`instruction tuning` 教模型“听懂别人要你做什么”。
 
 ## Preference tuning 和对齐
 

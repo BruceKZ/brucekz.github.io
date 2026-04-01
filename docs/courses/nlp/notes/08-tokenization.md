@@ -19,7 +19,7 @@ Covered in: Week 3, Lecture 9 (`9-Tokenization`)
 
 模型到底能看到什么、词表有多大、序列有多长，都受这一步影响。
 
-也就是说，`tokenization` 并不是训练前的无关预处理，而是模型设计本身的一部分。
+因此，`tokenization` 并不是训练前的无关预处理，而是模型设计本身的一部分。
 很多下游表现差异，最后都能追溯到这里的离散化选择。
 
 ## 词级切分
@@ -69,7 +69,7 @@ Covered in: Week 3, Lecture 9 (`9-Tokenization`)
 
 ## 子词切分
 
-`subword tokenization` 可以看成词级和字符级之间的折中。
+`subword tokenization` 是词级和字符级之间的折中。
 
 它想达到的效果通常是：
 

@@ -7,7 +7,7 @@ Covered in: Week 3 (`8-Transformers`, `9-Tokenization`)
 - `transformer` 在建模层面替代了循环结构
 - `tokenization` 决定模型实际看到的最小输入单元
 
-这两条线看起来一个偏模型、一个偏数据预处理，但在现代 NLP 里其实联系很紧。模型能力、词表大小、序列长度和训练成本会直接相互影响。
+这两条线看起来一个偏模型、一个偏数据预处理，但在现代 NLP 里联系很紧。模型能力、词表大小、序列长度和训练成本会直接相互影响。
 
 ## 为什么需要 transformer
 
@@ -45,7 +45,7 @@ Covered in: Week 3 (`8-Transformers`, `9-Tokenization`)
 - `RNN` 里位置 `t` 想利用位置 `1` 的信息，必须穿过很多递推步
 - `self-attention` 里位置 `t` 可以直接和位置 `1` 建立连接
 
-这就是为什么它在长距离建模上更自然。
+因此它在长距离建模上更自然。
 
 ## self-attention 到底在算什么
 
@@ -241,7 +241,7 @@ Covered in: Week 3 (`8-Transformers`, `9-Tokenization`)
 - 但序列更长
 - 模型需要处理更多位置
 
-因此词表大小本质上是在做：
+因此词表大小实质上是在权衡：
 
 - 表示粒度
 - 序列长度

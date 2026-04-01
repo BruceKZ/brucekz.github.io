@@ -2,7 +2,7 @@
 
 Covered in: Week 5, Lecture 13-14 (`13+14-data-artifacts`)
 
-这里的重点不是 `model architecture`，而是数据如何被定义、被标注，以及偏差怎样在数据阶段就进入系统。
+这一讲关注的不是 `model architecture`，而是数据如何被定义、被标注，以及偏差怎样在数据阶段就进入系统。
 
 ## benchmark、dataset、task 的区别
 
@@ -84,7 +84,7 @@ Covered in: Week 5, Lecture 13-14 (`13+14-data-artifacts`)
 - 真正理解能力并没有同步提升
 - `OOD generalization` 很差
 
-也就是说，数据集可能奖励的是模式利用，而不是真正的能力。
+这说明数据集可能奖励的是模式利用，而不是真正的能力。
 
 ## 标注者偏差
 

@@ -2,7 +2,7 @@
 
 Covered in: Week 5 (`13+14-data-artifacts`, `angelika_romanou-nlp-evaluation-guest-lecture`)
 
-这一部分可以看成两条相连的线：
+这一部分可分为两条相连的线：
 
 - 数据是怎么被构建出来的
 - 模型又是怎么被评测的
@@ -154,7 +154,7 @@ benchmark 可能无意中奖励“会做捷径题”的模型。
 - `sampling variance`
 - benchmark 选择和规模差异
 
-很多榜单排名其实是“模型 + prompt + implementation + benchmark choice”的联合结果，而不是一个纯粹、稳定、无上下文的能力值。
+很多榜单排名是“模型 + prompt + implementation + benchmark choice”的联合结果，而不是一个纯粹、稳定、无上下文的能力值。
 
 因此看到分数差距时，最应该先问的是：
 
