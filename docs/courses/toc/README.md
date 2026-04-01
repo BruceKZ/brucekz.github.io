@@ -2,6 +2,27 @@
 
 EPFL CS-251 Theory of Computation: [Coursebook](https://edu.epfl.ch/coursebook/en/theory-of-computation-CS-251) | [Moodle](https://moodle.epfl.ch/course/view.php?id=14459)
 
+## Lecture Notes
+
+- [Lecture 1: Introduction and Finite Automata](./Lecture1.md)
+- [Lecture 2: Non-Determinism and Closure Properties](./Lecture2.md)
+- [Lecture 3: Non-Regular Languages](./Lecture3.md)
+- [Lecture 4: Turing Machines](./Lecture4.md)
+- [Lecture 5: Decidability and Undecidability](./Lecture5.md)
+- [Lecture 6: Reductions](./Lecture6.md)
+
+## Slides
+
+| Lecture | PDF |
+| :---: | :--- |
+| 1 | [Lecture 1](https://blog.bruce12138.com/pdf/toc/Lecture1.pdf) |
+| 2 | [Lecture 2](https://blog.bruce12138.com/pdf/toc/Lecture2.pdf) |
+| 3 | [Lecture 3](https://blog.bruce12138.com/pdf/toc/Lecture3.pdf) |
+| 4 | [Lecture 4](https://blog.bruce12138.com/pdf/toc/Lecture4.pdf) |
+| 5 | [Lecture 5](https://blog.bruce12138.com/pdf/toc/Lecture5.pdf) |
+| 6 | [Lecture 6](https://blog.bruce12138.com/pdf/toc/Lecture6.pdf) |
+| 6b | [Lecture 6b Recap](https://blog.bruce12138.com/pdf/toc/Lecture6b.pdf) |
+
 ## Homework
 
 30% — 3 homeworks in groups of 2–4 students
@@ -15,3 +36,12 @@ EPFL CS-251 Theory of Computation: [Coursebook](https://edu.epfl.ch/coursebook/e
 - HW3: post April 28 @ 17:00, due May 8 @ 20:00
 
 70% — Final exam in June/July
+
+## Exercise Sets
+
+| Set | PDF | Solution |
+| :---: | :---: | :---: |
+| 4 | [Exercise Set 4](https://blog.bruce12138.com/pdf/toc/ExerciseSet4.pdf) | [Solution 4](https://blog.bruce12138.com/pdf/toc/ExerciseSet4_Solution.pdf) |
+| 5 | [Exercise Set 5](https://blog.bruce12138.com/pdf/toc/ExerciseSet5.pdf) | [Solution 5](https://blog.bruce12138.com/pdf/toc/ExerciseSet5_Solution.pdf) |
+| 6 | [Exercise Set 6](https://blog.bruce12138.com/pdf/toc/ExerciseSet6.pdf) | [Solution 6](https://blog.bruce12138.com/pdf/toc/ExerciseSet6_Solution.pdf) |
+| 7 | [Exercise Set 7](https://blog.bruce12138.com/pdf/toc/ExerciseSet7.pdf) | Pending |
