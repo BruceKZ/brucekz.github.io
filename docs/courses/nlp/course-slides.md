@@ -49,3 +49,9 @@ contributors: false
 | Slide Name | Link |
 |---|---|
 | Text Generation: Decoding, Training, and Evaluation | [19+20-Text_Generation_part1.pdf](https://blog.bruce12138.com/pdf/nlp/19+20-Text_Generation_part1.pdf) |
+
+## Week 7
+
+| Slide Name | Link |
+|---|---|
+| LLMs: In-context Learning, Instruction Tuning, Post-training | [23-gpt-3+prompting+post-training.pdf](https://blog.bruce12138.com/pdf/nlp/23-gpt-3+prompting+post-training.pdf) |

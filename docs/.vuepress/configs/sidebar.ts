@@ -154,6 +154,14 @@ export const sidebar = {
                             text: 'Pretraining and Transfer',
                             link: '/courses/nlp/notes/09-pretraining-and-transfer-learning.md',
                         },
+                        {
+                            text: 'Text Generation',
+                            link: '/courses/nlp/notes/12-text-generation.md',
+                        },
+                        {
+                            text: 'In-Context and Post-Training',
+                            link: '/courses/nlp/notes/13-in-context-learning-and-post-training.md',
+                        },
                     ],
                 },
                 {
