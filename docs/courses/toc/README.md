@@ -32,7 +32,10 @@ EPFL CS-251 Theory of Computation: [Coursebook](https://edu.epfl.ch/coursebook/e
 
   [Homework 1 ed link](https://edstem.org/eu/courses/2710/discussion/225360)
 
-- HW2: post March 31 @ 17:00, due April 17 @ 20:00
+- HW2: post March 31 @ 17:00, due April 17 @ 23:59
+
+  [Homework 2](https://blog.bruce12138.com/pdf/toc/HW2.pdf)
+
 - HW3: post April 28 @ 17:00, due May 8 @ 20:00
 
 70% — Final exam in June/July
