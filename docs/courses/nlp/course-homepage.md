@@ -108,13 +108,13 @@ Recording of the lectures will be made available on Mediaspace. We will reuse so
 
 | Week        | Release Date    |  Exercise Session Date  | Topic                                                                                  |  Instructor   |
 |:------------|:--------|:------------------------------------------------------------------------------------------|:-------------------------------------------------------------------:|:-------------------------------------------------------------------:|
-| **Week 1**  | 19 Feb  | 26 Feb | Intro + Setup   |  Madhur Panwar |
-| **Week 2**  | 26 Feb  |  5 Mar |  LMs + Neural LMs: fixed-context models <br/>  Language and Sequence-to-sequence models | Badr AlKhamissi |
-| **Week 3**  | 5 Mar  | 12 Mar | Attention + Transformers + Tokenization   |  Badr AlKhamissi |
-| **Week 4**  | 12 Mar  | 19 Mar | Pretrained LLMs   |  Badr AlKhamissi |
-| **Week 5**  | 19 Mar  | 26 Mar | Transfer Learning   |  Madhur Panwar |
-| **Week 6**  | 26 Mar  | 2 Apr | Text Generation   |  Madhur Panwar |
-| **Week 7**  | 1 Apr   | 2 Apr | In-context Learning + Post-training   |  TBD |
+| **[Week 1](https://github.com/epfl-nlp/cs-552-modern-nlp/tree/main/Exercises/Week%201)**  | 19 Feb  | 26 Feb | Intro + Setup   |  Madhur Panwar |
+| **[Week 2](https://github.com/epfl-nlp/cs-552-modern-nlp/tree/main/Exercises/Week%202)**  | 26 Feb  |  5 Mar |  LMs + Neural LMs: fixed-context models <br/>  Language and Sequence-to-sequence models | Badr AlKhamissi |
+| **[Week 3](https://github.com/epfl-nlp/cs-552-modern-nlp/tree/main/Exercises/Week%203)**  | 5 Mar  | 12 Mar | Attention + Transformers + Tokenization   |  Badr AlKhamissi |
+| **[Week 4](https://github.com/epfl-nlp/cs-552-modern-nlp/tree/main/Exercises/Week%204)**  | 12 Mar  | 19 Mar | Pretrained LLMs   |  Badr AlKhamissi |
+| **[Week 5](https://github.com/epfl-nlp/cs-552-modern-nlp/tree/main/Exercises/Week%205)**  | 19 Mar  | 26 Mar | Transfer Learning   |  Madhur Panwar |
+| **[Week 6](https://github.com/epfl-nlp/cs-552-modern-nlp/tree/main/Exercises/Week%206)**  | 26 Mar  | 2 Apr | Text Generation   |  Madhur Panwar |
+| **[Week 7](https://github.com/epfl-nlp/cs-552-modern-nlp/tree/main/Exercises/Week%207)**  | 1 Apr   | 2 Apr | In-context Learning + Post-training   |  TBD |
 
 
 

@@ -49,9 +49,19 @@ contributors: false
 | Slide Name | Link |
 |---|---|
 | Text Generation: Decoding, Training, and Evaluation | [19+20-Text_Generation_part1.pdf](https://blog.bruce12138.com/pdf/nlp/19+20-Text_Generation_part1.pdf) |
+| Text Generation: Evaluation (Part 2) | [21-Text_Generation_part2.pdf](https://blog.bruce12138.com/pdf/nlp/21-Text_Generation_part2.pdf) |
 
 ## Week 7
 
 | Slide Name | Link |
 |---|---|
 | LLMs: In-context Learning, Instruction Tuning, Post-training | [23-gpt-3+prompting+post-training.pdf](https://blog.bruce12138.com/pdf/nlp/23-gpt-3+prompting+post-training.pdf) |
+
+## Midterm
+
+| Slide Name | Link |
+|---|---|
+| Midterm 2025 | [Midterm_2025.pdf](https://blog.bruce12138.com/pdf/nlp/midterm/Midterm_2025.pdf) |
+| Midterm 2025 Solutions | [Midterm_2025_Solutions.pdf](https://blog.bruce12138.com/pdf/nlp/midterm/Midterm_2025_Solutions.pdf) |
+| Make-Up Midterm 2025 | [Make-Up_Midterm_2025.pdf](https://blog.bruce12138.com/pdf/nlp/midterm/Make-Up_Midterm_2025.pdf) |
+| Make-Up Midterm 2025 Solutions | [Make-Up_Midterm_2025_Solutions.pdf](https://blog.bruce12138.com/pdf/nlp/midterm/Make-Up_Midterm_2025_Solutions.pdf) |
