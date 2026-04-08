@@ -6,7 +6,8 @@
 
 - [课程主页整理](/courses/nlp/course-homepage.md)
 - [Official Course Homepage](https://nlp.epfl.ch/cs-552-modern-nlp/)
-- [课程幻灯片整理](/courses/nlp/course-slides.md)
+- [Resources - Slides](/courses/nlp/resources/slides.md)
+- [Resources - Exams](/courses/nlp/resources/exams.md)
 - [NLP 从零开始版](/courses/nlp/zero-to-one/)
 - [NLP 提炼版](/courses/nlp/high-yield/)
 - [NLP 知识点笔记](/courses/nlp/notes/)

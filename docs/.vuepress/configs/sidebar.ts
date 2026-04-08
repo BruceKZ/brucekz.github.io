@@ -89,9 +89,18 @@ export const sidebar = {
                     text: 'Course Homepage',
                     link: '/courses/nlp/course-homepage.md',
                 },
+            ],
+        },
+        {
+            text: 'Resources',
+            items: [
                 {
                     text: 'Slides',
-                    link: '/courses/nlp/course-slides.md',
+                    link: '/courses/nlp/resources/slides.md',
+                },
+                {
+                    text: 'Exams',
+                    link: '/courses/nlp/resources/exams.md',
                 },
             ],
         },

@@ -1,6 +1,5 @@
 ---
 title: Course Slides
-author: GitHub Actions
 contributors: false
 ---
 
@@ -18,8 +17,8 @@ contributors: false
 
 | Slide Name | Link |
 |---|---|
-| Classical LMs \| Neural LMs: Fixed Context Models | [4+5-EarlyLMs+RNNs-Start.pdf](https://blog.bruce12138.com/pdf/nlp/4+5-EarlyLMs+RNNs-Start.pdf) |
-| Neural LMs: RNNs | [6-RNNs-continued+LSTMs+GRUs.pdf](https://blog.bruce12138.com/pdf/nlp/6-RNNs-continued+LSTMs+GRUs.pdf) |
+| Classical LMs & Neural LMs: Fixed Context Models | [4_5-EarlyLMs_RNNs-Start.pdf](https://blog.bruce12138.com/pdf/nlp/4_5-EarlyLMs_RNNs-Start.pdf) |
+| Neural LMs: RNNs | [6-RNNs-continued_LSTMs_GRUs.pdf](https://blog.bruce12138.com/pdf/nlp/6-RNNs-continued_LSTMs_GRUs.pdf) |
 
 ## Week 3
 
@@ -41,27 +40,18 @@ contributors: false
 
 | Slide Name | Link |
 |---|---|
-| Evaluation and Dataset Biases | [13+14-data-artifacts.pdf](https://blog.bruce12138.com/pdf/nlp/13+14-data-artifacts.pdf) |
+| Evaluation and Dataset Biases | [13_14-data-artifacts.pdf](https://blog.bruce12138.com/pdf/nlp/13_14-data-artifacts.pdf) |
 | Guest Lecture: Evaluation of AI systems | [angelika_romanou-nlp-evaluation-guest-lecture.pdf](https://blog.bruce12138.com/pdf/nlp/angelika_romanou-nlp-evaluation-guest-lecture.pdf) |
 
 ## Week 6
 
 | Slide Name | Link |
 |---|---|
-| Text Generation: Decoding, Training, and Evaluation | [19+20-Text_Generation_part1.pdf](https://blog.bruce12138.com/pdf/nlp/19+20-Text_Generation_part1.pdf) |
+| Text Generation: Decoding, Training, and Evaluation | [19_20-Text_Generation_part1.pdf](https://blog.bruce12138.com/pdf/nlp/19_20-Text_Generation_part1.pdf) |
 | Text Generation: Evaluation (Part 2) | [21-Text_Generation_part2.pdf](https://blog.bruce12138.com/pdf/nlp/21-Text_Generation_part2.pdf) |
 
 ## Week 7
 
 | Slide Name | Link |
 |---|---|
-| LLMs: In-context Learning, Instruction Tuning, Post-training | [23-gpt-3+prompting+post-training.pdf](https://blog.bruce12138.com/pdf/nlp/23-gpt-3+prompting+post-training.pdf) |
-
-## Midterm
-
-| Slide Name | Link |
-|---|---|
-| Midterm 2025 | [Midterm_2025.pdf](https://blog.bruce12138.com/pdf/nlp/midterm/Midterm_2025.pdf) |
-| Midterm 2025 Solutions | [Midterm_2025_Solutions.pdf](https://blog.bruce12138.com/pdf/nlp/midterm/Midterm_2025_Solutions.pdf) |
-| Make-Up Midterm 2025 | [Make-Up_Midterm_2025.pdf](https://blog.bruce12138.com/pdf/nlp/midterm/Make-Up_Midterm_2025.pdf) |
-| Make-Up Midterm 2025 Solutions | [Make-Up_Midterm_2025_Solutions.pdf](https://blog.bruce12138.com/pdf/nlp/midterm/Make-Up_Midterm_2025_Solutions.pdf) |
+| LLMs: In-context Learning, Instruction Tuning, Post-training | [23-gpt-3_prompting_post-training.pdf](https://blog.bruce12138.com/pdf/nlp/23-gpt-3_prompting_post-training.pdf) |
