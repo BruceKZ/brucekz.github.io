@@ -72,8 +72,28 @@ export const sidebar = {
             text: 'Tech Notes',
             items: [
                 '/tech/README.md',
-                '/tech/hpc.md',
-                '/tech/local_latex.md',
+                {
+                    text: 'LaTeX',
+                    collapsed: false,
+                    items: [
+                        '/tech/local_latex.md',
+                        '/tech/epfl_homework_template.md',
+                    ],
+                },
+                {
+                    text: 'Competitive Programming',
+                    collapsed: false,
+                    items: [
+                        '/tech/icpc_cpp_workflow.md',
+                    ],
+                },
+                {
+                    text: 'HPC',
+                    collapsed: false,
+                    items: [
+                        '/tech/hpc.md',
+                    ],
+                },
             ],
         },
     ],
