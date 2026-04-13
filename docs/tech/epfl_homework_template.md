@@ -2,6 +2,8 @@
 
 A simple LaTeX template for EPFL homework.
 
+Download: [EPFL_Homework_Template.zip](/EPFL_Homework_Template.zip)
+
 ---
 
 ## Usage
@@ -25,8 +27,6 @@ If you use my Docker + VS Code setup on macOS, see [macOS Lightweight LaTeX Work
 
 ```text
 EPFL_Homework_Template/
-├── .vscode/
-│   └── settings.json
 ├── main.tex
 ├── resources/
 │   └── EPFL_Logo_R.png
@@ -38,7 +38,6 @@ EPFL_Homework_Template/
 - `main.tex`: preamble, page style, title, and all `\input{...}` entries.
 - `solutions/`: one file per problem.
 - `resources/`: images and other static files.
-- `.vscode/settings.json`: project-level LaTeX Workshop config.
 
 ---
 
