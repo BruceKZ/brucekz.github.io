@@ -56,6 +56,7 @@ sudo rm /etc/manpaths.d/TeX
         "texlive/texlive",
         "latexmk",
         "-xelatex",
+        "-shell-escape",
         "-synctex=1",
         "-interaction=nonstopmode",
         "-file-line-error",
@@ -88,11 +89,11 @@ sudo rm /etc/manpaths.d/TeX
 
 为进一步提升效率，可通过编写自定义 Zsh 函数，实现项目初始化、命令行独立编译以及辅助文件清理的自动化。为保持 `.zshrc` 主配置文件的整洁，推荐采用模块化加载方式，将 LaTeX 相关脚本独立存放在 `~/.zsh_latex` 文件中。
 
-### 准备工作：下载预设模板
+### 准备工作：先准备本地模板目录
 
-在使用自动化脚本配置初始化命令前，建议您先下载预设的 LaTeX 作业模板，并解压至您习惯的工作目录（下方脚本中默认路径为 `~/Projects/EPFL_Homework_Template`）。
+在使用自动化脚本配置初始化命令前，请先准备好本地模板目录。
 
-📦 [点击此处下载 EPFL_Homework_Template.zip](/EPFL_Homework_Template.zip)
+参考：[EPFL LaTeX 作业模板](./epfl_homework_template.md)。
 
 ### 创建核心脚本
 
@@ -142,7 +143,7 @@ texbuild() {
         -v "$PWD":"$PWD" \
         -w "$PWD" \
         texlive/texlive \
-        latexmk -xelatex -synctex=1 -interaction=nonstopmode -file-line-error "$target_file"
+        latexmk -xelatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error "$target_file"
         
     echo "Build completed."
 }
@@ -180,7 +181,7 @@ EOF
 
 完成上述配置后，日常文稿排版流程将大幅简化：
 
-1. **项目初始化：** 在终端执行 `epfl_hw HW_01`。系统将自动复制预设模板至当前目录，重命名为 `HW_01`，并使用 VS Code 打开该项目。
+1. **项目初始化：** 在终端执行 `epfl_hw homework1`。系统将自动复制预设模板至当前目录，重命名为 `homework1`，并使用 VS Code 打开该项目。
 2. **文档编译：** 在 VS Code 中编辑文档并保存，系统将自动触发后台 Docker 容器完成编译。若需脱离 GUI 环境，也可直接在项目目录下执行 `texbuild` 命令进行独立编译。
 3. **环境清理：** 编译完成后，若需移除冗余的临时中间文件（如 `.aux`、`.log` 等），仅需执行 `texclean`，目录中将仅保留源文件与生成的 PDF 最终文件。
 
