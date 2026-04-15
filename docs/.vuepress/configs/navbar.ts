@@ -1,9 +1,5 @@
 export const navbar = [
     {
-        text: 'Modern NLP',
-        link: '/courses/nlp/',
-    },
-    {
         text: 'Large-Scale Data Science',
         link: '/courses/bigdata/',
     },
@@ -15,10 +11,6 @@ export const navbar = [
         text: 'Courses',
         items: [
             {
-                text: 'Modern NLP',
-                link: '/courses/nlp/',
-            },
-            {
                 text: 'Large-Scale Data Science',
                 link: '/courses/bigdata/',
             },
@@ -29,6 +21,10 @@ export const navbar = [
             {
                 text: 'Archived',
                 items: [
+                    {
+                        text: 'Modern NLP',
+                        link: '/courses/nlp/',
+                    },
                     {
                         text: 'Machine Learning',
                         link: '/courses/archive/ml/',

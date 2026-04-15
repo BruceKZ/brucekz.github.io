@@ -210,14 +210,6 @@ export const sidebar = {
             ],
         },
     ],
-    '/courses/dataviz/': [
-        {
-            text: 'Data Visualization',
-            items: [
-                '/courses/archive/dataviz/README.md',
-            ],
-        },
-    ],
     '/courses/archive/dataviz/': [
         {
             text: 'Data Visualization',

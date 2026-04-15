@@ -2,10 +2,10 @@
 
 ## 回顾
 
-- [LP 的对偶性](/courses/algo2/Lecture5.html#_2-线性规划的对偶性-duality)
-- [Weak Duality](/courses/algo2/Lecture5.html#对偶性定理)
-- [String Duality](/courses/algo2/Lecture5.html#对偶性定理)
-- [Complementarity slackness](/courses/algo2/Lecture5.html#互补松弛)
+- [LP 的对偶性](/courses/archive/algo2/Lecture5.html#_2-线性规划的对偶性-duality)
+- [Weak Duality](/courses/archive/algo2/Lecture5.html#对偶性定理)
+- [String Duality](/courses/archive/algo2/Lecture5.html#对偶性定理)
+- [Complementarity slackness](/courses/archive/algo2/Lecture5.html#互补松弛)
 
 ## 最小费用完美匹配的对偶性与互补松弛性
 
@@ -203,6 +203,5 @@ $$
 /
 
 /
-
 
 
