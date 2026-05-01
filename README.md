@@ -29,7 +29,7 @@ The project is designed to keep study material readable on the web, maintainable
 
 | Area | Value | Notes |
 |---|---:|---|
-| NLP note files | 14 | Structured course notes under `docs/courses/nlp/notes` |
+| NLP note files | 14 | Structured course notes under `docs/courses/nlp/archive/notes` |
 | Course collections | 4 | `archive`, `bigdata`, `nlp`, `toc` |
 | Tech note files | 3 | Living technical notes under `docs/tech` |
 | GitHub workflows | 2 | Docs build and course sync automation |

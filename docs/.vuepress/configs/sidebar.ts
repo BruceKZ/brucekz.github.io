@@ -99,112 +99,57 @@ export const sidebar = {
     ],
     '/courses/nlp/': [
         {
-            text: 'Overview',
+            text: 'NLP Projects',
             items: [
                 {
                     text: 'Home',
                     link: '/courses/nlp/README.md',
                 },
+            ],
+        },
+        {
+            text: 'Course Archive',
+            items: [
+                {
+                    text: 'Archive Home',
+                    link: '/courses/nlp/archive/README.md',
+                },
                 {
                     text: 'Course Homepage',
-                    link: '/courses/nlp/course-homepage.md',
-                },
-            ],
-        },
-        {
-            text: 'Resources',
-            items: [
-                {
-                    text: 'Slides',
-                    link: '/courses/nlp/resources/slides.md',
+                    link: '/courses/nlp/archive/course-homepage.md',
                 },
                 {
-                    text: 'Exams',
-                    link: '/courses/nlp/resources/exams.md',
-                },
-            ],
-        },
-        {
-            text: 'Notes',
-            items: [
-                {
-                    text: 'Notes Index',
-                    link: '/courses/nlp/notes/README.md',
-                },
-                {
-                    text: 'Foundations',
+                    text: 'Resources',
                     collapsed: true,
                     items: [
                         {
-                            text: 'Basics',
-                            link: '/courses/nlp/notes/01-neural-text-classification.md',
+                            text: 'Slides',
+                            link: '/courses/nlp/archive/resources/slides.md',
                         },
                         {
-                            text: 'Embeddings',
-                            link: '/courses/nlp/notes/02-word-embeddings.md',
-                        },
-                        {
-                            text: 'Count-Based LMs',
-                            link: '/courses/nlp/notes/03-count-based-language-models.md',
+                            text: 'Exams',
+                            link: '/courses/nlp/archive/resources/exams.md',
                         },
                     ],
                 },
                 {
-                    text: 'Sequence Models',
+                    text: 'Notes',
                     collapsed: true,
                     items: [
-                        {
-                            text: 'Neural LMs and RNNs',
-                            link: '/courses/nlp/notes/04-neural-language-models-and-rnns.md',
-                        },
-                        {
-                            text: 'LSTMs and GRUs',
-                            link: '/courses/nlp/notes/05-lstms-grus-and-training-issues.md',
-                        },
-                        {
-                            text: 'Seq2Seq and Attention',
-                            link: '/courses/nlp/notes/06-seq2seq-and-attention.md',
-                        },
-                        {
-                            text: 'Transformers',
-                            link: '/courses/nlp/notes/07-transformers.md',
-                        },
-                        {
-                            text: 'Tokenization',
-                            link: '/courses/nlp/notes/08-tokenization.md',
-                        },
-                    ],
-                },
-                {
-                    text: 'Modern Pretraining',
-                    collapsed: true,
-                    items: [
-                        {
-                            text: 'Pretraining and Transfer',
-                            link: '/courses/nlp/notes/09-pretraining-and-transfer-learning.md',
-                        },
-                        {
-                            text: 'Text Generation',
-                            link: '/courses/nlp/notes/12-text-generation.md',
-                        },
-                        {
-                            text: 'In-Context and Post-Training',
-                            link: '/courses/nlp/notes/13-in-context-learning-and-post-training.md',
-                        },
-                    ],
-                },
-                {
-                    text: 'Data and Evaluation',
-                    collapsed: true,
-                    items: [
-                        {
-                            text: 'Annotation and Bias',
-                            link: '/courses/nlp/notes/10-data-annotation-and-bias.md',
-                        },
-                        {
-                            text: 'AI Evaluation',
-                            link: '/courses/nlp/notes/11-evaluation-of-ai-systems.md',
-                        },
+                        '/courses/nlp/archive/notes/README.md',
+                        '/courses/nlp/archive/notes/01-neural-text-classification.md',
+                        '/courses/nlp/archive/notes/02-word-embeddings.md',
+                        '/courses/nlp/archive/notes/03-count-based-language-models.md',
+                        '/courses/nlp/archive/notes/04-neural-language-models-and-rnns.md',
+                        '/courses/nlp/archive/notes/05-lstms-grus-and-training-issues.md',
+                        '/courses/nlp/archive/notes/06-seq2seq-and-attention.md',
+                        '/courses/nlp/archive/notes/07-transformers.md',
+                        '/courses/nlp/archive/notes/08-tokenization.md',
+                        '/courses/nlp/archive/notes/09-pretraining-and-transfer-learning.md',
+                        '/courses/nlp/archive/notes/10-data-annotation-and-bias.md',
+                        '/courses/nlp/archive/notes/11-evaluation-of-ai-systems.md',
+                        '/courses/nlp/archive/notes/12-text-generation.md',
+                        '/courses/nlp/archive/notes/13-in-context-learning-and-post-training.md',
                     ],
                 },
             ],

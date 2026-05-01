@@ -16,17 +16,17 @@ jobs:
 
       - name: Fetch CS-552 README
         run: |
-          echo "---" > docs/courses/nlp/course-homepage.md
-          echo "contributors: GitHub Actions" >> docs/courses/nlp/course-homepage.md
-          echo "---" >> docs/courses/nlp/course-homepage.md
-          echo "" >> docs/courses/nlp/course-homepage.md
-          curl -s -L "https://raw.githubusercontent.com/epfl-nlp/cs-552-modern-nlp/main/README.md" | sed 's/^# CS-552: Modern Natural Language Processing/# Course Homepage/' >> docs/courses/nlp/course-homepage.md
+          echo "---" > docs/courses/nlp/archive/course-homepage.md
+          echo "contributors: GitHub Actions" >> docs/courses/nlp/archive/course-homepage.md
+          echo "---" >> docs/courses/nlp/archive/course-homepage.md
+          echo "" >> docs/courses/nlp/archive/course-homepage.md
+          curl -s -L "https://raw.githubusercontent.com/epfl-nlp/cs-552-modern-nlp/main/README.md" | sed 's/^# CS-552: Modern Natural Language Processing/# Course Homepage/' >> docs/courses/nlp/archive/course-homepage.md
 
       - name: Check for changes and commit
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/courses/nlp/course-homepage.md
+          git add docs/courses/nlp/archive/course-homepage.md
           if git diff --staged --quiet; then
             echo "No changes in CS-552 course homepage."
           else
