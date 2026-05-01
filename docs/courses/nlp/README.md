@@ -1,6 +1,8 @@
 # CS552 Modern NLP / 现代自然语言处理
 
-这里主要放 NLP 课程 project 相关文档。
+这里是 EPFL CS-552 Modern NLP 课程的相关文档。
+
+Here are the docs for EPFL CS-552 Modern NLP.
 
 ## Project Docs
 
