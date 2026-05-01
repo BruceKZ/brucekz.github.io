@@ -215,6 +215,9 @@ export const sidebar = {
             text: 'Data Visualization',
             items: [
                 '/courses/archive/dataviz/README.md',
+                '/courses/archive/dataviz/milestone-1.md',
+                '/courses/archive/dataviz/milestone-2.md',
+                '/courses/archive/dataviz/milestone-3.md',
             ],
         },
     ],
