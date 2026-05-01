@@ -105,6 +105,44 @@ export const sidebar = {
                     text: 'Home',
                     link: '/courses/nlp/README.md',
                 },
+                {
+                    text: 'Read the Prompt, Not the README',
+                    link: '/courses/nlp/project/README.md',
+                },
+                {
+                    text: 'Project Wiki',
+                    collapsed: false,
+                    items: [
+                        {
+                            text: 'Docs Index',
+                            link: '/courses/nlp/project/docs/index.md',
+                        },
+                        {
+                            text: 'Proposal',
+                            link: '/courses/nlp/project/docs/proposal.md',
+                        },
+                        {
+                            text: 'Benchmark Design',
+                            link: '/courses/nlp/project/docs/benchmark.md',
+                        },
+                        {
+                            text: 'Eval Metrics',
+                            link: '/courses/nlp/project/docs/eval-metrics.md',
+                        },
+                        {
+                            text: 'MCP Usage',
+                            link: '/courses/nlp/project/docs/mcp-usage.md',
+                        },
+                        {
+                            text: 'Project Structure',
+                            link: '/courses/nlp/project/docs/project-structure.md',
+                        },
+                        {
+                            text: 'Timeline',
+                            link: '/courses/nlp/project/docs/timeline.md',
+                        },
+                    ],
+                },
             ],
         },
         {

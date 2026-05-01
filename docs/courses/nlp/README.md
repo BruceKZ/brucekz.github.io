@@ -1,10 +1,15 @@
 # CS552 Modern NLP / 现代自然语言处理
 
-这里之后主要放 NLP 课程 project 相关文档。
+这里主要放 NLP 课程 project 相关文档。
 
 ## Project Docs
 
-Project 文档还在整理中。
+- [Read the Prompt, Not the README](/courses/nlp/project/)
+- [Docs Index](/courses/nlp/project/docs/)
+- [Proposal](/courses/nlp/project/docs/proposal.md)
+- [Benchmark Design](/courses/nlp/project/docs/benchmark.md)
+- [Eval Metrics](/courses/nlp/project/docs/eval-metrics.md)
+- [Timeline](/courses/nlp/project/docs/timeline.md)
 
 ## Course Archive
 
