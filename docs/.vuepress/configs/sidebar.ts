@@ -204,11 +204,11 @@ export const sidebar = {
             ],
         },
     ],
-    '/courses/bigdata/': [
+    '/courses/archive/bigdata/': [
         {
             text: 'Large-Scale Data Science',
             items: [
-                '/courses/bigdata/README.md',
+                '/courses/archive/bigdata/README.md',
             ],
         },
     ],

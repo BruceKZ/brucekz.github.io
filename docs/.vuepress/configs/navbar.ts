@@ -1,9 +1,5 @@
 export const navbar = [
     {
-        text: 'Large-Scale Data Science',
-        link: '/courses/bigdata/',
-    },
-    {
         text: 'Theory of Computation',
         link: '/courses/toc/',
     },
@@ -11,16 +7,16 @@ export const navbar = [
         text: 'Courses',
         items: [
             {
-                text: 'Large-Scale Data Science',
-                link: '/courses/bigdata/',
-            },
-            {
                 text: 'Theory of Computation',
                 link: '/courses/toc/',
             },
             {
                 text: 'Archived',
                 items: [
+                    {
+                        text: 'Large-Scale Data Science',
+                        link: '/courses/archive/bigdata/',
+                    },
                     {
                         text: 'Modern NLP',
                         link: '/courses/nlp/',
