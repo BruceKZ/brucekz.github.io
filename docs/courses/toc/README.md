@@ -64,7 +64,7 @@ EPFL CS-251 Theory of Computation — Spring 2026.
 
 - **HW1** — posted March 5, due March 15 @ 23:59 · [PDF](https://blog.bruce12138.com/pdf/toc/HW1.pdf) · [Ed thread](https://edstem.org/eu/courses/2710/discussion/225360)
 - **HW2** — posted March 31 @ 17:00, due April 17 @ 23:59 · [PDF](https://blog.bruce12138.com/pdf/toc/HW2.pdf)
-- **HW3** — posted April 28 @ 17:00, due May 8 @ 20:00
+- **HW3** — posted April 28 @ 17:00, due May 8 @ 20:00 · [PDF](https://blog.bruce12138.com/pdf/toc/HW3.pdf)
 
 ## Past Exams
 
