@@ -217,6 +217,7 @@ export const sidebar = {
             text: 'Theory of Computation',
             items: [
                 '/courses/toc/README.md',
+                '/courses/toc/Plan.md',
                 '/courses/toc/Lecture1.md',
                 '/courses/toc/Lecture2.md',
                 '/courses/toc/Lecture3.md',
