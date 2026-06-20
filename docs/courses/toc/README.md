@@ -3,26 +3,16 @@
 EPFL CS-251 Theory of Computation — Spring 2026.
 [Coursebook](https://edu.epfl.ch/coursebook/en/theory-of-computation-CS-251) · [Moodle](https://moodle.epfl.ch/course/view.php?id=14459)
 
-> 📅 完整学期计划与进度条见 **[学期进度 · Semester Plan](./Plan.md)**。
+> 📅 **[Semester Plan](./Plan.md)**。
 
-## 目录 · Contents
+## Contents
 
-- [学期进度 · Semester Plan](./Plan.md)
-- [Lecture Notes](#lecture-notes)
+- [Semester Plan](./Plan.md)
 - [Slides](#slides)
 - [Exercise Sets](#exercise-sets)
 - [Homework](#homework)
 - [Past Exams](#past-exams)
 - [Textbook](#textbook)
-
-## Lecture Notes
-
-- [Lecture 1: Introduction and Finite Automata](./Lecture1.md)
-- [Lecture 2: Non-Determinism and Closure Properties](./Lecture2.md)
-- [Lecture 3: Non-Regular Languages](./Lecture3.md)
-- [Lecture 4: Turing Machines](./Lecture4.md)
-- [Lecture 5: Decidability and Undecidability](./Lecture5.md)
-- [Lecture 6: Reductions](./Lecture6.md)
 
 ## Slides
 
