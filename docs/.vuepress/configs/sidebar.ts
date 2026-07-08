@@ -97,17 +97,17 @@ export const sidebar = {
             ],
         },
     ],
-    '/courses/nlp/': [
+    '/courses/archive/nlp/': [
         {
             text: 'NLP Projects',
             items: [
                 {
                     text: 'Home',
-                    link: '/courses/nlp/README.md',
+                    link: '/courses/archive/nlp/README.md',
                 },
                 {
                     text: 'Read the Prompt, Not the README',
-                    link: '/courses/nlp/project/README.md',
+                    link: '/courses/archive/nlp/project/README.md',
                 },
                 {
                     text: 'Project Wiki',
@@ -115,31 +115,31 @@ export const sidebar = {
                     items: [
                         {
                             text: 'Docs Index',
-                            link: '/courses/nlp/project/docs/index.md',
+                            link: '/courses/archive/nlp/project/docs/index.md',
                         },
                         {
                             text: 'Proposal',
-                            link: '/courses/nlp/project/docs/proposal.md',
+                            link: '/courses/archive/nlp/project/docs/proposal.md',
                         },
                         {
                             text: 'Benchmark Design',
-                            link: '/courses/nlp/project/docs/benchmark.md',
+                            link: '/courses/archive/nlp/project/docs/benchmark.md',
                         },
                         {
                             text: 'Eval Metrics',
-                            link: '/courses/nlp/project/docs/eval-metrics.md',
+                            link: '/courses/archive/nlp/project/docs/eval-metrics.md',
                         },
                         {
                             text: 'MCP Usage',
-                            link: '/courses/nlp/project/docs/mcp-usage.md',
+                            link: '/courses/archive/nlp/project/docs/mcp-usage.md',
                         },
                         {
                             text: 'Project Structure',
-                            link: '/courses/nlp/project/docs/project-structure.md',
+                            link: '/courses/archive/nlp/project/docs/project-structure.md',
                         },
                         {
                             text: 'Timeline',
-                            link: '/courses/nlp/project/docs/timeline.md',
+                            link: '/courses/archive/nlp/project/docs/timeline.md',
                         },
                     ],
                 },
@@ -150,11 +150,11 @@ export const sidebar = {
             items: [
                 {
                     text: 'Archive Home',
-                    link: '/courses/nlp/archive/README.md',
+                    link: '/courses/archive/nlp/archive/README.md',
                 },
                 {
                     text: 'Course Homepage',
-                    link: '/courses/nlp/archive/course-homepage.md',
+                    link: '/courses/archive/nlp/archive/course-homepage.md',
                 },
                 {
                     text: 'Resources',
@@ -162,11 +162,11 @@ export const sidebar = {
                     items: [
                         {
                             text: 'Slides',
-                            link: '/courses/nlp/archive/resources/slides.md',
+                            link: '/courses/archive/nlp/archive/resources/slides.md',
                         },
                         {
                             text: 'Exams',
-                            link: '/courses/nlp/archive/resources/exams.md',
+                            link: '/courses/archive/nlp/archive/resources/exams.md',
                         },
                     ],
                 },
@@ -174,20 +174,20 @@ export const sidebar = {
                     text: 'Notes',
                     collapsed: true,
                     items: [
-                        '/courses/nlp/archive/notes/README.md',
-                        '/courses/nlp/archive/notes/01-neural-text-classification.md',
-                        '/courses/nlp/archive/notes/02-word-embeddings.md',
-                        '/courses/nlp/archive/notes/03-count-based-language-models.md',
-                        '/courses/nlp/archive/notes/04-neural-language-models-and-rnns.md',
-                        '/courses/nlp/archive/notes/05-lstms-grus-and-training-issues.md',
-                        '/courses/nlp/archive/notes/06-seq2seq-and-attention.md',
-                        '/courses/nlp/archive/notes/07-transformers.md',
-                        '/courses/nlp/archive/notes/08-tokenization.md',
-                        '/courses/nlp/archive/notes/09-pretraining-and-transfer-learning.md',
-                        '/courses/nlp/archive/notes/10-data-annotation-and-bias.md',
-                        '/courses/nlp/archive/notes/11-evaluation-of-ai-systems.md',
-                        '/courses/nlp/archive/notes/12-text-generation.md',
-                        '/courses/nlp/archive/notes/13-in-context-learning-and-post-training.md',
+                        '/courses/archive/nlp/archive/notes/README.md',
+                        '/courses/archive/nlp/archive/notes/01-neural-text-classification.md',
+                        '/courses/archive/nlp/archive/notes/02-word-embeddings.md',
+                        '/courses/archive/nlp/archive/notes/03-count-based-language-models.md',
+                        '/courses/archive/nlp/archive/notes/04-neural-language-models-and-rnns.md',
+                        '/courses/archive/nlp/archive/notes/05-lstms-grus-and-training-issues.md',
+                        '/courses/archive/nlp/archive/notes/06-seq2seq-and-attention.md',
+                        '/courses/archive/nlp/archive/notes/07-transformers.md',
+                        '/courses/archive/nlp/archive/notes/08-tokenization.md',
+                        '/courses/archive/nlp/archive/notes/09-pretraining-and-transfer-learning.md',
+                        '/courses/archive/nlp/archive/notes/10-data-annotation-and-bias.md',
+                        '/courses/archive/nlp/archive/notes/11-evaluation-of-ai-systems.md',
+                        '/courses/archive/nlp/archive/notes/12-text-generation.md',
+                        '/courses/archive/nlp/archive/notes/13-in-context-learning-and-post-training.md',
                     ],
                 },
             ],
@@ -212,18 +212,12 @@ export const sidebar = {
             ],
         },
     ],
-    '/courses/toc/': [
+    '/courses/archive/toc/': [
         {
             text: 'Theory of Computation',
             items: [
-                '/courses/toc/README.md',
-                '/courses/toc/Plan.md',
-                '/courses/toc/Lecture1.md',
-                '/courses/toc/Lecture2.md',
-                '/courses/toc/Lecture3.md',
-                '/courses/toc/Lecture4.md',
-                '/courses/toc/Lecture5.md',
-                '/courses/toc/Lecture6.md',
+                '/courses/archive/toc/README.md',
+                '/courses/archive/toc/Plan.md',
             ],
         },
     ],

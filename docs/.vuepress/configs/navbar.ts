@@ -1,25 +1,21 @@
 export const navbar = [
     {
-        text: 'Theory of Computation',
-        link: '/courses/toc/',
-    },
-    {
         text: 'Courses',
         items: [
             {
-                text: 'Theory of Computation',
-                link: '/courses/toc/',
-            },
-            {
                 text: 'Archived',
                 items: [
+                    {
+                        text: 'Theory of Computation',
+                        link: '/courses/archive/toc/',
+                    },
                     {
                         text: 'Large-Scale Data Science',
                         link: '/courses/archive/bigdata/',
                     },
                     {
                         text: 'Modern NLP',
-                        link: '/courses/nlp/',
+                        link: '/courses/archive/nlp/',
                     },
                     {
                         text: 'Machine Learning',

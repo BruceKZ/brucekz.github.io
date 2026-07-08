@@ -29,8 +29,8 @@ The project is designed to keep study material readable on the web, maintainable
 
 | Area | Value | Notes |
 |---|---:|---|
-| NLP note files | 14 | Structured course notes under `docs/courses/nlp/archive/notes` |
-| Course collections | 3 | `archive`, `nlp`, `toc` |
+| NLP note files | 14 | Structured course notes under `docs/courses/archive/nlp/archive/notes` |
+| Course collections | 1 | `archive` |
 | Tech note files | 3 | Living technical notes under `docs/tech` |
 | GitHub workflows | 2 | Docs build and course sync automation |
 
@@ -55,8 +55,6 @@ The project is designed to keep study material readable on the web, maintainable
 │   ├── README.md                 # blog homepage
 │   ├── tech/                     # technical notes
 │   ├── courses/                  # course-specific material
-│   │   ├── nlp/
-│   │   ├── toc/
 │   │   └── archive/
 │   └── .vuepress/                # site config, theme overrides, assets
 ├── .github/workflows/            # build and sync automation
