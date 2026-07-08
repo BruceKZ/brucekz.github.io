@@ -16,3 +16,7 @@ Contents
 ## HPC
 
 - [HPC Cluster Usage](./hpc.md)
+
+## Hardware
+
+- [Multi Device Single Monitor](./monitor.md)

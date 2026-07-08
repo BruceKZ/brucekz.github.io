@@ -94,6 +94,13 @@ export const sidebar = {
                         '/tech/hpc.md',
                     ],
                 },
+                {
+                    text: 'Hardware',
+                    collapsed: false,
+                    items: [
+                        '/tech/monitor.md',
+                    ],
+                },
             ],
         },
     ],
