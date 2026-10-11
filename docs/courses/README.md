@@ -1,5 +1,7 @@
 # Courses
 
+- [Information Security Lab](/courses/infosec/)
+
 <details>
 <summary>Archive Courses</summary>
 

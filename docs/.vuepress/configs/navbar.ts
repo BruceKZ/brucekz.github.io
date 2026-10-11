@@ -3,6 +3,10 @@ export const navbar = [
         text: 'Courses',
         items: [
             {
+                text: 'Information Security Lab',
+                link: '/courses/infosec/',
+            },
+            {
                 text: 'Archived',
                 items: [
                     {

@@ -7,6 +7,17 @@ export const sidebar = {
             ],
         },
     ],
+    '/courses/infosec/': [
+        {
+            text: 'Information Security Lab',
+            items: [
+                '/courses/infosec/README.md',
+                '/courses/infosec/week1.md',
+                '/courses/infosec/week2.md',
+                '/courses/infosec/week3.md',
+            ],
+        },
+    ],
     '/courses/archive/ml/': [
         {
             text: 'Machine Learning',
