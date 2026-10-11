@@ -67,6 +67,28 @@ export const sidebar = {
             ],
         },
     ],
+    '/cuda/': [
+        {
+            text: 'CUDA',
+            items: [
+                '/cuda/README.md',
+                {
+                    text: 'Programming Notes',
+                    collapsed: false,
+                    items: [
+                        '/cuda/notes/README.md',
+                    ],
+                },
+                {
+                    text: 'LeetGPU',
+                    collapsed: false,
+                    items: [
+                        '/cuda/leetgpu/README.md',
+                    ],
+                },
+            ],
+        },
+    ],
     '/tech/': [
         {
             text: 'Tech Notes',

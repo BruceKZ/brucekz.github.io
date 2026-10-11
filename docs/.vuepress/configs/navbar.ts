@@ -38,6 +38,10 @@ export const navbar = [
         ]
     },
     {
+        text: 'CUDA',
+        link: '/cuda/',
+    },
+    {
         text: 'Tech Notes',
         link: '/tech/',
     },
