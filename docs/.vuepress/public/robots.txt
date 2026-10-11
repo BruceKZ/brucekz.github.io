@@ -1,0 +1,4 @@
+# HTML pages carry a noindex meta tag and must stay crawlable for it to be seen.
+# PDFs cannot carry one, so block crawling them instead.
+User-agent: *
+Disallow: /pdf/

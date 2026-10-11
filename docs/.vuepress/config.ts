@@ -33,7 +33,9 @@ export default defineUserConfig({
     title: 'Bruce12138',
     description: '',
     head: [
-        ['link', { rel: 'icon', href: '/favicon.ico' }]
+        ['link', { rel: 'icon', href: '/favicon.ico' }],
+        // Keep the site out of search engines for now.
+        ['meta', { name: 'robots', content: 'noindex, nofollow, noarchive' }],
     ],
     extendsMarkdown: (md) => {
         md.use(tasklist)
