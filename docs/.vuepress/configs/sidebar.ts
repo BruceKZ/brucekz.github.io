@@ -109,7 +109,7 @@ export const sidebar = {
                     text: 'Graph',
                     collapsed: false,
                     items: [
-                        '/algo/graph/MaximumBipartiteMatching.md',
+                        '/algo/graph/maximum-bipartite-matching.md',
                     ],
                 },
             ],
