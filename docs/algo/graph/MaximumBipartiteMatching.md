@@ -6,6 +6,10 @@
 
 [Problem](https://www.luogu.com.cn/problem/P3386) · [Submission](https://www.luogu.com.cn/record/307056269)
 
+Given a bipartite graph $G = (L \cup R, E)$ with $|L| = n$, $|R| = m$ and $|E| = e$, find the size of a maximum matching, i.e. the largest $M \subseteq E$ in which no two edges share a vertex.
+
+Constraints: $1 \le n, m \le 500$, $1 \le e \le 5 \times 10^4$.
+
 ```cpp
 void solve() {
     int n, m, e;
@@ -46,6 +50,15 @@ void solve() {
 ### Codeforces 387D
 
 [Problem](https://codeforces.com/contest/387/problem/D) · [Submission](https://codeforces.com/contest/387/submission/396751226)
+
+Given a directed graph $G = (V, E)$ with $|V| = n$ and $|E| = m$, without multiple arcs but possibly with loops. A graph is *interesting* if it has no multiple arcs and there is a center $c \in V$ such that:
+
+- $(c, v) \in E$ and $(v, c) \in E$ for every $v \in V$, including the loop $(c, c)$;
+- $\deg^+(v) = \deg^-(v) = 2$ for every $v \ne c$.
+
+In one operation, add or remove a single arc. Find the minimum number of operations that makes $G$ interesting.
+
+Constraints: $2 \le n \le 500$, $1 \le m \le 1000$.
 
 ```cpp
 void solve() {
@@ -103,6 +116,10 @@ void solve() {
 ### Luogu P2764
 
 [Problem](https://www.luogu.com.cn/problem/P2764) · [Submission](https://www.luogu.com.cn/record/307080443)
+
+Given a directed acyclic graph $G = (V, E)$ with $|V| = n$ and $|E| = m$, find a minimum path cover: the smallest set of paths in $G$ such that every vertex lies on exactly one path. Paths of length $0$ are allowed. Output each path, then the number of paths.
+
+Constraints: $1 \le n \le 150$, $1 \le m \le 6000$.
 
 ```cpp
 void solve() {
