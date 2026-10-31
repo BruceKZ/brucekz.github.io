@@ -46,6 +46,10 @@ export const navbar = [
         link: '/cuda/',
     },
     {
+        text: 'Algorithms',
+        link: '/algo/',
+    },
+    {
         text: 'Tech Notes',
         link: '/tech/',
     },

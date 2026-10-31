@@ -53,6 +53,7 @@ The project is designed to keep study material readable on the web, maintainable
 .
 ├── docs/
 │   ├── README.md                 # blog homepage
+│   ├── algo/                     # algorithm notes and solutions
 │   ├── tech/                     # technical notes
 │   ├── courses/                  # course-specific material
 │   │   └── archive/

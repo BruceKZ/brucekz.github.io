@@ -100,6 +100,21 @@ export const sidebar = {
             ],
         },
     ],
+    '/algo/': [
+        {
+            text: 'Algorithms',
+            items: [
+                '/algo/README.md',
+                {
+                    text: 'Graph',
+                    collapsed: false,
+                    items: [
+                        '/algo/graph/MaximumBipartiteMatching.md',
+                    ],
+                },
+            ],
+        },
+    ],
     '/tech/': [
         {
             text: 'Tech Notes',
