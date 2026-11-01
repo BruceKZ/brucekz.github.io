@@ -110,6 +110,7 @@ export const sidebar = {
                     collapsed: false,
                     items: [
                         '/algo/graph/maximum-bipartite-matching.md',
+                        '/algo/graph/maximum-flow.md',
                     ],
                 },
             ],
