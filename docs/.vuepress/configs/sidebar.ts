@@ -11,10 +11,15 @@ export const sidebar = {
         {
             text: 'Information Security Lab',
             items: [
-                '/courses/infosec/README.md',
-                '/courses/infosec/week1.md',
-                '/courses/infosec/week2.md',
-                '/courses/infosec/week3.md',
+                { text: 'Exercises', link: '/courses/infosec/' },
+                {
+                    text: 'Module 1 · 中文版',
+                    items: [
+                        { text: 'Week 1 · MOV Attack', link: '/courses/infosec/week1.md' },
+                        { text: 'Week 2 · Lattices / HNP', link: '/courses/infosec/week2.md' },
+                        { text: 'Week 3 · Coppersmith', link: '/courses/infosec/week3.md' },
+                    ],
+                },
             ],
         },
     ],
