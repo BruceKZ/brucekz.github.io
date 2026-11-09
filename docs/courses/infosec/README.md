@@ -10,7 +10,7 @@ Exercise sheets and solutions for the ETH Zurich Information Security Lab (2026)
 |---|---|---|---|
 | Exercise 1 | [module2-ex1.pdf](https://blog.bruce12138.com/pdf/infosec/module2-ex1.pdf) | [module2-ex1-solutions.pdf](https://blog.bruce12138.com/pdf/infosec/module2-ex1-solutions.pdf) | [module2-ex1-slides.pdf](https://blog.bruce12138.com/pdf/infosec/module2-ex1-slides.pdf) |
 | Exercise 2 | [module2-ex2.pdf](https://blog.bruce12138.com/pdf/infosec/module2-ex2.pdf) | [module2-ex2-solutions.pdf](https://blog.bruce12138.com/pdf/infosec/module2-ex2-solutions.pdf) | [module2-ex2-slides.pdf](https://blog.bruce12138.com/pdf/infosec/module2-ex2-slides.pdf) |
-| Exercise 3 (Side Channels) | [module2-ex3.pdf](https://blog.bruce12138.com/pdf/infosec/module2-ex3.pdf) | — | — |
+| Exercise 3 (Side Channels) | [module2-ex3.pdf](https://blog.bruce12138.com/pdf/infosec/module2-ex3.pdf) | [module2-ex3-solutions.pdf](https://blog.bruce12138.com/pdf/infosec/module2-ex3-solutions.pdf) | [module2-ex3-slides.pdf](https://blog.bruce12138.com/pdf/infosec/module2-ex3-slides.pdf) |
 
 ## Module 1: Exercise Sheets
 
