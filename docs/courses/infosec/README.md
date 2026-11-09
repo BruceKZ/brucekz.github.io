@@ -1,6 +1,6 @@
 # Information Security Lab
 
-## Module 2 · TEEs
+## Module 2: Trusted Execution Environments
 
 | | Sheet | Solutions | Slides |
 |---|---|---|---|
@@ -8,7 +8,7 @@
 | Ex 2 | [PDF](/pdf/infosec/module2-ex2.pdf) | [PDF](/pdf/infosec/module2-ex2-solutions.pdf) | [PDF](/pdf/infosec/module2-ex2-slides.pdf) |
 | Ex 3 | [PDF](/pdf/infosec/module2-ex3.pdf) | [PDF](/pdf/infosec/module2-ex3-solutions.pdf) | [PDF](/pdf/infosec/module2-ex3-slides.pdf) |
 
-## Module 1 · Public-Key Cryptanalysis
+## Module 1: Elliptic Curve Cryptography and Lattice Cryptanalysis
 
 | | Sheet | Solutions |
 |---|---|---|
