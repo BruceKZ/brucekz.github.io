@@ -1,10 +1,18 @@
 # Information Security Lab / 信息安全实验
 
-这里是 ETH Zurich Information Security Lab（2026）Module 1 的习题与解答，包括课程原件和中文翻译版。
+这里是 ETH Zurich Information Security Lab（2026）的习题与解答。Module 1 附中文翻译版。
 
-Exercise sheets and solutions for Module 1 of the ETH Zurich Information Security Lab (2026), with Chinese translations.
+Exercise sheets and solutions for the ETH Zurich Information Security Lab (2026). Module 1 includes Chinese translations.
 
-## Exercise Sheets
+## Module 2: Trusted Execution Environments
+
+| Name | Exercise | Solutions | Slides |
+|---|---|---|---|
+| Exercise 1 | [module2-ex1.pdf](https://blog.bruce12138.com/pdf/infosec/module2-ex1.pdf) | [module2-ex1-solutions.pdf](https://blog.bruce12138.com/pdf/infosec/module2-ex1-solutions.pdf) | [module2-ex1-slides.pdf](https://blog.bruce12138.com/pdf/infosec/module2-ex1-slides.pdf) |
+| Exercise 2 | [module2-ex2.pdf](https://blog.bruce12138.com/pdf/infosec/module2-ex2.pdf) | [module2-ex2-solutions.pdf](https://blog.bruce12138.com/pdf/infosec/module2-ex2-solutions.pdf) | [module2-ex2-slides.pdf](https://blog.bruce12138.com/pdf/infosec/module2-ex2-slides.pdf) |
+| Exercise 3 (Side Channels) | [module2-ex3.pdf](https://blog.bruce12138.com/pdf/infosec/module2-ex3.pdf) | — | — |
+
+## Module 1: Exercise Sheets
 
 | Name | Original | 中文版 | LaTeX |
 |---|---|---|---|
